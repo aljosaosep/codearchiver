@@ -1,0 +1,13 @@
+<p>
+  <b>Child:</b>
+  <%=h @subcategory.child_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @subcategory.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_subcategory_path(@subcategory) %> |
+<%= link_to 'Back', subcategories_path %>

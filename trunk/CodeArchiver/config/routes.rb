@@ -1,4 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :code_replies
+
+  map.resources :comments
+
+  map.resources :grades
+
+  map.resources :codes
+
+  map.resources :subcategories
+
+  map.resources :categories
+
   map.resources :program_languages
 
   map.resources :types

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  code_body: MyText
+  tag: MyString
+  description: MyText
+  shortdescription: MyText
+  user: 
+  program_language: 
+  category: 
+  type: 
+
+two:
+  title: MyString
+  code_body: MyText
+  tag: MyString
+  description: MyText
+  shortdescription: MyText
+  user: 
+  program_language: 
+  category: 
+  type: 

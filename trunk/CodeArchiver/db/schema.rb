@@ -9,7 +9,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100322151822) do
+ActiveRecord::Schema.define(:version => 20100322153653) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "code_replies", :force => true do |t|
+    t.integer  "child_id"
+    t.integer  "code_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "codes", :force => true do |t|
+    t.string   "title"
+    t.text     "code_body"
+    t.string   "tag"
+    t.text     "description"
+    t.text     "shortdescription"
+    t.integer  "user_id"
+    t.integer  "program_language_id"
+    t.integer  "category_id"
+    t.integer  "type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "code_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grades", :force => true do |t|
+    t.integer  "value",      :limit => 10, :precision => 10, :scale => 0
+    t.integer  "user_id"
+    t.integer  "code_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profiles", :force => true do |t|
     t.string   "email"
@@ -26,6 +69,13 @@ ActiveRecord::Schema.define(:version => 20100322151822) do
   create_table "program_languages", :force => true do |t|
     t.string   "language_name"
     t.text     "reservered_words"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subcategories", :force => true do |t|
+    t.integer  "child_id"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

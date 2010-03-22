@@ -1,0 +1,22 @@
+<h1>Listing code_replies</h1>
+
+<table>
+  <tr>
+    <th>Child</th>
+    <th>Code</th>
+  </tr>
+
+<% @code_replies.each do |code_reply| %>
+  <tr>
+    <td><%=h code_reply.child_id %></td>
+    <td><%=h code_reply.code %></td>
+    <td><%= link_to 'Show', code_reply %></td>
+    <td><%= link_to 'Edit', edit_code_reply_path(code_reply) %></td>
+    <td><%= link_to 'Destroy', code_reply, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New code_reply', new_code_reply_path %>

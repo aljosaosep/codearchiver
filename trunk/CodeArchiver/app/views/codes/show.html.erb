@@ -1,0 +1,48 @@
+<p>
+  <b>Title:</b>
+  <%=h @code.title %>
+</p>
+
+<p>
+  <b>Code body:</b>
+  <%=h @code.code_body %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%=h @code.tag %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @code.description %>
+</p>
+
+<p>
+  <b>Shortdescription:</b>
+  <%=h @code.shortdescription %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @code.user %>
+</p>
+
+<p>
+  <b>Program language:</b>
+  <%=h @code.program_language %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @code.category %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @code.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_code_path(@code) %> |
+<%= link_to 'Back', codes_path %>
