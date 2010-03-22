@@ -1890,3 +1890,49 @@ ActiveRecord::AssociationTypeMismatch (User(#130047336) expected, got String(#35
 Rendered rescues/_trace (42.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+  [4;36;1mSQL (71.0ms)[0m   [0;1mCREATE TABLE `types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (53.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322151643')[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+  [4;36;1mSQL (91.0ms)[0m   [0;1mCREATE TABLE `program_languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `language_name` varchar(255), `reservered_words` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322151822')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `program_languages`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `program_languages`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m

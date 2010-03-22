@@ -1,0 +1,22 @@
+<h1>Listing program_languages</h1>
+
+<table>
+  <tr>
+    <th>Language name</th>
+    <th>Reservered words</th>
+  </tr>
+
+<% @program_languages.each do |program_language| %>
+  <tr>
+    <td><%=h program_language.language_name %></td>
+    <td><%=h program_language.reservered_words %></td>
+    <td><%= link_to 'Show', program_language %></td>
+    <td><%= link_to 'Edit', edit_program_language_path(program_language) %></td>
+    <td><%= link_to 'Destroy', program_language, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New program_language', new_program_language_path %>

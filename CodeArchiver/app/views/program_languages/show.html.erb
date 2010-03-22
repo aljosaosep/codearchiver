@@ -1,0 +1,13 @@
+<p>
+  <b>Language name:</b>
+  <%=h @program_language.language_name %>
+</p>
+
+<p>
+  <b>Reservered words:</b>
+  <%=h @program_language.reservered_words %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_language_path(@program_language) %> |
+<%= link_to 'Back', program_languages_path %>
