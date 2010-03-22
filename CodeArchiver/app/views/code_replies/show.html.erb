@@ -1,0 +1,13 @@
+<p>
+  <b>Child:</b>
+  <%=h @code_reply.child_id %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%=h @code_reply.code %>
+</p>
+
+
+<%= link_to 'Edit', edit_code_reply_path(@code_reply) %> |
+<%= link_to 'Back', code_replies_path %>

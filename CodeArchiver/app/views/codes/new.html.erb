@@ -1,0 +1,47 @@
+<h1>New code</h1>
+
+<% form_for(@code) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :code_body %><br />
+    <%= f.text_area :code_body %>
+  </p>
+  <p>
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :shortdescription %><br />
+    <%= f.text_area :shortdescription %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :program_language %><br />
+    <%= f.text_field :program_language %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', codes_path %>

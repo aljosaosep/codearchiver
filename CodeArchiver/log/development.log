@@ -1936,3 +1936,341 @@ Migrating to CreateProgramLanguages (20100322151822)
   [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mSQL (6.0ms)[0m   [0mdescribe `users`[0m
   [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 16:20:09) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 19ms (View: 10, DB: 4) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 16:20:15) [GET]
+  [4;35;1mProfile Load (0.0ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/profiles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-22 16:20:23) [GET]
+
+ActionController::RoutingError (No route matches "/program_lanugages" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-22 16:20:29) [GET]
+
+ActionController::RoutingError (No route matches "/program_langugages" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramLanguagesController#index (for 127.0.0.1 at 2010-03-22 16:20:34) [GET]
+  [4;36;1mProgramLanguage Load (1.0ms)[0m   [0;1mSELECT * FROM `program_languages` [0m
+Rendering template within layouts/program_languages
+Rendering program_languages/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/program_languages]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-22 16:20:58) [GET]
+  [4;35;1mType Load (1.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+Completed in 62ms (View: 55, DB: 1) | 200 OK [http://127.0.0.1/types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+Migrating to CreateCategories (20100322152212)
+  [4;36;1mSQL (126.0ms)[0m   [0;1mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322152212')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `program_languages`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `program_languages`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+Migrating to CreateCategories (20100322152212)
+Migrating to CreateSubcategories (20100322152309)
+  [4;36;1mSQL (89.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322152309')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `program_languages`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `program_languages`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `subcategories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 16:27:34) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 16:27:41) [GET]
+  [4;35;1mSubcategory Load (0.0ms)[0m   [0mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 16:27:44) [GET]
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 67ms (View: 56, DB: 4) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+Migrating to CreateCategories (20100322152212)
+Migrating to CreateSubcategories (20100322152309)
+Migrating to CreateCodes (20100322153048)
+  [4;36;1mSQL (187.0ms)[0m   [0;1mCREATE TABLE `codes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `code_body` text, `tag` varchar(255), `description` text, `shortdescription` text, `user_id` int(11), `program_language_id` int(11), `category_id` int(11), `type_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322153048')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `codes`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `codes`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mdescribe `program_languages`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `program_languages`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+Migrating to CreateCategories (20100322152212)
+Migrating to CreateSubcategories (20100322152309)
+Migrating to CreateCodes (20100322153048)
+Migrating to CreateGrades (20100322153319)
+  [4;36;1mSQL (178.0ms)[0m   [0;1mCREATE TABLE `grades` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `value` decimal, `user_id` int(11), `code_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322153319')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `codes`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `codes`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `grades`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `grades`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `grades`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `program_languages`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `program_languages`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+Migrating to CreateCategories (20100322152212)
+Migrating to CreateSubcategories (20100322152309)
+Migrating to CreateCodes (20100322153048)
+Migrating to CreateGrades (20100322153319)
+Migrating to CreateComments (20100322153500)
+  [4;36;1mSQL (90.0ms)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` text, `user_id` int(11), `code_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322153500')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `codes`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `codes`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `grades`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `grades`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `grades`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `program_languages`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `program_languages`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+Migrating to CreateTypes (20100322151643)
+Migrating to CreateProgramLanguages (20100322151822)
+Migrating to CreateCategories (20100322152212)
+Migrating to CreateSubcategories (20100322152309)
+Migrating to CreateCodes (20100322153048)
+Migrating to CreateGrades (20100322153319)
+Migrating to CreateComments (20100322153500)
+Migrating to CreateCodeReplies (20100322153653)
+  [4;36;1mSQL (98.0ms)[0m   [0;1mCREATE TABLE `code_replies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `code_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322153653')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `code_replies`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `code_replies`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `code_replies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `codes`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `codes`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `grades`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `grades`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `grades`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `program_languages`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `program_languages`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-22 16:38:12) [GET]
+  [4;35;1mCode Load (0.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-03-22 16:38:19) [GET]
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/comments]
