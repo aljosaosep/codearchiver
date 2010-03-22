@@ -1,0 +1,1892 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (190.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+  [4;35;1mSQL (69.0ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (34.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100322123754')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 13:38:36) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 1934ms (View: 1928, DB: 1) | 200 OK [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 13:38:42) [GET]
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 21ms (View: 11, DB: 3) | 200 OK [http://127.0.0.1/categories/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 13:38:47) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+  [4;36;1mSQL (87.0ms)[0m   [0;1mCREATE TABLE `types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (66.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322123946')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (18.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-22 13:40:03) [GET]
+  [4;35;1mType Load (0.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#new (for 127.0.0.1 at 2010-03-22 13:40:05) [GET]
+  [4;36;1mType Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Rendering template within layouts/types
+Rendering types/new
+Completed in 23ms (View: 10, DB: 8) | 200 OK [http://127.0.0.1/types/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#create (for 127.0.0.1 at 2010-03-22 13:40:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "type"=>{"name"=>"Algorithm"}}
+  [4;35;1mType Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mType Create (0.0ms)[0m   [0mINSERT INTO `types` (`name`, `created_at`, `updated_at`) VALUES('Algorithm', '2010-03-22 12:40:12', '2010-03-22 12:40:12')[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/types/1
+Completed in 61ms (DB: 52) | 302 Found [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#show (for 127.0.0.1 at 2010-03-22 13:40:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (3.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Rendering template within layouts/types
+Rendering types/show
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://127.0.0.1/types/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-22 13:40:13) [GET]
+  [4;35;1mType Load (0.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+  [4;36;1mType Columns (22.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Completed in 37ms (View: 8, DB: 22) | 200 OK [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#new (for 127.0.0.1 at 2010-03-22 13:40:15) [GET]
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+Rendering template within layouts/types
+Rendering types/new
+Completed in 15ms (View: 5, DB: 3) | 200 OK [http://127.0.0.1/types/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#create (for 127.0.0.1 at 2010-03-22 13:40:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "type"=>{"name"=>"Data structure"}}
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mType Create (0.0ms)[0m   [0;1mINSERT INTO `types` (`name`, `created_at`, `updated_at`) VALUES('Data structure', '2010-03-22 12:40:22', '2010-03-22 12:40:22')[0m
+  [4;35;1mSQL (22.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/types/2
+Completed in 40ms (DB: 27) | 302 Found [http://127.0.0.1/types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#show (for 127.0.0.1 at 2010-03-22 13:40:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 2) [0m
+Rendering template within layouts/types
+Rendering types/show
+Completed in 15ms (View: 3, DB: 7) | 200 OK [http://127.0.0.1/types/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-22 13:40:25) [GET]
+  [4;36;1mType Load (1.0ms)[0m   [0;1mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+  [4;35;1mType Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+Completed in 21ms (View: 9, DB: 6) | 200 OK [http://127.0.0.1/types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#new (for 127.0.0.1 at 2010-03-22 13:40:28) [GET]
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Rendering template within layouts/types
+Rendering types/new
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/types/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#create (for 127.0.0.1 at 2010-03-22 13:40:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "type"=>{"name"=>"Tutorial"}}
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mType Create (1.0ms)[0m   [0mINSERT INTO `types` (`name`, `created_at`, `updated_at`) VALUES('Tutorial', '2010-03-22 12:40:33', '2010-03-22 12:40:33')[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/types/3
+Completed in 51ms (DB: 41) | 302 Found [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#show (for 127.0.0.1 at 2010-03-22 13:40:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mType Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 3) [0m
+Rendering template within layouts/types
+Rendering types/show
+Completed in 18ms (View: 3, DB: 8) | 200 OK [http://127.0.0.1/types/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-22 13:40:34) [GET]
+  [4;35;1mType Load (0.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 13:40:41) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 13:40:43) [GET]
+  [4;36;1mCategory Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 21ms (View: 5, DB: 9) | 200 OK [http://127.0.0.1/categories/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-22 13:40:49) [POST]
+  Parameters: {"category"=>{"name"=>"Math"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mCategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (1.0ms)[0m   [0mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES('Math', '2010-03-22 12:40:49', '2010-03-22 12:40:49')[0m
+  [4;36;1mSQL (38.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/categories/1
+Completed in 58ms (DB: 50) | 302 Found [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-03-22 13:40:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (4.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 20ms (View: 7, DB: 7) | 200 OK [http://127.0.0.1/categories/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 13:40:50) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mCategory Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://127.0.0.1/categories]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 13:40:52) [GET]
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 15ms (View: 5, DB: 4) | 200 OK [http://127.0.0.1/categories/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-22 13:40:56) [POST]
+  Parameters: {"category"=>{"name"=>"Multimedia"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES('Multimedia', '2010-03-22 12:40:56', '2010-03-22 12:40:56')[0m
+  [4;35;1mSQL (52.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/categories/2
+Completed in 69ms (DB: 60) | 302 Found [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-03-22 13:40:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (4.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 16ms (View: 3, DB: 7) | 200 OK [http://127.0.0.1/categories/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 13:40:58) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mCategory Columns (18.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Completed in 35ms (View: 11, DB: 18) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 13:40:59) [GET]
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 15ms (View: 4, DB: 4) | 200 OK [http://127.0.0.1/categories/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-22 13:41:08) [POST]
+  Parameters: {"category"=>{"name"=>"Sorting"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mCategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES('Sorting', '2010-03-22 12:41:08', '2010-03-22 12:41:08')[0m
+  [4;36;1mSQL (86.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/categories/3
+Completed in 106ms (DB: 96) | 302 Found [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-03-22 13:41:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (5.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 3) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 17ms (View: 3, DB: 8) | 200 OK [http://127.0.0.1/categories/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 13:41:09) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Completed in 23ms (View: 14, DB: 4) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+  [4;36;1mSQL (80.0ms)[0m   [0;1mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `IM` varchar(255), `company` varchar(255), `portfolio` text, `webpage` varchar(255), `avatar` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322125036')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 13:50:59) [GET]
+  [4;35;1mProfile Load (0.0ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/profiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322125511)
+  [4;36;1mSQL (96.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322125511')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 14:01:10) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Completed in 42ms (View: 19, DB: 3) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:01:17) [GET]
+  [4;36;1mSubcategory Load (0.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 43ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/subcategories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:01:19) [GET]
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+
+ActionView::TemplateError (undefined method `subcategory_id' for #<Subcategory id: nil, created_at: nil, updated_at: nil>) on line #8 of app/views/subcategories/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :subcategory_id %><br />
+8:     <%= f.text_field :subcategory_id %>
+9:   </p>
+10:   <p>
+11:     <%= f.submit 'Create' %>
+
+    app/views/subcategories/new.html.erb:8
+    app/views/subcategories/new.html.erb:3
+    app/controllers/subcategories_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 14:02:06) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Completed in 22ms (View: 13, DB: 3) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 14:02:09) [GET]
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://127.0.0.1/categories/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-22 14:02:12) [POST]
+  Parameters: {"category"=>{"name"=>"bla"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES('bla', '2010-03-22 13:02:12', '2010-03-22 13:02:12')[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/categories/4
+Completed in 52ms (DB: 42) | 302 Found [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2010-03-22 14:02:12) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (5.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 17ms (View: 3, DB: 7) | 200 OK [http://127.0.0.1/categories/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 14:02:14) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Completed in 27ms (View: 14, DB: 4) | 200 OK [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:02:21) [GET]
+  [4;35;1mSubcategory Load (1.0ms)[0m   [0mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:02:24) [GET]
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+
+ActionView::TemplateError (undefined method `subcategory_id' for #<Subcategory id: nil, created_at: nil, updated_at: nil>) on line #8 of app/views/subcategories/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :subcategory_id %><br />
+8:     <%= f.text_field :subcategory_id %>
+9:   </p>
+10:   <p>
+11:     <%= f.submit 'Create' %>
+
+    app/views/subcategories/new.html.erb:8
+    app/views/subcategories/new.html.erb:3
+    app/controllers/subcategories_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:05:43) [GET]
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+
+ActionView::TemplateError (undefined method `subcategory_id' for #<Subcategory id: nil, created_at: nil, updated_at: nil>) on line #8 of app/views/subcategories/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :subcategory_id %><br />
+8:   <!--  <%= f.text_field :subcategory_id %> -->
+9:   </p>
+10:   <p>
+11:     <%= f.submit 'Create' %>
+
+    app/views/subcategories/new.html.erb:8
+    app/views/subcategories/new.html.erb:3
+    app/controllers/subcategories_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:06:08) [GET]
+  [4;36;1mSubcategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 17ms (View: 8, DB: 4) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#create (for 127.0.0.1 at 2010-03-22 14:06:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSubcategory Create (0.0ms)[0m   [0mINSERT INTO `subcategories` (`created_at`, `updated_at`) VALUES('2010-03-22 13:06:12', '2010-03-22 13:06:12')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/subcategories/1
+Completed in 51ms (DB: 38) | 302 Found [http://127.0.0.1/subcategories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#show (for 127.0.0.1 at 2010-03-22 14:06:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSubcategory Load (2.0ms)[0m   [0;1mSELECT * FROM `subcategories` WHERE (`subcategories`.`id` = 1) [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/show
+
+ActionView::TemplateError (undefined method `subcategory_id' for #<Subcategory:0x57d45b0>) on line #3 of app/views/subcategories/show.html.erb:
+1: <p>
+2:   <b>Subcategory:</b>
+3:   <%=h @subcategory.subcategory_id %>
+4: </p>
+5: 
+6: 
+
+    app/views/subcategories/show.html.erb:3
+    app/controllers/subcategories_controller.rb:18:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mDROP TABLE `subcategories`[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322125511'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 14:11:28) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Completed in 28ms (View: 15, DB: 4) | 200 OK [http://127.0.0.1/categories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 14:11:34) [GET]
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 14ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/categories/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322131706)
+  [4;36;1mSQL (85.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322131706')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:19:14) [GET]
+  [4;36;1mSubcategory Load (1.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/subcategories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:19:16) [GET]
+  [4;35;1mSubcategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+
+ActionView::TemplateError (undefined method `has_many' for #<Subcategory:0x46cf020>) on line #12 of app/views/subcategories/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :has_many %><br />
+12:     <%= f.text_field :has_many %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/subcategories/new.html.erb:12
+    app/views/subcategories/new.html.erb:3
+    app/controllers/subcategories_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mDROP TABLE `subcategories`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322131706'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 14:20:41) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Completed in 25ms (View: 15, DB: 4) | 200 OK [http://127.0.0.1/categories/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322132114')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:24:31) [GET]
+  [4;36;1mSubcategory Load (1.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/subcategories/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:24:34) [GET]
+  [4;35;1mSubcategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 22ms (View: 10, DB: 4) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#create (for 127.0.0.1 at 2010-03-22 14:28:33) [POST]
+  Parameters: {"subcategory"=>{"child_id"=>"Editing"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mSubcategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubcategory Create (1.0ms)[0m   [0;1mINSERT INTO `subcategories` (`created_at`, `updated_at`, `child_id`) VALUES('2010-03-22 13:28:33', '2010-03-22 13:28:33', 0)[0m
+  [4;35;1mSQL (375.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/subcategories/1
+Completed in 392ms (DB: 382) | 302 Found [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#show (for 127.0.0.1 at 2010-03-22 14:28:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSubcategory Load (3.0ms)[0m   [0mSELECT * FROM `subcategories` WHERE (`subcategories`.`id` = 1) [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/show
+Completed in 19ms (View: 7, DB: 7) | 200 OK [http://127.0.0.1/subcategories/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:28:36) [GET]
+  [4;36;1mSubcategory Load (1.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+  [4;35;1mSubcategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Completed in 19ms (View: 7, DB: 6) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:28:39) [GET]
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 15ms (View: 5, DB: 3) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#create (for 127.0.0.1 at 2010-03-22 14:28:42) [POST]
+  Parameters: {"subcategory"=>{"child_id"=>"3"}, "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mSubcategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSubcategory Create (0.0ms)[0m   [0mINSERT INTO `subcategories` (`created_at`, `updated_at`, `child_id`) VALUES('2010-03-22 13:28:42', '2010-03-22 13:28:42', 3)[0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/subcategories/2
+Completed in 64ms (DB: 53) | 302 Found [http://127.0.0.1/subcategories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#show (for 127.0.0.1 at 2010-03-22 14:28:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSubcategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSubcategory Load (2.0ms)[0m   [0;1mSELECT * FROM `subcategories` WHERE (`subcategories`.`id` = 2) [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/show
+Completed in 15ms (View: 3, DB: 4) | 200 OK [http://127.0.0.1/subcategories/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:28:44) [GET]
+  [4;35;1mSubcategory Load (0.0ms)[0m   [0mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Completed in 21ms (View: 10, DB: 3) | 200 OK [http://127.0.0.1/subcategories]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:28:45) [GET]
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#create (for 127.0.0.1 at 2010-03-22 14:28:48) [POST]
+  Parameters: {"subcategory"=>{"child_id"=>"3333344"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mSubcategory Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubcategory Create (1.0ms)[0m   [0;1mINSERT INTO `subcategories` (`created_at`, `updated_at`, `child_id`) VALUES('2010-03-22 13:28:48', '2010-03-22 13:28:48', 3333344)[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/subcategories/3
+Completed in 64ms (DB: 53) | 302 Found [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#show (for 127.0.0.1 at 2010-03-22 14:28:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSubcategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSubcategory Load (2.0ms)[0m   [0mSELECT * FROM `subcategories` WHERE (`subcategories`.`id` = 3) [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/show
+Completed in 15ms (View: 2, DB: 4) | 200 OK [http://127.0.0.1/subcategories/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:28:50) [GET]
+  [4;36;1mSubcategory Load (0.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+  [4;35;1mSubcategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSubcategory Load (0.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubcategory Create (0.0ms)[0m   [0;1mINSERT INTO `subcategories` (`created_at`, `updated_at`, `child_id`) VALUES('2010-03-22 13:31:08', '2010-03-22 13:31:08', NULL)[0m
+  [4;35;1mSQL (56.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'categories.subcategory_id' in 'where clause': SELECT * FROM `categories` WHERE (`categories`.subcategory_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (41.0ms)[0m   [0;1mDROP TABLE `subcategories`[0m
+  [4;35;1mSQL (38.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322132114'[0m
+Migrating to CreateProfiles (20100322125036)
+  [4;36;1mSQL (23.0ms)[0m   [0;1mDROP TABLE `profiles`[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322125036'[0m
+Migrating to CreateTypes (20100322123946)
+  [4;36;1mSQL (30.0ms)[0m   [0;1mDROP TABLE `types`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322123946'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+  [4;36;1mSQL (119.0ms)[0m   [0;1mCREATE TABLE `types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322123946')[0m
+Migrating to CreateProfiles (20100322125036)
+  [4;36;1mSQL (75.0ms)[0m   [0;1mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `IM` varchar(255), `company` varchar(255), `portfolio` text, `webpage` varchar(255), `avatar` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322125036')[0m
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (108.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322132114')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (22.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:43:52) [GET]
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 16ms (View: 5, DB: 3) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:43:54) [GET]
+  [4;35;1mSubcategory Load (0.0ms)[0m   [0mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-22 14:44:01) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Completed in 25ms (View: 15, DB: 3) | 200 OK [http://127.0.0.1/categories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-22 14:44:04) [GET]
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 15ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/categories/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (40.0ms)[0m   [0;1mDROP TABLE `subcategories`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322132114'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (80.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322132114')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSubcategory Load (1.0ms)[0m   [0mSELECT * FROM `subcategories` LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:51:55) [GET]
+  [4;35;1mSubcategory Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#create (for 127.0.0.1 at 2010-03-22 14:51:58) [POST]
+  Parameters: {"subcategory"=>{"child_id"=>"123"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mSubcategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubcategory Create (0.0ms)[0m   [0;1mINSERT INTO `subcategories` (`created_at`, `updated_at`, `child_id`) VALUES('2010-03-22 13:51:58', '2010-03-22 13:51:58', 123)[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/subcategories/1
+Completed in 52ms (DB: 39) | 302 Found [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#show (for 127.0.0.1 at 2010-03-22 14:51:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubcategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSubcategory Load (2.0ms)[0m   [0mSELECT * FROM `subcategories` WHERE (`subcategories`.`id` = 1) [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/show
+Completed in 14ms (View: 3, DB: 5) | 200 OK [http://127.0.0.1/subcategories/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 14:52:00) [GET]
+  [4;36;1mSubcategory Load (1.0ms)[0m   [0;1mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+  [4;35;1mSubcategory Columns (155.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+Completed in 170ms (View: 6, DB: 156) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#new (for 127.0.0.1 at 2010-03-22 14:52:03) [GET]
+  [4;36;1mSubcategory Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+Rendering template within layouts/subcategories
+Rendering subcategories/new
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/subcategories/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#create (for 127.0.0.1 at 2010-03-22 14:52:06) [POST]
+  Parameters: {"subcategory"=>{"child_id"=>"456"}, "commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mSubcategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSubcategory Create (0.0ms)[0m   [0mINSERT INTO `subcategories` (`created_at`, `updated_at`, `child_id`) VALUES('2010-03-22 13:52:06', '2010-03-22 13:52:06', 456)[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/subcategories/2
+Completed in 112ms (DB: 101) | 302 Found [http://127.0.0.1/subcategories]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#show (for 127.0.0.1 at 2010-03-22 14:52:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSubcategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSubcategory Load (1.0ms)[0m   [0;1mSELECT * FROM `subcategories` WHERE (`subcategories`.`id` = 2) [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/show
+Completed in 14ms (View: 3, DB: 5) | 200 OK [http://127.0.0.1/subcategories/2]
+  [4;36;1mSubcategory Load (0.0ms)[0m   [0;1mSELECT * FROM `subcategories` LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mMysql::Error: Unknown column 'categories.subcategory_id' in 'where clause': SELECT * FROM `categories` WHERE (`categories`.subcategory_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (40.0ms)[0m   [0;1mDROP TABLE `subcategories`[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322132114'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322132114)
+  [4;36;1mSQL (118.0ms)[0m   [0;1mCREATE TABLE `subcategories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `child_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322132114')[0m
+Migrating to CreateUsers (20100322135420)
+  [4;36;1mSQL (129.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322135420')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322135420)
+  [4;36;1mSQL (43.0ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322135420'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322132114)
+Migrating to CreateUsers (20100322135420)
+  [4;35;1mSQL (161.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (24.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100322135420')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `subcategories`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100322135420'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20100322123754)
+Migrating to CreateTypes (20100322123946)
+Migrating to CreateProfiles (20100322125036)
+Migrating to CreateSubcategories (20100322132114)
+Migrating to CreateUsers (20100322141710)
+  [4;36;1mSQL (89.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `profile_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322141710')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `subcategories`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `subcategories`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `subcategories`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `types`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `types`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubcategoriesController#index (for 127.0.0.1 at 2010-03-22 15:19:58) [GET]
+  [4;35;1mSubcategory Load (0.0ms)[0m   [0mSELECT * FROM `subcategories` [0m
+Rendering template within layouts/subcategories
+Rendering subcategories/index
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/subcategories]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 15:20:04) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:20:06) [GET]
+  [4;35;1mUser Columns (21.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 39ms (View: 11, DB: 21) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:20:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"jeeeeeej", "username"=>"jernej", "password"=>"halozan"}}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#37674360) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:20:45) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 6, DB: 3) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-22 15:20:52) [GET]
+
+ActionController::RoutingError (No route matches "/profile/" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 15:20:56) [GET]
+  [4;36;1mProfile Load (0.0ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-22 15:20:58) [GET]
+  [4;35;1mProfile Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 67ms (View: 55, DB: 4) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-22 15:21:27) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"nimam.DD", "portfolio"=>"zacel sem ko sem bil majhen", "IM"=>"jernejh....", "avatar"=>"", "webpage"=>"", "email"=>"jernej.halozan{fasf"}, "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mProfile Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProfile Create (0.0ms)[0m   [0;1mINSERT INTO `profiles` (`company`, `portfolio`, `created_at`, `updated_at`, `IM`, `avatar`, `webpage`, `email`) VALUES('nimam.DD', 'zacel sem ko sem bil majhen', '2010-03-22 14:21:27', '2010-03-22 14:21:27', 'jernejh....', '', '', 'jernej.halozan{fasf')[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/profiles/1
+Completed in 57ms (DB: 45) | 302 Found [http://127.0.0.1/profiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2010-03-22 15:21:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProfile Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (3.0ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 1) [0m
+Rendering template within layouts/profiles
+Rendering profiles/show
+Completed in 21ms (View: 8, DB: 5) | 200 OK [http://127.0.0.1/profiles/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 15:21:36) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:21:37) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 6, DB: 3) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:21:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"1", "username"=>"jerry123", "password"=>"123456"}}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#130672704) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:23:10) [GET]
+  [4;35;1mUser Columns (24.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 38ms (View: 6, DB: 24) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:23:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"1", "username"=>"jerry123", "password"=>"123456"}}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#129934416) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:23:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"1", "username"=>"jerry123", "password"=>"123456"}}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#131005548) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:23:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"1", "username"=>"jerry123", "password"=>"123456"}}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#130439448) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 15:23:36) [GET]
+  [4;35;1mProfile Load (0.0ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+  [4;36;1mProfile Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Completed in 18ms (View: 6, DB: 5) | 200 OK [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 15:23:48) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:23:50) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 17ms (View: 6, DB: 4) | 200 OK [http://127.0.0.1/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:23:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"1", "username"=>"aaaaaa", "password"=>"sssssss"}}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#130859508) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 15:25:31) [GET]
+  [4;36;1mProfile Load (1.0ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+  [4;35;1mProfile Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Completed in 17ms (View: 8, DB: 4) | 200 OK [http://127.0.0.1/profiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-22 15:25:35) [GET]
+  [4;36;1mProfile Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 20ms (View: 8, DB: 3) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-22 15:25:41) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"sag", "portfolio"=>"asfag", "IM"=>"sag", "avatar"=>"ag", "webpage"=>"sag", "email"=>"asf"}, "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mProfile Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProfile Create (1.0ms)[0m   [0mINSERT INTO `profiles` (`company`, `portfolio`, `created_at`, `updated_at`, `IM`, `avatar`, `webpage`, `email`) VALUES('sag', 'asfag', '2010-03-22 14:25:41', '2010-03-22 14:25:41', 'sag', 'ag', 'sag', 'asf')[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/profiles/2
+Completed in 58ms (DB: 46) | 302 Found [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2010-03-22 15:25:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProfile Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mProfile Load (3.0ms)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 2) [0m
+Rendering template within layouts/profiles
+Rendering profiles/show
+Completed in 16ms (View: 3, DB: 7) | 200 OK [http://127.0.0.1/profiles/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 15:25:43) [GET]
+  [4;35;1mProfile Load (1.0ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+  [4;36;1mProfile Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Completed in 26ms (View: 11, DB: 5) | 200 OK [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 15:25:48) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:25:50) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 22ms (View: 11, DB: 5) | 200 OK [http://127.0.0.1/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:26:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"1", "username"=>"safas", "password"=>"asgasg"}}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#130715844) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:26:03) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 21ms (View: 10, DB: 5) | 200 OK [http://127.0.0.1/users/new]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:26:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"profile"=>"safsf", "username"=>"safas", "password"=>"asgasg"}}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActiveRecord::AssociationTypeMismatch (Profile(#129951372) expected, got String(#35208228)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (154.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (288.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+  [4;35;1mSQL (127.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100322145034')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+  [4;36;1mSQL (126.0ms)[0m   [0;1mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `IM` varchar(255), `company` varchar(255), `portfolio` text, `webpage` varchar(255), `avatar` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322145241')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322145034)
+Migrating to CreateProfiles (20100322145241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 15:53:14) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-22 15:53:15) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 20ms (View: 10, DB: 4) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-22 15:53:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk=", "user"=>{"username"=>"jerry", "password"=>"jstsmhalozan"}}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password`) VALUES('2010-03-22 14:53:28', '2010-03-22 14:53:28', 'jerry', 'jstsmhalozan')[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/users/1
+Completed in 82ms (DB: 71) | 302 Found [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-22 15:53:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 20ms (View: 6, DB: 6) | 200 OK [http://127.0.0.1/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 15:53:30) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 20ms (View: 9, DB: 3) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 15:53:34) [GET]
+  [4;36;1mProfile Load (0.0ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-22 15:53:36) [GET]
+  [4;35;1mProfile Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 23ms (View: 12, DB: 3) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-22 15:54:31) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"Zalik.d", "portfolio"=>"sčkafčj\304\215", "IM"=>"jernej", "avatar"=>"www.", "webpage"=>"www", "user"=>"1", "email"=>"jernej"}, "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mProfile Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+
+ActiveRecord::AssociationTypeMismatch (User(#130506276) expected, got String(#35208228)):
+  app/controllers/profiles_controller.rb:43:in `new'
+  app/controllers/profiles_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 16:10:09) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 20ms (View: 8, DB: 3) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 16:10:15) [GET]
+  [4;35;1mProfile Load (1.0ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/profiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-22 16:10:17) [GET]
+  [4;36;1mProfile Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-22 16:10:24) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"sasgasg", "portfolio"=>"sagsg", "IM"=>"assf", "avatar"=>"asgsg", "webpage"=>"asggsg", "user"=>"1", "email"=>"assaf"}, "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;35;1mProfile Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+
+ActiveRecord::AssociationTypeMismatch (User(#131425872) expected, got String(#35208228)):
+  app/controllers/profiles_controller.rb:45:in `new'
+  app/controllers/profiles_controller.rb:45:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-22 16:12:23) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (18.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 31ms (View: 6, DB: 20) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-22 16:12:29) [GET]
+  [4;36;1mProfile Load (0.0ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-22 16:12:30) [GET]
+  [4;35;1mProfile Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 33ms (View: 8, DB: 10) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-22 16:12:38) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"sasf", "portfolio"=>"asg", "IM"=>"as", "avatar"=>"asgs", "webpage"=>"asg", "user"=>"1", "email"=>"aa"}, "authenticity_token"=>"F5PXSNEoA1dhYJnBnl65piEKAw0f7CBV77ba0VjHPYk="}
+  [4;36;1mProfile Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+
+ActiveRecord::AssociationTypeMismatch (User(#130047336) expected, got String(#35208228)):
+  app/controllers/profiles_controller.rb:46:in `new'
+  app/controllers/profiles_controller.rb:46:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)

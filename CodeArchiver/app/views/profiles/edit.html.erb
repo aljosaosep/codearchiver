@@ -1,0 +1,40 @@
+<h1>Editing profile</h1>
+
+<% form_for(@profile) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :IM %><br />
+    <%= f.text_field :IM %>
+  </p>
+  <p>
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </p>
+  <p>
+    <%= f.label :portfolio %><br />
+    <%= f.text_area :portfolio %>
+  </p>
+  <p>
+    <%= f.label :webpage %><br />
+    <%= f.text_field :webpage %>
+  </p>
+  <p>
+    <%= f.label :avatar %><br />
+    <%= f.text_field :avatar %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @profile %> |
+<%= link_to 'Back', profiles_path %>

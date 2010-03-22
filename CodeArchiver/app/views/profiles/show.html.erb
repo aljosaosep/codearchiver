@@ -1,0 +1,38 @@
+<p>
+  <b>Email:</b>
+  <%=h @profile.email %>
+</p>
+
+<p>
+  <b>Im:</b>
+  <%=h @profile.IM %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @profile.company %>
+</p>
+
+<p>
+  <b>Portfolio:</b>
+  <%=h @profile.portfolio %>
+</p>
+
+<p>
+  <b>Webpage:</b>
+  <%=h @profile.webpage %>
+</p>
+
+<p>
+  <b>Avatar:</b>
+  <%=h @profile.avatar %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @profile.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
