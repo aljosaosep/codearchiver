@@ -10,6 +10,15 @@ class CodesController < ApplicationController
     end
   end
 
+
+
+def getAuthorName
+ # @author = User.find(@code.user_id).username
+ return User.find(@code.user_id).username
+end
+
+
+
   # GET /codes/1
   # GET /codes/1.xml
   def show
@@ -82,4 +91,5 @@ class CodesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
 end

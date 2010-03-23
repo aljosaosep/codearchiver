@@ -3099,3 +3099,2027 @@ Rendering codes/show
   [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
   [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
 Completed in 85ms (View: 31, DB: 46) | 200 OK [http://127.0.0.1/codes/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (0.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#new (for 127.0.0.1 at 2010-03-23 13:47:29) [GET]
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+Rendering template within layouts/codes
+Rendering codes/new
+Completed in 21ms (View: 9, DB: 5) | 200 OK [http://127.0.0.1/codes/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:47:35) [GET]
+  [4;35;1mCode Load (0.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (4.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (10.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (3.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 92ms (View: 46, DB: 36) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 13:47:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCode Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (4.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (4.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 85ms (View: 33, DB: 42) | 200 OK [http://127.0.0.1/codes/3]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:48:23) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (4.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (5.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (3.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 76ms (View: 33, DB: 37) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 13:48:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCode Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mCode Load (2.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (4.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (6.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 81ms (View: 36, DB: 35) | 200 OK [http://127.0.0.1/codes/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 13:53:07) [GET]
+
+SyntaxError (C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/codes_controller.rb:90: syntax error, unexpected kEND, expecting $end):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 13:53:09) [GET]
+
+SyntaxError (C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/codes_controller.rb:90: syntax error, unexpected kEND, expecting $end):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 13:53:14) [GET]
+
+SyntaxError (C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/codes_controller.rb:90: syntax error, unexpected kEND, expecting $end):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-23 13:53:27) [GET]
+  [4;35;1mType Load (1.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+  [4;36;1mType Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Completed in 28ms (View: 14, DB: 8) | 200 OK [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 13:53:31) [GET]
+
+SyntaxError (C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/codes_controller.rb:90: syntax error, unexpected kEND, expecting $end):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:54:10) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (6.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (6.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (3.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 133ms (View: 87, DB: 37) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 13:54:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCode Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (3.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+
+ActionView::TemplateError (undefined local variable or method `authorName' for #<ActionView::Base:0xb72b6e0>) on line #28 of app/views/codes/show.html.erb:
+25: 
+26: <p>
+27:   <b>User:</b>
+28:   <%=h authorName %>
+29: </p>
+30: 
+31: <p>
+
+    app/views/codes/show.html.erb:28
+    app/controllers/codes_controller.rb:18:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:54:20) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (4.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (13.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (5.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 87ms (View: 37, DB: 42) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:54:32) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (4.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (4.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (5.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 76ms (View: 37, DB: 32) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 13:54:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCode Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (4.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mProgramLanguage Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (4.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (5.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (8.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 70ms (View: 25, DB: 36) | 200 OK [http://127.0.0.1/codes/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:55:27) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (6.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (3.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 79ms (View: 35, DB: 35) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 13:55:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCode Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mCode Load (4.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;35;1mProgramLanguage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (7.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (3.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 88ms (View: 32, DB: 39) | 200 OK [http://127.0.0.1/codes/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 13:56:58) [GET]
+
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  app/controllers/codes_controller.rb:4
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 13:58:11) [GET]
+  [4;35;1mCode Load (0.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (4.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (6.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 82ms (View: 35, DB: 36) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 14:20:22) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mProgramLanguage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (50.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (5.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (3.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 2436ms (View: 2338, DB: 71) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 14:21:25) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (15.6ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (15.6ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 281ms (View: 140, DB: 109) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:21:34) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 82ms (View: 53, DB: 9) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-23 14:21:35) [GET]
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 57ms (View: 28, DB: 8) | 200 OK [http://127.0.0.1/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-23 14:21:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U=", "user"=>{"username"=>"edo", "password"=>"edo123"}}
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password`) VALUES('2010-03-23 13:21:44', '2010-03-23 13:21:44', 'edo', 'edo123')[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/users/2
+Completed in 87ms (DB: 55) | 302 Found [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-23 14:21:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 188ms (View: 141, DB: 18) | 200 OK [http://127.0.0.1/users/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:21:46) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 50ms (View: 21, DB: 9) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-23 14:21:51) [GET]
+  [4;36;1mProfile Load (1.0ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 60ms (View: 41, DB: 1) | 200 OK [http://127.0.0.1/profiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-23 14:21:55) [GET]
+  [4;35;1mProfile Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 66ms (View: 34, DB: 8) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-23 14:22:13) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"sdkg\304\215", "portfolio"=>"dsčsddsćčslkg", "IM"=>"sdaag", "avatar"=>"ČSDČG\304\214", "webpage"=>"DDLFGSLK", "user"=>"2", "email"=>"lamm"}, "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U="}
+  [4;36;1mProfile Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+
+ActiveRecord::AssociationTypeMismatch (User(#78916548) expected, got String(#1686564)):
+  app/controllers/profiles_controller.rb:43:in `new'
+  app/controllers/profiles_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-23 14:22:21) [GET]
+  [4;35;1mProfile Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 60ms (View: 30, DB: 10) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-23 14:22:42) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"sdkg\304\215", "portfolio"=>"dsčsddsćčslkg", "IM"=>"sdaag", "avatar"=>"ČSDČG\304\214", "webpage"=>"DDLFGSLK", "user"=>"2", "email"=>"lamm"}, "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U="}
+  [4;36;1mProfile Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+
+ActiveRecord::AssociationTypeMismatch (User(#79592160) expected, got String(#1686564)):
+  app/controllers/profiles_controller.rb:43:in `new'
+  app/controllers/profiles_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2010-03-23 14:22:50) [GET]
+  [4;35;1mProfile Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/profiles/new]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2010-03-23 14:23:40) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"company"=>"sasada", "portfolio"=>"sadad", "IM"=>"sadasd", "avatar"=>"asdadsa", "user_id"=>"2", "webpage"=>"sadad", "email"=>"asadda"}, "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U="}
+  [4;36;1mProfile Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProfile Create (1.0ms)[0m   [0;1mINSERT INTO `profiles` (`company`, `portfolio`, `created_at`, `updated_at`, `IM`, `avatar`, `user_id`, `webpage`, `email`) VALUES('sasada', 'sadad', '2010-03-23 13:23:40', '2010-03-23 13:23:40', 'sadasd', 'asdadsa', 2, 'sadad', 'asadda')[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/profiles/1
+Completed in 98ms (DB: 70) | 302 Found [http://127.0.0.1/profiles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2010-03-23 14:23:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProfile Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (12.0ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 1) [0m
+Rendering template within layouts/profiles
+Rendering profiles/show
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 153ms (View: 107, DB: 27) | 200 OK [http://127.0.0.1/profiles/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2010-03-23 14:23:46) [GET]
+  [4;36;1mProfile Load (1.0ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+  [4;35;1mProfile Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 68ms (View: 26, DB: 17) | 200 OK [http://127.0.0.1/profiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 14:23:52) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (11.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (15.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 192ms (View: 95, DB: 73) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#new (for 127.0.0.1 at 2010-03-23 14:23:55) [GET]
+  [4;35;1mCode Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+Rendering template within layouts/codes
+Rendering codes/new
+Completed in 36ms (View: 20, DB: 4) | 200 OK [http://127.0.0.1/codes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#create (for 127.0.0.1 at 2010-03-23 14:24:56) [POST]
+  Parameters: {"commit"=>"Create", "code"=>{"program_language_id"=>"1", "shortdescription"=>"Sum(a,b)", "code_body"=>"int a=1;\r\nint b=5;\r\n\r\nreturn a+b;", "title"=>"Sum 2 number", "type_id"=>"1", "tag"=>"sum, c++", "category_id"=>"1", "user_id"=>"2", "description"=>"Sum of two number"}, "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U="}
+  [4;36;1mCode Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCode Create (0.0ms)[0m   [0;1mINSERT INTO `codes` (`program_language_id`, `created_at`, `title`, `code_body`, `shortdescription`, `updated_at`, `tag`, `type_id`, `user_id`, `category_id`, `description`) VALUES(1, '2010-03-23 13:24:57', 'Sum 2 number', 'int a=1;\r\nint b=5;\r\n\r\nreturn a+b;', 'Sum(a,b)', '2010-03-23 13:24:57', 'sum, c++', 1, 2, 1, 'Sum of two number')[0m
+  [4;35;1mSQL (52.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/codes/4
+Completed in 98ms (DB: 59) | 302 Found [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 14:24:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (8.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mProgramLanguage Columns (17.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (1.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (16.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mType Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (12.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 199ms (View: 62, DB: 91) | 200 OK [http://127.0.0.1/codes/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 14:24:59) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (10.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (15.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (9.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 221ms (View: 118, DB: 80) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:30:20) [GET]
+
+SyntaxError (C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/models/user.rb:4: syntax error, unexpected ':', expecting kEND
+  validates_uniqueness_of :username :case_sensitive => false 
+                                     ^):
+  app/controllers/users_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:33:06) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-23 14:33:12) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 53ms (View: 28, DB: 4) | 200 OK [http://127.0.0.1/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-23 14:33:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U=", "user"=>{"username"=>"edo", "password"=>"aaaa"}}
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (48.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'edo') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 397ms (View: 14, DB: 60) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-23 14:33:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U=", "user"=>{"username"=>"edo12", "password"=>""}}
+  [4;35;1mUser Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'edo12') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 89ms (View: 35, DB: 18) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-23 14:36:31) [GET]
+  [4;35;1mType Load (1.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+  [4;36;1mType Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Completed in 130ms (View: 106, DB: 5) | 200 OK [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:36:35) [GET]
+
+SyntaxError (C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/models/user.rb:4: syntax error, unexpected tIDENTIFIER, expecting tASSOC
+...itive => false, :scope user_id  
+                              ^):
+  app/controllers/users_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (123.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:36:48) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-23 14:49:44) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 62ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/users]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 14:49:47) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (10.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (6.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (7.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 256ms (View: 167, DB: 79) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#new (for 127.0.0.1 at 2010-03-23 14:49:51) [GET]
+  [4;35;1mCode Columns (11.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+Rendering template within layouts/codes
+Rendering codes/new
+Completed in 53ms (View: 16, DB: 27) | 200 OK [http://127.0.0.1/codes/new]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#create (for 127.0.0.1 at 2010-03-23 14:50:33) [POST]
+  Parameters: {"commit"=>"Create", "code"=>{"program_language_id"=>"1", "shortdescription"=>"salhsklahfkajjhjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksalhsklahfkajjhjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksalhsklahfkajjhjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksalhsklahfkajjhjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksalhsklahfkajjhjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksalhsklahfkajjhjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk", "code_body"=>"sdgsadhas", "title"=>"sagsgafasggasgs", "type_id"=>"1", "tag"=>"asfsjahfk", "category_id"=>"1", "user_id"=>"2", "description"=>"sakhkasfakfasfafk"}, "authenticity_token"=>"NUajfF+LuZRnzTbplZZa8jlkHm0a0JKzHuSZr34bR0U="}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/codes
+Rendering codes/new
+Completed in 91ms (View: 37, DB: 26) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-23 14:57:47) [GET]
+
+ActionController::RoutingError (No route matches "/code" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 14:57:49) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (6.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 119ms (View: 60, DB: 45) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 15:38:27) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (4.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (5.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (3.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 2351ms (View: 2245, DB: 30) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 15:38:33) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (8.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+
+ActionView::TemplateError (undefined method `authorName' for #<Code:0x99956a0>) on line #28 of app/views/codes/show.html.erb:
+25: 
+26: <p>
+27:   <b>User:</b>
+28:   <%=h @code.authorName %>
+29: </p>
+30: 
+31: <p>
+
+    app/views/codes/show.html.erb:28
+    app/controllers/codes_controller.rb:25:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 15:39:18) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 229ms (View: 145, DB: 57) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 15:39:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (8.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+
+ActionView::TemplateError (undefined method `authorName' for #<Code:0x99dee40>) on line #28 of app/views/codes/show.html.erb:
+25: 
+26: <p>
+27:   <b>User:</b>
+28:   <%=h @code.authorName %>
+29: </p>
+30: 
+31: <p>
+
+    app/views/codes/show.html.erb:28
+    app/controllers/codes_controller.rb:26:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 15:46:04) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (38.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (9.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (12.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (5.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 217ms (View: 88, DB: 103) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 15:46:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (4.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+
+ActionView::TemplateError (undefined local variable or method `authorName' for #<ActionView::Base:0x975c168>) on line #28 of app/views/codes/show.html.erb:
+25: 
+26: <p>
+27:   <b>User:</b>
+28:   <%=h authorName %>
+29: </p>
+30: 
+31: <p>
+
+    app/views/codes/show.html.erb:28
+    app/controllers/codes_controller.rb:25:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 15:55:31) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (11.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (6.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 181ms (View: 88, DB: 62) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 15:55:34) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (9.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mProgramLanguage Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (5.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (5.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 211ms (View: 130, DB: 48) | 200 OK [http://127.0.0.1/codes/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 15:56:34) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (8.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 122ms (View: 62, DB: 47) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 15:56:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (9.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (11.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (9.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (5.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 159ms (View: 56, DB: 66) | 200 OK [http://127.0.0.1/codes/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 23 15:58:07 +0100 2010
+  Status: 500 Internal Server Error
+  C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: formal argument cannot be a constant
+  def ecikaPecika (Code thisCode)
+                       ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+  def ecikaPecika (Code thisCode)
+                                ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:7: syntax error, unexpected kEND, expecting $end
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:126:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:120:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/application_controller.rb:5
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 23 15:58:10 +0100 2010
+  Status: 500 Internal Server Error
+  C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: formal argument cannot be a constant
+  def ecikaPecika (Code thisCode)
+                       ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+  def ecikaPecika (Code thisCode)
+                                ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:7: syntax error, unexpected kEND, expecting $end
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:126:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:120:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/application_controller.rb:5
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 23 15:58:15 +0100 2010
+  Status: 500 Internal Server Error
+  C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: formal argument cannot be a constant
+  def ecikaPecika (Code thisCode)
+                       ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+  def ecikaPecika (Code thisCode)
+                                ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:7: syntax error, unexpected kEND, expecting $end
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:126:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:120:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/application_controller.rb:5
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 23 15:58:22 +0100 2010
+  Status: 500 Internal Server Error
+  C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: formal argument cannot be a constant
+  def ecikaPecika (Code thisCode)
+                       ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+  def ecikaPecika (Code thisCode)
+                                ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:7: syntax error, unexpected kEND, expecting $end
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:126:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:120:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/application_controller.rb:5
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 23 15:58:32 +0100 2010
+  Status: 500 Internal Server Error
+  C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: formal argument cannot be a constant
+  def ecikaPecika (Code thisCode)
+                       ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+  def ecikaPecika (Code thisCode)
+                                ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:7: syntax error, unexpected kEND, expecting $end
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:126:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:120:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/application_controller.rb:5
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Tue Mar 23 15:58:51 +0100 2010
+  Status: 500 Internal Server Error
+  C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: formal argument cannot be a constant
+  def ecikaPecika (Code thisCode)
+                       ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+  def ecikaPecika (Code thisCode)
+                                ^
+C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/helpers/users_helper.rb:7: syntax error, unexpected kEND, expecting $end
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:126:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:120:in `helper'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:115:in `helper'
+    C:/Users/Edo/Desktop/Praktikum/CodeArchiver/CodeArchiver/app/controllers/application_controller.rb:5
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    C:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TypesController#index (for 127.0.0.1 at 2010-03-23 16:00:59) [GET]
+  [4;35;1mType Load (1.0ms)[0m   [0mSELECT * FROM `types` [0m
+Rendering template within layouts/types
+Rendering types/index
+  [4;36;1mType Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+Completed in 92ms (View: 66, DB: 11) | 200 OK [http://127.0.0.1/types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:01:02) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (6.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 135ms (View: 63, DB: 46) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:01:21) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (10.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (12.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (5.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 180ms (View: 90, DB: 65) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 16:01:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCode Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mCode Load (8.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mProgramLanguage Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (6.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (5.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 151ms (View: 60, DB: 56) | 200 OK [http://127.0.0.1/codes/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:01:44) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (6.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (5.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 136ms (View: 63, DB: 44) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 16:03:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (9.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (7.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mType Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 148ms (View: 54, DB: 57) | 200 OK [http://127.0.0.1/codes/4]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:03:21) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (6.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (8.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 184ms (View: 62, DB: 46) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:03:45) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (Couldn't find Code without an ID) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h authorName(code) %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/helpers/users_helper.rb:4:in `authorName'
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (134.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 16:04:14) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mCode Load (4.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mProgramLanguage Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (5.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (9.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mType Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 162ms (View: 101, DB: 48) | 200 OK [http://127.0.0.1/codes/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:04:19) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (Couldn't find Code without an ID) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h authorName(code) %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/helpers/users_helper.rb:4:in `authorName'
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (77.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:05:35) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (Couldn't find Code without an ID) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h authorName(code) %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/helpers/users_helper.rb:3:in `authorName'
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:07:29) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (Couldn't find Code without an ID) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h authorName(code) %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/helpers/codes_helper.rb:3:in `authorName'
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (150.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 16:07:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (3.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `codes` WHERE (`codes`.`id` = 3) [0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (4.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 190ms (View: 40, DB: 44) | 200 OK [http://127.0.0.1/codes/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:09:24) [GET]
+  [4;35;1mCode Load (2.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (undefined method `username' for #<Code:0x99c0090>) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h code.username %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:10:29) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (undefined method `username' for #<Code:0x97e9858>) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h code.username %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:11:12) [GET]
+  [4;35;1mCode Load (0.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+
+ActionView::TemplateError (Couldn't find Code without an ID) on line #23 of app/views/codes/index.html.erb:
+20:     <td><%=h code.tag %></td>
+21:     <td><%=h code.description %></td>
+22:     <td><%=h code.shortdescription %></td>
+23:     <td><%=h authorName(code) %></td>
+24:     <td><%=h code.program_language %></td>
+25:     <td><%=h code.category %></td>
+26:     <td><%=h code.type %></td>
+
+    app/helpers/codes_helper.rb:3:in `authorName'
+    app/views/codes/index.html.erb:23
+    app/views/codes/index.html.erb:16:in `each'
+    app/views/codes/index.html.erb:16
+    app/controllers/codes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (138.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:13:45) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (10.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mProgramLanguage Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (12.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (15.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;36;1mType Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 200ms (View: 97, DB: 80) | 200 OK [http://127.0.0.1/codes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2010-03-23 16:13:51) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCode Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `codes`[0m
+  [4;35;1mCode Load (8.0ms)[0m   [0mSELECT * FROM `codes` WHERE (`codes`.`id` = 4) [0m
+Rendering template within layouts/codes
+Rendering codes/show
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mProgramLanguage Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `program_languages`[0m
+  [4;35;1mProgramLanguage Load (13.0ms)[0m   [0mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;36;1mCategory Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (16.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mType Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `types`[0m
+  [4;35;1mType Load (4.0ms)[0m   [0mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 191ms (View: 68, DB: 84) | 200 OK [http://127.0.0.1/codes/4]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:16:45) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (5.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 157ms (View: 73, DB: 58) | 200 OK [http://127.0.0.1/codes]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#new (for 127.0.0.1 at 2010-03-23 16:16:46) [GET]
+  [4;35;1mCode Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+Rendering template within layouts/codes
+Rendering codes/new
+Completed in 107ms (View: 85, DB: 7) | 200 OK [http://127.0.0.1/codes/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CodesController#index (for 127.0.0.1 at 2010-03-23 16:20:39) [GET]
+  [4;36;1mCode Load (0.0ms)[0m   [0;1mSELECT * FROM `codes` [0m
+Rendering template within layouts/codes
+Rendering codes/index
+  [4;35;1mCode Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `codes`[0m
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mProgramLanguage Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `program_languages`[0m
+  [4;36;1mProgramLanguage Load (6.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (8.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 5) [0m
+  [4;35;1mType Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mType Load (5.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `program_languages` WHERE (`program_languages`.`id` = 1) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `types` WHERE (`types`.`id` = 1) [0m
+Completed in 127ms (View: 57, DB: 51) | 200 OK [http://127.0.0.1/codes]
