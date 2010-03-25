@@ -1,4 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+  
+  map.root :controller => "profiles"
+  
   map.resources :code_replies
 
   map.resources :comments

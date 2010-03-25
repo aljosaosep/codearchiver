@@ -1,7 +1,11 @@
 class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.xml
+  
+  layout :default.to_s
+  
   def index
+    
     @profiles = Profile.all
 
     respond_to do |format|
