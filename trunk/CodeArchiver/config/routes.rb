@@ -1,7 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
-  
-  map.root :controller => "profiles"
-  
+  map.signup 'signup', :controller => 'users', :action => 'new'
+  map.logout 'logout', :controller => 'sessions', :action => 'destroy'
+  map.login 'login', :controller => 'sessions', :action => 'new'
+  map.resources :sessions
+
+  map.resources :users
+
+  map.signup 'signup', :controller => 'users', :action => 'new'
+  map.logout 'logout', :controller => 'sessions', :action => 'destroy'
+  map.login 'login', :controller => 'sessions', :action => 'new'
+  map.resources :sessions
+
+  map.resources :users
+
   map.resources :code_replies
 
   map.resources :comments
@@ -20,11 +31,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :profiles
 
-  map.resources :users
+#  map.resources :users
 
-  map.resources :users
+ # map.resources :users
 
-  map.resources :users
+  #map.resources :users
 
   map.resources :subcategories
 
