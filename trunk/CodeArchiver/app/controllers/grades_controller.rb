@@ -1,6 +1,7 @@
 class GradesController < ApplicationController
   # GET /grades
   # GET /grades.xml
+  layout :default.to_s
   def index
     @grades = Grade.all
 

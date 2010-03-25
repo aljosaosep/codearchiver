@@ -1,6 +1,7 @@
 class ProgramLanguagesController < ApplicationController
   # GET /program_languages
   # GET /program_languages.xml
+  layout :default.to_s
   def index
     @program_languages = ProgramLanguage.all
 

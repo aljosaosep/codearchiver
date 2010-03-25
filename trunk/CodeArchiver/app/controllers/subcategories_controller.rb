@@ -1,6 +1,7 @@
 class SubcategoriesController < ApplicationController
   # GET /subcategories
   # GET /subcategories.xml
+  layout :default.to_s
   def index
     @subcategories = Subcategory.all
 

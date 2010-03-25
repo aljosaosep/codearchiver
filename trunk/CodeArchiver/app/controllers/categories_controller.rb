@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.xml
+  layout :default.to_s
   def index
     @categories = Category.all
 
