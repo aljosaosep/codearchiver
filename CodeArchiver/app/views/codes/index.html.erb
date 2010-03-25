@@ -1,33 +1,37 @@
-<h1>Listing codes</h1>
+<h1><b><u>LIBRARY:</u></b></h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Code body</th>
-    <th>Tag</th>
-    <th>Description</th>
-    <th>Shortdescription</th>
-    <th>User</th>
-    <th>Program language</th>
-    <th>Category</th>
-    <th>Type</th>
-  </tr>
+<table id="codes_table">
+  <!--<tr>-->
+    <!--<th>Title</th>-->
+    <!--<th>Code body</th>-->
+    <!--<th>Tag</th>-->
+    <!--<th>Description</th>-->
+    <!--<th>Shortdescription</th>-->
+    <!--<th>User</th>-->
+    <!--<th>Program language</th>-->
+    <!--<th>Category</th>-->
+    <!--<th>Type</th>-->
+  <!--</tr>-->
 
 <% @codes.each do |code| %>
+<tr border="solid #bbbbbb 2px">
   <tr>
-    <td><%=h code.title %></td>
-    <td><%=h code.code_body %></td>
-    <td><%=h code.tag %></td>
-    <td><%=h code.description %></td>
-    <td><%=h code.shortdescription %></td>
-    <td><%=h authorName(code) %></td>
-    <td><%=h programLanguageName(code) %></td>
-    <td><%=h code.category %></td>
-    <td><%=h code.type %></td>
-    <td><%= link_to 'Show', code %></td>
-    <td><%= link_to 'Edit', edit_code_path(code) %></td>
-    <td><%= link_to 'Destroy', code, :confirm => 'Are you sure?', :method => :delete %></td>
+  	<td rowspan="2"><b><%=h programLanguageName(code) %></b></td>
+    <td rowspan="2"><b><%=h code.category %></b></td>
+    <td><b><u><!--<%=h code.title %>--><%= link_to code.title, code %></u></b></td>
+    <!--<td><%=h code.code_body %></td>-->
+    <!--<td><%=h code.tag %></td>-->
+    <!--<td><%=h code.description %></td>-->
+    <!--<td><%=h code.shortdescription %></td>-->
+    <td>by <b><u><%=h authorName(code) %></u></b></td>
+    <!--<td><%=h code.type %></td>-->
+    <td rowspan="2"><%= link_to 'Edit', edit_code_path(code) %></td>
+    <td rowspan="2"><%= link_to 'Destroy', code, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  <tr>
+    <td colspan="2">Short description: <%=h code.shortdescription %></td>
+  </tr>
+</tr>
 <% end %>
 </table>
 

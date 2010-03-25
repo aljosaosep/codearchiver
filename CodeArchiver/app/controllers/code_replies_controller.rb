@@ -1,6 +1,7 @@
 class CodeRepliesController < ApplicationController
   # GET /code_replies
   # GET /code_replies.xml
+  layout :default.to_s
   def index
     @code_replies = CodeReply.all
 

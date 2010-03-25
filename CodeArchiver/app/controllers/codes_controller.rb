@@ -1,6 +1,7 @@
 class CodesController < ApplicationController
   # GET /codes
   # GET /codes.xml
+  layout :default.to_s
   def index
     @codes = Code.all
 

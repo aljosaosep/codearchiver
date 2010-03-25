@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
+  layout :default.to_s
   def index
     @comments = Comment.all
 

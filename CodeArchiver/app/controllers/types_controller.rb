@@ -1,6 +1,7 @@
 class TypesController < ApplicationController
   # GET /types
   # GET /types.xml
+  layout :default.to_s
   def index
     @types = Type.all
 
