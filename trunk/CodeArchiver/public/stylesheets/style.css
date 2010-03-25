@@ -1,0 +1,43 @@
+#wrapper {
+	width: 1000px;
+	height: auto;
+	border: 5px red solid;
+	margin: 0 auto;
+	
+}
+
+#wrapper #sidebar {
+	width: 150px;
+	background-color: gray;
+	float: left;
+	text-align: center;
+}
+
+	#wrapper #sidebar #slika {
+		width: 150px;
+		height: 150px;
+		background-color: yellow;
+	}
+	
+	#wrapper #sidebar a {
+		padding-top: 20px;
+		display: block;
+		width: 150px;
+		height: 30px;
+		background-color: yellow;
+		color: black;
+		text-decoration: none;
+	}
+	
+	#wrapper #sidebar a:hover {
+		background-color: #FF3355;
+		color: black;
+		text-decoration: none;	
+	}
+
+#wrapper #main {
+	width: 850px;
+	background-color: green;
+	float: left;
+	text-align: center;
+}
