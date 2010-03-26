@@ -13,5 +13,13 @@ module CodesHelper
     return ProgramLanguage.find(thisCode.program_language_id).language_name
   end
   
+   # Returns Category as string
+  # Input: code class
+  # Output: Category name
+  def categoryName(thisCode)
+    return Category.find(thisCode.category_id).name
+  end
+  
+  
   
 end
