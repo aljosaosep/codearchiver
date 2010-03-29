@@ -51,6 +51,9 @@ end
   # POST /codes.xml
   def create
     @code = Code.new(params[:code])
+	# TODO: check if user is NOT logged in!!!! 
+	@code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
+
 
     respond_to do |format|
       if @code.save
