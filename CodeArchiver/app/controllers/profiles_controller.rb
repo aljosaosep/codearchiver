@@ -17,8 +17,8 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.xml
   def show
-    @profile = Profile.find(params[:id])
-
+    #@profile = Profile.find(params[:id])
+    @profile = Profile.find(:first, :conditions => {:user_id => session[:user_id]} )
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @profile }      

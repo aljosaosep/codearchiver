@@ -2,7 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "main"
  
- 
+  map.profile 'profile', :controller => 'profiles', :action => 'show'
+  
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'

@@ -20,6 +20,13 @@ module CodesHelper
     return Category.find(thisCode.category_id).name
   end
   
+  # Returns Type as string
+  # Input: code class
+  # Output: Type name
+  def typeName(thisCode)
+    return Type.find(thisCode.type_id).name
+  end
+  
   
   
 end
