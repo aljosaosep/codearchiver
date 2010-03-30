@@ -26,7 +26,8 @@ class CommentsController < ApplicationController
   # GET /comments/new.xml
   def new
     @comment = Comment.new
-
+    @comment.user_id = session[:user_id]
+    @comment.save
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @comment }
