@@ -25,22 +25,22 @@
 
 <p>
   <b>User:</b>
-  <%=h authorName(@code) %>
+  <%=h @code.getAuthorName %>
 </p>
 
 <p>
   <b>Program language:</b>
-  <%=h programLanguageName(@code) %>
+  <%=h @code.getProgLangName %>
 </p>
 
 <p>
   <b>Category:</b>
-  <%=h categoryName(@code) %>
+  <%=h @code.getCategoryName %>
 </p>
 
 <p>
   <b>Type:</b>
-  <%=h typeName(@code) %>
+  <%=h @code.getTypeName %>
 </p>
 
 

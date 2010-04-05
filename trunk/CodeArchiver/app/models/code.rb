@@ -18,4 +18,30 @@ class Code < ActiveRecord::Base
   has_many :grades
   has_one :code_replies
   has_many :comments
+
+	# Next five methods added by Aljosa 5.4.10
+
+  	# Returns author's name as string
+  	# Output: name
+	def getAuthorName
+		return User.find(self.user_id).username
+	end
+
+   	# Returns Category as string
+  	# Output: Category name
+	def getCategoryName
+		return Category.find(self.user_id).name
+	end
+
+  	# Returns programLanguage as string
+  	# Output: programLanguage name
+	def getProgLangName
+		return ProgramLanguage.find(self.user_id).language_name
+	end
+
+  	# Returns Type as string
+  	# Output: Type name
+	def getTypeName
+		return Type.find(self.user_id).name
+	end
 end
