@@ -4,6 +4,10 @@ ActionController::Routing::Routes.draw do |map|
  
   map.profile 'profile', :controller => 'profiles', :action => 'show'
   
+  #6.4.2010
+  map.users 'users/:username', :controller => 'users', :action => 'show'
+ # map.users.connect ':controller/:action/:username'
+  
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'

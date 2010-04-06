@@ -35,19 +35,19 @@ class Code < ActiveRecord::Base
    	# Returns Category as string
   	# Output: Category name
 	def getCategoryName
-		return Category.find(self.user_id).name
+		return Category.find(self.category_id).name
 	end
 
   	# Returns programLanguage as string
   	# Output: programLanguage name
 	def getProgLangName
-		return ProgramLanguage.find(self.user_id).language_name
+		return ProgramLanguage.find(self.program_language_id).language_name
 	end
 
   	# Returns Type as string
   	# Output: Type name
 	def getTypeName
-		return Type.find(self.user_id).name
+		return Type.find(self.type_id).name
 	end
 
 	##########################################
@@ -64,18 +64,18 @@ class Code < ActiveRecord::Base
    	# Returns Category obj
   	# Output: obj
 	def getCategory
-		return Category.find(self.user_id)
+		return Category.find(self.category_id)
 	end
 
   	# Returns programLanguage obj
   	# Output: obj
 	def getProgLang
-		return ProgramLanguage.find(self.user_id)
+		return ProgramLanguage.find(self.program_language_id)
 	end
 
   	# Returns Type obj
   	# Output: obj
 	def getType
-		return Type.find(self.user_id)
+		return Type.find(self.type_id)
 	end
 end

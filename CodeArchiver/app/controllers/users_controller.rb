@@ -14,4 +14,16 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
+  
+# example users/halozan #06.04.2010 14.00
+  def show
+    @user = User.find(:first, :conditions => {:username => params[:username]})
+    @profile = Profile.find(:first, :conditions => {:user_id => @user.id} )
+   # respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.xml  { render :xml => @profile }      
+   # end
+  end
+  
 end
