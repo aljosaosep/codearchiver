@@ -29,7 +29,7 @@
 }
 
 #wrapper #sidebar a:active{
-	background-color:#1E90FF; 
+	background-color:#6495ED; 
 }
 
 #wrapper #sidebar #slika{
@@ -44,8 +44,8 @@
 }
 
 #wrapper #main tr{
-	 /*border:solid #B0C4DE 2px;*/
-	 background-color:#eeeeee;
+	 /*border:solid #eeeeee 2px;*/
+	 /*background-color:#eeeeee;*/
 }
 
 #wrapper #main td{
@@ -53,8 +53,23 @@
 }
 
 #wrapper #main #codes_table{
-	/*border:solid #bbbbbb 5px;*/
+	width: 90%;
+	background-color: #6495ED;
+	border: solid #eeeeee 2px;
 }
+
+#wrapper #main #codes_table a{
+	text-decoration: none;
+	text-shadow:2 2 2 #B0C4DE;
+	}
+	
+#wrapper #main #codes_table a:hover{
+	text-decoration: underline;
+	}
+
+#wrapper #main #codes_table p{
+	color: #B0C4DE;
+	}
 
 /*#wrapper #main #codes_table #tr1{
 	border:solid #B0C4DE 2px;
