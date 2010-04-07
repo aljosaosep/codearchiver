@@ -1,44 +1,28 @@
 <h1>LIBRARY</h1>
 
-<table id="codes_table">
-  <!--<tr>-->
-    <!--<th>Title</th>-->
-    <!--<th>Code body</th>-->
-    <!--<th>Tag</th>-->
-    <!--<th>Description</th>-->
-    <!--<th>Shortdescription</th>-->
-    <!--<th>User</th>-->
-    <!--<th>Program language</th>-->
-    <!--<th>Category</th>-->
-    <!--<th>Type</th>-->
-  <!--</tr>-->
-
-<% @codes.each do |code| %>
-<tr border="solid #bbbbbb 2px">
-  <tr>
-  <td rowspan="2"><b><%= link_to code.getProgLangName, code.getProgLang %></b></td>
-    <td rowspan="2"><b><%= link_to code.getCategoryName, code.getCategory %></b></td>
-
-
-    <td><b><u><!--<%=h code.title %>--><%= link_to code.title, code %></u></b></td>
-    <!--<td><%=h code.code_body %></td>-->
-    <!--<td><%=h code.tag %></td>-->
-    <!--<td><%=h code.description %></td>-->
-    <!--<td><%=h code.shortdescription %></td>-->
-	<!--<td>by <b><u><%= link_to code.getAuthorName, :controller => "users", :action => "show", :username => code.getAuthorName %></u></b></td>-->
-	<td>by <b><u><%= link_to code.getAuthorName, user_path(code.getAuthorName) %></u></b></td>
-
-    <!--<td><%=h code.type %></td>-->
-    <td rowspan="2"><%= link_to 'Edit', edit_code_path(code) %></td>
-    <td rowspan="2"><%= link_to 'Destroy', code, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-  <tr>
-    <td colspan="2"><%=h code.shortdescription %></td>
-  </tr>
-</tr>
-<% end %>
+<table style="width: 100%">
+	<tr>
+		<td>
+			<% @codes.each do |code| %>
+			<table  id="codes_table">
+  				<tr>
+					<td style="width: 75%">
+						<b><u><!--<%=h code.title %>--><%= link_to code.title, code %></u></b> 
+						by 
+						<b><u><%= link_to code.getAuthorName, user_path(code.getAuthorName) %></u></b>
+						<br />
+						<p><%=h code.shortdescription %></p>
+					</td>
+  					<td style="width: 5%; background-color: orange"><b><%= link_to code.getProgLangName, code.getProgLang %></b></td>
+   				 	<td style="width: 10%; background-color: orange"><b><%= link_to code.getCategoryName, code.getCategory %></b></td>	
+   			 		<td style="width: 5%; background-color: orange"><%= link_to 'Edit', edit_code_path(code) %></td>
+    				<td style="width: 5%; background-color: orange"><%= link_to 'Destroy', code, :confirm => 'Are you sure?', :method => :delete %></td>
+  				</tr>
+			<% end %>
+			</table>
+		</td>
+	</tr>
 </table>
 
 <br />
-
 <%= link_to 'New code', new_code_path %>
