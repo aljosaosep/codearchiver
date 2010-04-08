@@ -4,19 +4,17 @@
 	<tr>
 		<td>
 			<% @codes.each do |code| %>
-			<table  id="codes_table">
+			<table  class="codes_table">
   				<tr>
-					<td style="width: 75%">
-						<b><u><!--<%=h code.title %>--><%= link_to code.title, code %></u></b> 
+					<td style="width: 80%">
+						<%= link_to code.title, code %> 
 						by 
-						<b><u><%= link_to code.getAuthorName, user_path(code.getAuthorName) %></u></b>
+						<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
 						<br />
 						<p><%=h code.shortdescription %></p>
 					</td>
-  					<td style="width: 5%; background-color: orange"><b><%= link_to code.getProgLangName, code.getProgLang %></b></td>
-   				 	<td style="width: 10%; background-color: orange"><b><%= link_to code.getCategoryName, code.getCategory %></b></td>	
-   			 		<td style="width: 5%; background-color: orange"><%= link_to 'Edit', edit_code_path(code) %></td>
-    				<td style="width: 5%; background-color: orange"><%= link_to 'Destroy', code, :confirm => 'Are you sure?', :method => :delete %></td>
+  					<td class="codes_table_td" style="width: 10%;"><%= link_to code.getProgLangName, code.getProgLang %></td>
+   				 	<td class="codes_table_td" style="width: 10%;"><%= link_to code.getCategoryName, code.getCategory %></td>	
   				</tr>
 			<% end %>
 			</table>
