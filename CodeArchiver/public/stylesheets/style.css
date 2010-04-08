@@ -22,6 +22,7 @@
 			display:block;
 			color:black;
 			text-decoration:none;
+			margin: 0 auto;
 		}
 
 		#wrapper #sidebar a:hover{
@@ -44,25 +45,27 @@
 			float:right;
 	}
 
-		/* code/index in profile/show */		
+/* code/index in profile/show */		
 		#wrapper #main .codes_table {
 			width: 100%;
-			background-color: #6495ED;
+			background-color: white;
 			border: solid #eeeeee 2px;
 		}
 
 			#wrapper #main .codes_table td {
-				background-color: #eeeeee;
+				background-color: white;
 			}
 			
 			#wrapper #main .codes_table td.codes_table_td {
-				background-color: orange;
+				background-color: #eeeeee;
 				text-align: center;
+				font-size: large;
 			}
 
 			#wrapper #main .codes_table a{
 				text-decoration: none;
 				color: blue;
+				font-size: large;
 			}
 
 		
@@ -73,5 +76,6 @@
 		}
 
 		#wrapper #main .codes_table p{
-			color: #B0C4DE;
+			color: #B0C444;
+			font-size: small;
 		}
