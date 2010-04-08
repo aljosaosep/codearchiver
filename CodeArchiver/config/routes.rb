@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "main"
  
+  
   map.profile 'profile', :controller => 'profiles', :action => 'show'
   
   #6.4.2010
@@ -15,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-  map.signup 'signup', :controller => 'users', :action => 'new'
+  map.users 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.resources :sessions
