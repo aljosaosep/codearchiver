@@ -5,6 +5,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.profile 'profile', :controller => 'profiles', :action => 'show'
   
+  #dodano za edit 8.4.2010
+  map.profile 'profile/:id,', :controller => 'profiles', :action => 'edit'
+  
   #6.4.2010
   map.users 'users/:username', :controller => 'users', :action => 'show'
  # map.users.connect ':controller/:action/:username'
