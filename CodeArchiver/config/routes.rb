@@ -46,6 +46,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :profiles
 
+	map.resources :code_list
+
 #  map.resources :users
 
  # map.resources :users
