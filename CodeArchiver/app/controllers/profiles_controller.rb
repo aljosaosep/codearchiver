@@ -63,7 +63,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
 
-	puts params[:id]
+	
 
     respond_to do |format|
       if @profile.update_attributes(params[:profile])
