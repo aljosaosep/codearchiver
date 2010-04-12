@@ -62,7 +62,20 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1.xml
   def update
     @profile = Profile.find(params[:id])
-
+    
+    #@profile.email = 
+    puts "ATRIBUTIIIIIIIIIIIIIi"
+    #for @enProfil in @profile.attribute_names
+     # puts @enProfil
+    #end
+    puts "PARAMETRIIIIII"
+    
+  puts "PROFILE = " + @profile.to_s
+  puts "USER = " + @profile.user.to_s
+    #@profile.update_attribute(:email, @profile.email)
+    #@profile.update_attribute(:im, "drekkkk")
+    #@profile.save
+    #puts 'PRVI PARAMETER = '+  params[:IM]
 	
 
     respond_to do |format|
@@ -75,6 +88,7 @@ class ProfilesController < ApplicationController
         format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
       end
     end
+    
   end
 
   # DELETE /profiles/1

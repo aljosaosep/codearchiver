@@ -130,4 +130,10 @@ end
       @codes = Code.find(:all, :conditions => {:category_id => @category.id})
   end
   
+  def language
+      @language = ProgramLanguage.find(:first, :conditions => {:language_name => params[:name]})
+      puts "PROGRAM LANGUAGE ID = "+  @language.id.to_s
+      @codes = Code.find(:all, :conditions => {:program_language_id => @language.id})
+  end
+  
 end
