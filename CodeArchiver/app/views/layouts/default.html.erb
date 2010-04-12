@@ -24,24 +24,10 @@
 			<div id="main">
 				
 				<div id="loginbar">
-					<% if session[:user_id] %>
-					
-						<% form_remote_tag(:update => "loginbar", :url => {:controller => "sessions", :action => "destroy"}) do %>
-					
-							<span>Logged in as: </span><a href="/profile"><%= session[:username] %></a>!
-							<%= submit_tag "Log out", :class => "login_button" %><br/>
-						
-						<% end %>
-						
+					<% if session[:user_id] %> 
+						<%= render :partial => "sessions/create" %>
 					<% else %>
-						<% form_remote_tag(:update => "loginbar", :url => {:controller => "sessions", :action => "create"}) do %>
-							U: <input type="text" name="login">
-							P: <input type="password" name="password">
-							
-							<%= submit_tag "Log in", :class => "login_button" %><br/>
-							<br />Don't have an account? <%= link_to "Sign up!", signup_path %>
-							
-						<% end %>
+						<%= render :partial => "sessions/destroy" %>
 					<% end %>
 				</div>
 				
