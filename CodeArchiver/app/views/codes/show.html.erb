@@ -1,47 +1,79 @@
+
+<!-- Code title -->
 <p>
-  <b>Title:</b>
-  <%=h @code.title %>
+  <h1> <%=h @code.title  %></h1>
 </p>
 
+<!-- Code body -->
 <p>
-  <b>Code body:</b>
+  <b>Code:</b> <br />
   <%=h @code.code_body %>
 </p>
 
+<!--
 <p>
   <b>Tag:</b>
   <%=h @code.tag %>
 </p>
+-->
 
+<!--
 <p>
   <b>Description:</b>
   <%=h @code.description %>
 </p>
+-->
 
+<!--
 <p>
   <b>Shortdescription:</b>
   <%=h @code.shortdescription %>
 </p>
+-->
 
-<p>
-  <b>User:</b>
-  <%=h @code.getAuthorName %>
-</p>
+<!-- CODE INFO -->
+<!-- user, cat, type and stuff, in one line. -->
+<!-- TODO: make links instead of titles -->
+<b>User:</b>
+<%= link_to @code.getAuthorName, user_path(@code.getAuthorName) %>
 
-<p>
-  <b>Program language:</b>
-  <%=h @code.getProgLangName %>
-</p>
+<b>Program language:</b>
+<%=h @code.getProgLangName %>
 
-<p>
-  <b>Category:</b>
-  <%=h @code.getCategoryName %>
-</p>
+<b>Category:</b>
+<%=h @code.getCategoryName %>
 
-<p>
-  <b>Type:</b>
-  <%=h @code.getTypeName %>
-</p>
+<b>Type:</b>
+<%=h @code.getTypeName %>
+
+
+<!-- COMMENT AREA -->
+<!-- Separated with horizontal line at teh moment, TODO: use something nicer :) -->
+<hr />
+	<p>
+		<p> 
+			<b> Comments </b>
+		</p>
+
+			<% @comments.each do |comment| %>
+			<table  class="comments_table">
+  				<tr>
+					<td style="width: 80%">
+						
+						<br />
+						by
+						<%= link_to comment.getAuthorName, user_path(comment.getAuthorName) %> 
+						<br />
+
+						<p><%=h comment.content %></p>
+					</td>
+  		
+  				</tr>
+			<% end %>
+			</table>
+
+	</p>
+<hr />
 
 
 <%= link_to 'Edit', edit_code_path(@code) %> |

@@ -23,12 +23,13 @@ end
   # GET /codes/1
   # GET /codes/1.xml
   def show
-    @code = Code.find(params[:id])
+    	@code = Code.find(params[:id])
+	@comments = @code.getComments
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @code }
-    end
+    	respond_to do |format|
+      		format.html # show.html.erb
+      		format.xml  { render :xml => @code }
+    	end
   end
 
   # GET /codes/new
