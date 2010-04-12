@@ -12,8 +12,9 @@
 		text-align:center;
 	}
 
-		#wrapper #sidebar a {
+		#wrapper #sidebar a.buttons {
 			background-color:white;
+			/*border-bottom:1px #cccccc solid;*/
 			border:1px #cccccc solid;
 			width:100px;
 			height:25px;
@@ -37,13 +38,36 @@
 			background-image:url("/images/sidebar title.png");
 			width:150px;
 			height:150px;
+			cursor: pointer;
 		}
 
 
+
 	#wrapper #main{
-			width:850px;
-			float:right;
+		width:850px;
+		float:right;
+		position: relative;	
 	}
+	
+		#wrapper #main #loginbar {
+			position: absolute;
+			right: 0px;
+			border: 1px #cccccc solid;
+			font-size:xx-small;
+			/*background-color: #eeeeee;*/
+		}
+		
+			#wrapper #main #loginbar input{
+				width: 50px;
+				height: 13px;
+				font-size: xx-small;
+			}
+			
+			#wrapper #main #loginbar .login_button{
+				height:20px;
+				position:relative;
+				top:1px;
+			}
 
 /* code/index in profile/show */		
 		#wrapper #main .codes_table {

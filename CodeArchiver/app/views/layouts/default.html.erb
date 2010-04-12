@@ -10,16 +10,32 @@
 		<div id="wrapper">
 			<div id="sidebar">
 				
-				<div id="slika">
-						
+				<div id="slika" onclick="window.location='/codes'">	
 				</div>
-				<a href="/main">Main</a> 
-				<a href="/codes">Library</a> 
-				<a href="/codes/new">Add Code</a> 
-				<a href="/profile">Profile</a>
-				<a href="/help">Help</a>
+				
+				
+				
+				<a class="buttons" href="/main">Main</a> 
+				<a class="buttons" href="/codes">Library</a> 
+				<a class="buttons" href="/codes/new">Add Code</a> 
+				<a class="buttons" href="/help">Help</a>
 			</div>
 			<div id="main">
+				
+				<div id="loginbar">
+						<% if session[:user_id] %>
+							<span>Logged in as: </span><a href="/profile"><%= session[:username] %></a>!
+							<%= link_to "Log out", :logout, :class => "logout_button" %>
+						<% else %>
+							<% form_tag sessions_path do %>
+								U: <input type="text" name="login">
+								P: <input type="password" name="password">
+								<%= submit_tag "Log in", :class => "login_button" %><br/>
+								Don't have an account? <%= link_to "Sign up!", signup_path %>
+							<%end%>
+						<% end %>
+				</div>
+				
 				<%= yield %>
 			</div>
 			<div style="clear: both"></div>
