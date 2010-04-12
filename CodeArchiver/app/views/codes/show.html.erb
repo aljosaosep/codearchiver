@@ -50,26 +50,26 @@
 <!-- COMMENT AREA -->
 <!-- Separated with horizontal line at teh moment, TODO: use something nicer :) -->
 
+<!-- comment input form -->
 <hr />
 	<!-- create layout for insertion of comment -->
 	<% form_tag :action => 'create_comment' do %>
 		
+		<!-- used for passing this code_id -->
 		<input type="hidden" name="code_id" value="<%= @code.id %>" />	
+
 		<p>
     			<%= text_area :comment, :content %>
 		</p>
 
-
-
 		<p>
     			<%= submit_tag 'Comment' %>
-  		</p>
-
-		
+  		</p>	
 	<% end %>
 
 <hr />
 
+<!-- comments show section -->
 <hr />
 	<p>
 		<p> 
