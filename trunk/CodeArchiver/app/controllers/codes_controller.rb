@@ -97,4 +97,11 @@ end
     end
   end
   
+  
+   def category
+      @category = Category.find(:first, :conditions => {:name => params[:name]})
+      puts "KATEGORIJA ID = "+  @category.id.to_s
+      @codes = Code.find(:all, :conditions => {:category_id => @category.id})
+  end
+  
 end

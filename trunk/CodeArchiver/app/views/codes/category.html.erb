@@ -1,0 +1,36 @@
+<!--<h1>Listing code by categories</h1>
+
+<% for code in @codes -%>
+	<div class="entry">
+		
+		<%= link_to code.title, code %> 
+	</div>
+<% end %>   -->
+
+<h1>Codes by categories</h1>
+
+<table style="width: 100%">
+	<tr>
+		<td>
+			<% @codes.each do |code| %>
+			<table  class="codes_table">
+  				<tr>
+					<td style="width: 80%">
+						<%= link_to code.title, code %> 
+						by 
+						<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
+						<br />
+						<p><%=h code.shortdescription %></p>
+					</td>
+  					<td class="codes_table_td" style="width: 10%;"><%= link_to code.getProgLangName, code.getProgLang %></td>
+   				 	<td class="codes_table_td" style="width: 10%;"><%= link_to code.getCategoryName, code.getCategory %></td>	
+  				</tr>
+			<% end %>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<br />
+<%= link_to 'New code', new_code_path %>
+

@@ -3,10 +3,12 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "main"
  
   
-  map.profile 'profile', :controller => 'profiles', :action => 'show'
+  map.codesbycategory 'codes/category/:name', :controller => 'codes', :action => 'category'
   
-  #dodano za edit 8.4.2010
-  map.profile 'profile/:id,', :controller => 'profiles', :action => 'edit'
+  map.myprofile 'profile', :controller => 'profiles', :action => 'show'
+  
+   #dodano za edit 8.4.2010
+ # map.profile 'profile/:id', :controller => 'profiles', :action => 'edit'
   
   #6.4.2010
   map.users 'users/:username', :controller => 'users', :action => 'show'
@@ -14,14 +16,14 @@ ActionController::Routing::Routes.draw do |map|
   
   
   #new -> create
-  map.signup 'signup', :controller => 'users', :action => 'create'
+  map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.resources :sessions
 
   map.resources :users
 
-  map.users 'signup', :controller => 'users', :action => 'new'
+  map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.resources :sessions
