@@ -46,9 +46,32 @@
 <b>Type:</b>
 <%=h @code.getTypeName %>
 
-
 <!-- COMMENT AREA -->
 <!-- Separated with horizontal line at teh moment, TODO: use something nicer :) -->
+
+<!-- post-comment layout -->
+<hr />
+	<!-- create layout for insertion of comment -->
+	<% form_tag :action => 'create_comment' do %>
+		
+		<input type="hidden" name="code_id" value="<%= @code.id %>" />	
+		<p>
+    			<%= text_area :comment, :content %>
+		</p>
+
+
+
+		<p>
+    			<%= submit_tag 'Comment' %>
+  		</p>
+
+		
+	<% end %>
+
+<hr />
+
+
+<!-- comments display -->
 <hr />
 	<p>
 		<p> 
