@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:notice] = "Logged in successfully."
-      redirect_to_target_or_default(:back)
+      #redirect_to_target_or_default(:back)
       session[:username] = user.username
     else
       flash.now[:error] = "Invalid login or password."
@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:notice] = "You have been logged out."
-    redirect_to :back
+    #redirect_to :back
   end
 end
