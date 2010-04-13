@@ -19,22 +19,12 @@ ActionController::Routing::Routes.draw do |map|
   
   
  # map.users.connect ':controller/:action/:username'
-  
-  
-  #new -> create
-  map.signup 'signup', :controller => 'users', :action => 'new'
-  map.logout 'logout', :controller => 'sessions', :action => 'destroy'
-  map.login 'login', :controller => 'sessions', :action => 'new'
-  map.resources :sessions
-
-  map.resources :users
 
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
-  map.resources :sessions
-
   
+  map.resources :sessions
 
   map.resources :users
 
@@ -56,19 +46,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :profiles
 
-	map.resources :code_list
-
-#  map.resources :users
-
- # map.resources :users
-
-  #map.resources :users
-
-  map.resources :subcategories
-
-  map.resources :subcategories
-
-  map.resources :subcategories
+  map.resources :code_list
 
   map.resources :subcategories
 
@@ -77,6 +55,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :types
 
   map.resources :categories
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

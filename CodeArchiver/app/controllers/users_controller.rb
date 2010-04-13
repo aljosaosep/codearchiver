@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
+  
+  layout :default.to_s
+  
   def new
-    @user = User.new
+    #@user = User.new
   end
   
   def create
