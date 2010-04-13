@@ -2,7 +2,10 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "main"
  
-  
+  #12.04
+  #map.commentform 'code_list/:id', :controller => 'code_list', :action => 'new_comment'  
+  #map.commentform 'code_list/:id', :controller => 'code_list', :action => 'show'  
+
   map.codesbycategory 'codes/category/:name', :controller => 'codes', :action => 'category'
   map.codesbylanguagename 'codes/language/:name', :controller => 'codes', :action => 'language'
   
