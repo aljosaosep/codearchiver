@@ -5,6 +5,9 @@
 	margin: 0 auto;
 }
 
+
+
+/*      ************WRAPPER / SIDEBAR************      */
 	#wrapper #sidebar{
 		width:150px;
 		border:5px white solid;
@@ -43,12 +46,18 @@
 
 
 
+
+/*      ************WRAPPER / MAIN************      */
 	#wrapper #main{
 		width:850px;
 		float:right;
 		position: relative;	
 	}
 	
+	
+	
+	
+/*      ************WRAPPER / MAIN / LOGINBAR ************      */	
 		#wrapper #main #loginbar {
 			position: absolute;
 			right: 0px;
@@ -69,11 +78,30 @@
 				top:1px;
 			}
 
-/* code/index in profile/show */		
+/*      ************WRAPPER / MAIN / LIBRARY************      */   /* code/index in profile/show */	
+		#wrapper #main .legend_tr{
+			background-color: #eeeeee;
+		}
+		
+		#wrapper #main .legend_td{
+			text-align: center;
+		}
+		
+		#wrapper #main a.legend_a{
+			color: #A9A9A9;
+			font-size: large;
+		}
+		
+		#wrapper #main a:hover{
+			text-decoration: underline;
+		}
+
+/*      ************WRAPPER / MAIN / LIBRARY / .codes_table ************      */
 		#wrapper #main .codes_table {
 			width: 100%;
 			background-color: white;
-			border: solid #eeeeee 2px;
+			/*border: solid #eeeeee 2px;*/
+			border-top: solid #eeeeee 2px;
 		}
 
 			#wrapper #main .codes_table td {
@@ -84,6 +112,7 @@
 				background-color: #eeeeee;
 				text-align: center;
 				font-size: large;
+				color: blue;
 			}
 
 			#wrapper #main .codes_table a{
@@ -91,15 +120,28 @@
 				color: blue;
 				font-size: large;
 			}
+			
+			#wrapper #main .codes_table a.codes_table_a{
+				color: #A9A9A9;
+				font-size: small;
+			}
 
-		
+			#wrapper #main .codes_table a:hover{
+				text-decoration: underline;
+				color: blue;
+			}
 
-		#wrapper #main .codes_table a:hover{
-			text-decoration: underline;
-			color: blue;
-		}
-
-		#wrapper #main .codes_table p{
-			color: #B0C444;
-			font-size: small;
-		}
+			#wrapper #main .codes_table p{
+				color: #B0C444;
+				font-size: medium;
+			}
+			
+			#wrapper #main .codes_table p.codes_table_p{
+				color: #A9A9A9;
+				font-size: small;
+			}
+			
+			#wrapper #main .codes_table p.codes_table_p :hover{
+				color: #A9A9A9;
+				text-decoration: underline;
+			}
