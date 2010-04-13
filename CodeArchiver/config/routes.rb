@@ -6,8 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   #map.commentform 'code_list/:id', :controller => 'code_list', :action => 'new_comment'  
   #map.commentform 'code_list/:id', :controller => 'code_list', :action => 'show'  
 
-  map.codesbycategory 'codes/category/:name', :controller => 'codes', :action => 'category'
-  map.codesbylanguagename 'codes/language/:name', :controller => 'codes', :action => 'language'
+  #map.codesbycategory 'codes/category/:name', :controller => 'codes', :action => 'category'
+  #map.codesbylanguagename 'codes/language/:name', :controller => 'codes', :action => 'language'
   
   map.myprofile 'profile', :controller => 'profiles', :action => 'show'
   
