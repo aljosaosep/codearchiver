@@ -4,7 +4,7 @@ class Code < ActiveRecord::Base
   	validates_length_of :title, :maximum=>40
   	validates_presence_of :description
   	validates_presence_of :shortdescription
-  	validates_length_of :shortdescription, :maximum=>50, :message=>": Maximum 50 character allowed"
+  	validates_length_of :shortdescription, :maximum=>200, :message=>": Maximum 200 character allowed"
   	validates_presence_of :user_id
   	validates_presence_of :category_id
   	validates_presence_of :type_id
