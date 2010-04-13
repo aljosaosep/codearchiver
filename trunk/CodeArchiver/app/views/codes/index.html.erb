@@ -1,4 +1,21 @@
-<h1>LIBRARY</h1>
+<h1>Categories</h1>
+
+<p>CATEGORIES</p>
+<% for category in @categories -%>
+	<div class="entry">
+		<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id}, :post => true %> 
+	</div>
+<% end %>
+<br /><br />
+
+<p>LANGUAGE NAMES</p>
+<% for language in @languages -%>
+	<div class="entry">
+		<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :tip => "jezik", :idX => language.id}, :post => true %> 
+	</div>
+<% end %>
+
+<br /><br /><br /><br />
 
 <table style="width: 100%">
 	<tr>

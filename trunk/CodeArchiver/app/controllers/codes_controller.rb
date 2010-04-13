@@ -3,7 +3,29 @@ class CodesController < ApplicationController
   # GET /codes.xml
   layout :default.to_s
   def index
-    @codes = Code.all
+    #@parameterX = params[:parameterX]
+    #if(@parameterX.nil?)
+     # puts "prazen"
+    #else
+    #  puts "=================" + @parameterX.to_s
+    #end
+    
+    @tip = params[:tip]
+    @idX = params[:idX]
+    if @tip == "kategorija"
+      #pomeni da bomo izpisali algoritme z določeno kategorijo
+      #@category = Category.find(:first, :conditions => {:name => params[:name]})
+      @codes = Code.find(:all, :conditions => {:category_id => @idX})
+    elsif @tip == "jezik"
+      @codes = Code.find(:all, :conditions => {:program_language_id => @idX})
+    else
+      @codes = Code.all
+    end
+    
+    @categories = Category.all
+    @languages = ProgramLanguage.all
+    
+    
 
     respond_to do |format|
       format.html # index.html.erb
