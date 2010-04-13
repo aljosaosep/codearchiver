@@ -56,6 +56,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :categories
   
+  map.connect "*anything",
+    :controller => "main",
+    :action => "error404"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 
