@@ -1,0 +1,9 @@
+<% form_remote_tag(:update => "loginbar", :url => {:controller => "sessions", :action => "create"}) do %>
+						
+	U: <input type="text" name="login">
+	P: <input type="password" name="password">
+	
+	<%= submit_tag "Log in", :class => "login_button" %><br/>
+	<br />Don't have an account? <%= link_to "Sign up!", signup_path %>
+	
+<% end %>
