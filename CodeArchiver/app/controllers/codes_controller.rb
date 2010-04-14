@@ -25,30 +25,23 @@ class CodesController < ApplicationController
     @categories = Category.all
     @languages = ProgramLanguage.all
     
-    
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @codes }
     end
   end
 
-
-
-def getAuthorName
- # @author = User.find(@code.user_id).username
- return User.find(@code.user_id).username
-end
-
-
+  def getAuthorName
+   # @author = User.find(@code.user_id).username
+   return User.find(@code.user_id).username
+  end
 
   # GET /codes/1
   # GET /codes/1.xml
   def show
-    	@code = Code.find(params[:id])
-	@comments = @code.getComments
-
-	@newcomment = Comment.new
+    @code = Code.find(params[:id])
+	  @comments = @code.getComments
+    @newcomment = Comment.new
 
     	respond_to do |format|
       		format.html # show.html.erb
@@ -76,14 +69,13 @@ end
   # POST /codes.xml
   def create
     @code = Code.new(params[:code])
-	# TODO: check if user is NOT logged in!!!! 
-	@code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
-
+	  # TODO: check if user is NOT logged in!!!! 
+	  @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
 
     respond_to do |format|
       if @code.save
         flash[:notice] = 'Code was successfully created.'
-        format.html { redirect_to(@code) }
+        format.html { redirect_to("/codes") }
         format.xml  { render :xml => @code, :status => :created, :location => @code }
       else
         format.html { render :action => "new" }
