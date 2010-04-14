@@ -7,19 +7,17 @@
 		<%= javascript_include_tag :defaults %>
 	</head>
 	<body>
-		
 		<div id="wrapper">
 			<div id="sidebar">
-				
-				<div id="slika" onclick="window.location='/codes'">	
-				</div>
-				
-				
-				
-				<a class="buttons" href="/">Main</a> 
-				<a class="buttons" href="/codes">Library</a> 
-				<a class="buttons" href="/codes/new">Add Code</a> 
+				<div id="slika" onclick="window.location='/'"></div>
+				<a class="buttons" href="/">Main</a>
+				<a class="buttons" href="/codes">Library</a>
 				<a class="buttons" href="/help">Help</a>
+				<% if session[:user_id] %>
+					<br />
+					<a class="buttons" href="/codes/new">Add Code</a>
+					<a class="buttons" href="/profile">Profile</a>
+				<% end %>
 			</div>
 			<div id="main">
 				
