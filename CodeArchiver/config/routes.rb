@@ -26,6 +26,8 @@ ActionController::Routing::Routes.draw do |map|
     :controller => 'help',
     :action => 'index'
   
+  map.coddes 'create_comment', :controller => 'codes', :action => 'create_comment'
+  
   map.resources :sessions
 
   map.resources :users
