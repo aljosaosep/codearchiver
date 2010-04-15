@@ -8,9 +8,10 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
+    
     if @user.save
       session[:user_id] = @user.id
-      Profile.create(:user_id => @user.id)
+      Profile.create(:user_id => @user.id, :email => "yes")
       flash[:notice] = "Thank you for signing up! You are now logged in."
       redirect_to new_session_path
     else
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(:first, :conditions => {:username => params[:username]})
     @profile = Profile.find(:first, :conditions => {:user_id => @user.id} )
+    @codes = Code.find(:all, :conditions => {:user_id => @user.id})
    # respond_to do |format|
     #  format.html # show.html.erb
     #  format.xml  { render :xml => @profile }      

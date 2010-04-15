@@ -3,9 +3,13 @@
 <% form_for(@profile) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+  <!--<p>
     <%= f.label :email %><br />
     <%= f.text_field :email %>
+  </p>-->
+  <p>
+  	<%= f.radio_button :email, "yes" %> Yes
+	<%= f.radio_button :email, "no" %> No
   </p>
   <p>
     <%= f.label :IM %><br />
