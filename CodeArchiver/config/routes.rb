@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.login 'login', 
     :controller => 'sessions', 
-    :action => 'new'
+    :action => 'create'
   
   map.help 'help',
     :controller => 'help',

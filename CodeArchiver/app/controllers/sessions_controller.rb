@@ -13,11 +13,14 @@ class SessionsController < ApplicationController
       flash.now[:error] = "Invalid login or password."
       render :action => 'new'
     end
+    
+    redirect_to :back
   end
   
   def destroy
     session[:user_id] = nil
     flash[:notice] = "You have been logged out."
-    #redirect_to :back
+    
+    redirect_to :back
   end
 end
