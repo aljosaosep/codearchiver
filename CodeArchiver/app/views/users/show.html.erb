@@ -2,11 +2,12 @@
   <b>Username:</b>
   <%=h @user.username %>
 </p>
-<p>
-  <b>Email:</b>
-  <%=h @profile.email %>
-</p>
-
+<% if @profile.email=="yes" %>
+	<p>
+	  <b>Email:</b>
+	  <%=h @user.email %>
+	</p>
+<% end %>
 <p>
   <b>Im:</b>
   <%=h @profile.IM %>
@@ -38,5 +39,41 @@
   <%=h @profile.user %>
 </p>
 -->
+
+<table style="width: 100%">
+	<tr>
+		<td>
+			<tr class="legend_tr">
+				<td style="width: 70%"><a class="legend_a">Title</a>/<a class="legend_a">Author</a></td>
+				<td class="legend_td" style="width: 10%"><a class="legend_a">No. of views</a></td>
+				<td class="legend_td" style="width: 10%"><a class="legend_a">No. of comments</a></td>
+				<td class="legend_td" style="width: 10%"><a class="legend_a">Ratio</a></td>		
+			</tr>
+			<% @codes.each do |code| %>
+			<table class="codes_table">
+  				<tr>
+					<td style="width: 70%">
+						<%= link_to code.title, code %> 
+						by 
+						<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
+						<br />
+						<p><%=h code.shortdescription %></p>
+						<p class="codes_table_p">
+							<%= link_to code.getProgLangName, code.getProgLang, :class => "codes_table_a" %>
+							/
+							<%= link_to code.getCategoryName, code.getCategory, :class => "codes_table_a" %>
+						</p>
+					</td>
+					<td class="codes_table_td" style="width: 10%;">#views</td>
+  					<td class="codes_table_td" style="width: 10%;">#comments</td>
+   				 	<td class="codes_table_td" style="width: 10%;">#ratio</td>	
+  				</tr>
+			<% end %>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<br />
 
 
