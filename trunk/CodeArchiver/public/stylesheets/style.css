@@ -3,8 +3,25 @@
 	height:auto;
 	border:5px white solid;
 	margin: 0 auto;
+	
+	font-family: Verdana,Geneva,sans-serif;
+	color:#555555;
+	font-size: 13px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
 }
 
+	#wrapper h1 {
+		font-family: Georgia,"Times New Roman",Times,serif;
+		font-size-adjust: none;
+		font-stretch: normal;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		line-height: normal;
+	}
 
 
 /*      ************WRAPPER / SIDEBAR************      */
@@ -95,6 +112,36 @@
 		#wrapper #main a:hover{
 			text-decoration: underline;
 		}
+
+		#wrapper #main form {
+			font-size: 13px;
+			color: #555555;
+			font-family: Arial,Helvetica,Tahoma,Verdana,Sans-Serif;
+			font-size-adjust: none;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+		}
+
+		#wrapper #main form#new_code  {
+			
+		}
+			
+			#wrapper #main form#new_code input, #wrapper #main form#new_code textarea {
+				width: 300px;
+			} 
+			
+			#wrapper #main form#new_code input#code_submit {
+				width: auto;
+			}
+			
+			#wrapper #main form#new_code textarea#code_description {
+				height: 150px;
+			}
+			
+			#wrapper #main form#new_code textarea#code_code_body  {
+				width: 600px;
+			}
 
 /*      ************WRAPPER / MAIN / LIBRARY / .codes_table ************      */
 		#wrapper #main .codes_table {
