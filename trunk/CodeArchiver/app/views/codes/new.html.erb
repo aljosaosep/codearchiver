@@ -29,20 +29,22 @@
     <%= f.text_field :tag %>
   </p>
   
-  <p>
+  <p id="program_language_id">
   	Program Language<br />
 	<%= select :code, :program_language_id, ProgramLanguage.find(:all).collect{|p| [p.language_name, p.id]} %>
   </p>
   
-  <p>
+  <p id="category_id">
   	Category<br />
 	<%= select :code, :category_id, Category.find(:all).collect{|c| [c.name, c.id]} %>
   </p>
   
-  <p>
+  <input id="code_type_id" name="code[type_id]" type="hidden" value="1" />
+  
+  <!--<p id="type_id">
   	Type<br />
 	<%= select :code, :type_id, Type.find(:all).collect{|t| [t.name, t.id]} %>
-  </p>
+  </p>-->
   
   <p>
     <%= f.submit 'Create' %>
