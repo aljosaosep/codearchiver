@@ -124,14 +124,15 @@
 		}
 
 		#wrapper #main form#new_code  {
-			
+			position: relative;	
 		}
 			
-			#wrapper #main form#new_code input, #wrapper #main form#new_code textarea {
+			#wrapper #main form input, #wrapper #main form textarea {
 				width: 300px;
-			} 
+			}
 			
-			#wrapper #main form#new_code input#code_submit {
+			#wrapper #main form#new_code input#code_submit,
+			#wrapper #main form.edit_profile input#profile_submit {
 				width: auto;
 			}
 			
@@ -142,6 +143,19 @@
 			#wrapper #main form#new_code textarea#code_code_body  {
 				width: 600px;
 			}
+			
+			#wrapper #main form#new_code p#program_language_id {
+				left: 330px;
+				position:absolute;
+				top: 95px;
+			}
+			
+			#wrapper #main form#new_code p#category_id {
+				left: 465px;
+				position: absolute;
+				top: 95px;
+			}
+			
 
 /*      ************WRAPPER / MAIN / LIBRARY / .codes_table ************      */
 		#wrapper #main .codes_table {
