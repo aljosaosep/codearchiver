@@ -1,5 +1,5 @@
 #wrapper {
-	width:1010px;
+	width:980px;
 	height:auto;
 	border:5px white solid;
 	margin: 0 auto;
@@ -66,7 +66,7 @@
 
 /*      ************WRAPPER / MAIN************      */
 	#wrapper #main{
-		width:850px;
+		width:820px;
 		float:right;
 		position: relative;	
 	}
