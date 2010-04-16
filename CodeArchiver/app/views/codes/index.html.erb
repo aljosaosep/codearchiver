@@ -1,29 +1,42 @@
 <h1>Library</h1>
 
-<p>CATEGORIES</p>
-<% for category in @categories -%>
-	<div class="entry">
-		<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id}, :post => true %> 
-	</div>
-<% end %>
+<br/><br/><br/>
+
+<p style="text-align: center;">CATEGORIES</p>
+<table class="library_categories_table">
+	<tr>
+		<% for category in @categories -%>	
+			<td>
+				<div class="entry">
+					<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id}, :post => true, :class => "categories_table_a" %> 
+				</div>
+			</td>
+		<% end %>		
+	</tr>
+</table>
+<br />
+
+<p style="text-align: center;">LANGUAGES</p>
+<table class="library_categories_table">
+	<tr>
+		<% for language in @languages -%>
+			<td>
+				<div class="entry">
+					<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :tip => "jezik", :idX => language.id}, :post => true, :class => "categories_table_a" %> 
+				</div>
+			</td>
+		<% end %>
+	</tr>
+</table>
 <br /><br />
-
-<p>LANGUAGE NAMES</p>
-<% for language in @languages -%>
-	<div class="entry">
-		<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :tip => "jezik", :idX => language.id}, :post => true %> 
-	</div>
-<% end %>
-
-<br /><br /><br /><br />
 
 <table style="width: 100%">
 	<tr>
 		<td>
 			<tr class="legend_tr">
 				<td style="width: 70%"><a class="legend_a">Title</a>/<a class="legend_a">Author</a></td>
-				<td class="legend_td" style="width: 10%"><a class="legend_a">No. of views</a></td>
-				<td class="legend_td" style="width: 10%"><a class="legend_a">No. of comments</a></td>
+				<td class="legend_td" style="width: 10%"><a class="legend_a">Views</a></td>
+				<td class="legend_td" style="width: 10%"><a class="legend_a">Comments</a></td>
 				<td class="legend_td" style="width: 10%"><a class="legend_a">Ratio</a></td>		
 			</tr>
 			<% @codes.each do |code| %>
@@ -41,9 +54,9 @@
 							<%= link_to code.getCategoryName, code.getCategory, :class => "codes_table_a" %>
 						</p>
 					</td>
-					<td class="codes_table_td" style="width: 10%;">#views</td>
-  					<td class="codes_table_td" style="width: 10%;">#comments</td>
-   				 	<td class="codes_table_td" style="width: 10%;">#ratio</td>	
+					<td class="codes_table_td" style="width: 10%;">999</td>
+  					<td class="codes_table_td" style="width: 10%;">999</td>
+   				 	<td class="codes_table_td" style="width: 10%;">9.9</td>	
   				</tr>
 			<% end %>
 			</table>
@@ -52,4 +65,3 @@
 </table>
 
 <br />
-<%= link_to 'New code', new_code_path %>
