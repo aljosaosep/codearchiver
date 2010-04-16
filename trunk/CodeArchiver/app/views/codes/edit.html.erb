@@ -7,38 +7,38 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
+
+  <p>
+    <%= f.label :shortdescription %><br />
+    <%= f.text_field :shortdescription %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>	
+  
   <p>
     <%= f.label :code_body %><br />
     <%= f.text_area :code_body %>
   </p>
+  
   <p>
     <%= f.label :tag %><br />
     <%= f.text_field :tag %>
   </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+  
+  <p id="program_language_id">
+  	Program Language<br />
+	<%= select :code, :program_language_id, ProgramLanguage.find(:all).collect{|p| [p.language_name, p.id]} %>
   </p>
-  <p>
-    <%= f.label :shortdescription %><br />
-    <%= f.text_area :shortdescription %>
+  
+  <p id="category_id">
+  	Category<br />
+	<%= select :code, :category_id, Category.find(:all).collect{|c| [c.name, c.id]} %>
   </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </p>
-  <p>
-    <%= f.label :program_language %><br />
-    <%= f.text_field :program_language %>
-  </p>
-  <p>
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </p>
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </p>
+  
+  <input id="code_type_id" name="code[type_id]" type="hidden" value="1" />
   <p>
     <%= f.submit 'Update' %>
   </p>
