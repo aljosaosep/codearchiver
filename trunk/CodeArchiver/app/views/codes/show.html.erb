@@ -1,14 +1,52 @@
+<br/><br/><br/><br/>
+<table class="show_table">
+	<tr>
+		<td>
+			<p>
+			  	<h1 class="show_title"> 
+					<%=h @code.title  %>
+			  		<a class="show_title_a">
+			  			<br/>by  
+						<%= link_to @code.getAuthorName, user_path(@code.getAuthorName), :class => "show_title_a2" %>
+					</a>
+				</h1>
+			</p>
+		</td>
+		<td class="show_table_td2">
+			<p>
+				<%=h @code.getProgLangName %>
+				/
+				<%=h @code.getCategoryName %>
+			</p>
+		</td>
+	</tr>
+</table>
 
-<!-- Code title -->
-<p>
-  <h1> <%=h @code.title  %></h1>
-</p>
 
-<!-- Code body -->
-<p>
-  <b>Code:</b> <br />
-  <%=h @code.code_body %>
-</p>
+<table class="show_description">
+	<tr>
+		<td>
+			<p>
+  				<p><b class="show_description_b">Description:</b></p>
+  				<a class="show_description_a"><%=h @code.description %></a>
+			</p>
+		</td>
+	</tr>
+</table>
+
+
+<p><b class="show_code_b">Code:</b></p>
+<table class="show_code">
+	<tr>
+		<td>
+			<p>
+			  <a class="show_code_a"><%=h @code.code_body %></a>
+			</p>
+		</td>
+	</tr>
+</table>
+
+
 
 <!--
 <p>
@@ -17,12 +55,7 @@
 </p>
 -->
 
-<!--
-<p>
-  <b>Description:</b>
-  <%=h @code.description %>
-</p>
--->
+
 
 <!--
 <p>
@@ -34,23 +67,22 @@
 <!-- CODE INFO -->
 <!-- user, cat, type and stuff, in one line. -->
 <!-- TODO: make links instead of titles -->
-<b>User:</b>
-<%= link_to @code.getAuthorName, user_path(@code.getAuthorName) %>
+<!--<b>User:</b>-->
 
-<b>Program language:</b>
-<%=h @code.getProgLangName %>
 
-<b>Category:</b>
-<%=h @code.getCategoryName %>
-
+<!--
 <b>Type:</b>
 <%=h @code.getTypeName %>
-
+-->
 
 <!-- COMMENT AREA -->
 <!-- Separated with horizontal line at teh moment, TODO: use something nicer :) -->
 
 <!-- comment input form -->
+
+
+
+
 <hr />
 	<!-- create layout for insertion of comment -->
 	<% form_tag :action => 'create_comment' do %>
@@ -68,6 +100,9 @@
 	<% end %>
 
 <hr />
+
+
+
 
 <!-- comments show section -->
 <hr />

@@ -96,6 +96,49 @@
 			}
 
 /*      ************WRAPPER / MAIN / LIBRARY************      */   /* code/index in profile/show */	
+
+
+
+/*      ************WRAPPER / MAIN / LIBRARY / LIBRARY_CATEGORIES_TABLE************      */  
+
+		#wrapper #main .library_categories_table{
+			width: 100%;
+		}
+		
+			#wrapper #main .library_categories_table td{
+				text-align: center;
+				width: 10%;
+				border: #cccccc solid 1px;
+				margin: 0 auto;
+			}
+			
+			#wrapper #main .library_categories_table td :hover{
+				background-color: #B0C4DE;
+				color: black;
+			}
+			
+			#wrapper #main .library_categories_table td :active{
+				background-color: #6495ED;
+				color: black;
+			}
+			
+				#wrapper #main .library_categories_table td .categories_table_a{
+					text-decoration: none;
+					color: black;
+				}
+			
+				#wrapper #main .library_categories_table td .categories_table_a :hover{
+					text-decoration: none;
+					color: black;
+				}
+			
+				#wrapper #main .library_categories_table td .categories_table_a :active{
+					text-decoration: none;
+					color: black;
+				}
+		
+		
+/*      ************WRAPPER / MAIN / LIBRARY / LEGEND************      */ 			
 		#wrapper #main .legend_tr{
 			background-color: #eeeeee;
 		}
@@ -106,13 +149,15 @@
 		
 		#wrapper #main a.legend_a{
 			color: #A9A9A9;
-			font-size: large;
+			font-size: small;
 		}
 		
-		#wrapper #main a:hover{
+		#wrapper #main a.legend_a :hover{
 			text-decoration: underline;
 		}
 
+
+/*      ************WRAPPER / MAIN / FORM************      */   
 		#wrapper #main form {
 			font-size: 13px;
 			color: #555555;
@@ -129,6 +174,7 @@
 			
 			#wrapper #main form input, #wrapper #main form textarea {
 				width: 300px;
+				height:100px;
 			}
 			
 			#wrapper #main form#new_code input#code_submit,
@@ -162,7 +208,7 @@
 			width: 100%;
 			background-color: white;
 			/*border: solid #eeeeee 2px;*/
-			border-top: solid #eeeeee 2px;
+			border-top: solid #eeeeee 1px;
 		}
 
 			#wrapper #main .codes_table td {
@@ -170,21 +216,21 @@
 			}
 			
 			#wrapper #main .codes_table td.codes_table_td {
-				background-color: #eeeeee;
+				background-color: #white;
+				/*border: #eeeeee solid 2px;*/
 				text-align: center;
-				font-size: large;
 				color: blue;
 			}
 
 			#wrapper #main .codes_table a{
 				text-decoration: none;
 				color: blue;
-				font-size: large;
+				font-size: medium;
 			}
 			
 			#wrapper #main .codes_table a.codes_table_a{
 				color: #A9A9A9;
-				font-size: small;
+				font-size: xx-small;
 			}
 
 			#wrapper #main .codes_table a:hover{
@@ -194,15 +240,98 @@
 
 			#wrapper #main .codes_table p{
 				color: #B0C444;
-				font-size: medium;
 			}
 			
 			#wrapper #main .codes_table p.codes_table_p{
 				color: #A9A9A9;
-				font-size: small;
+				font-size: xx-small;
 			}
 			
 			#wrapper #main .codes_table p.codes_table_p :hover{
 				color: #A9A9A9;
 				text-decoration: underline;
 			}
+
+			
+/*      ************WRAPPER / MAIN / CODES_SHOW************      */			
+			
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_TITLE************      */
+
+		#wrapper #main .show_table{
+			width: 100%;
+			background-color: #eeeeee;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			padding-left: 10px;
+		}
+		
+			#wrapper #main .show_table td.show_table_td2{
+				text-align: right;
+				color: #555555;
+				padding-right: 10px;
+			}
+
+				#wrapper #main .show_table h1.show_title{
+					color: #6495ED;
+					font-weight: bold;
+				}
+		
+				#wrapper #main .show_table h1.show_title a.show_title_a{
+					color:#555555;
+					font-size: small;
+					font-weight: normal;
+				}
+				
+				#wrapper #main .show_table h1.show_title a.show_title_a :hover{
+					text-decoration: none;
+				}
+		
+				#wrapper #main .show_table h1.show_title a.show_title_a2{
+					color: #6495ED;
+					text-decoration: none;
+					font-size: small;
+				}
+				
+				#wrapper #main .show_table h1.show_title a.show_title_a2 :hover{
+					text-decoration: underline;
+				}
+				
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_DESCRIPTION************      */
+		#wrapper #main .show_description{
+			width: 100%;
+			border: white solid 5px;
+		}
+		
+		#wrapper #main .show_description b.show_description_b{
+			color: #2E58FF;
+			font-weight: bold;
+			font-size: large;
+		}
+
+		#wrapper #main .show_description a.show_description_a{
+			color: black;
+		}
+		
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE************      */		
+		
+		#wrapper #main .show_code{
+			width: 100%;
+		}
+		
+		#wrapper #main b.show_code_b{
+			color: #2E58FF;
+			font-weight: bold;
+			padding-left: 7px;
+			font-size: large;
+		}
+		
+		#wrapper #main .show_code td{
+			background-color: #eeeeee;
+			text-align:center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		
+		#wrapper #main .show_code a.show_code_a{
+			color: black;
+		}
