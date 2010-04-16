@@ -89,14 +89,14 @@
 	<% form_tag :action => 'create_comment' do %>
 		
 		<!-- used for passing this code_id -->
-		<input type="hidden" name="code_id" value="<%= @code.id %>" />	
+		<input type="hidden" name="code_id" value="<%= @code.id %>"/>	
 
 		<p>
-    			<%= text_area :comment, :content %>
+    			<%= text_area :comment, :content, :class => "comment_text_area" %>
 		</p>
 
 		<p>
-    			<%= submit_tag 'Comment', :class => "code_comment_submit" %>
+    			<%= submit_tag 'Comment', :class => "submit_button" %>
   		</p>	
 	<% end %>
 
