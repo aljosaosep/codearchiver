@@ -170,35 +170,29 @@
 			font-weight: normal;
 		}
 
-		#wrapper #main form#new_code  {
+		#wrapper #main form  {
 			position: relative;	
 		}
 			
 			#wrapper #main form input, #wrapper #main form textarea {
 				width: 300px;
-				/*height:100px;*/
 			}
 			
-			#wrapper #main form#new_code input#code_submit,
-			#wrapper #main form.edit_profile input#profile_submit {
-				width: auto;
-			}
-			
-			#wrapper #main form#new_code textarea#code_description {
+			#wrapper #main form textarea#code_description {
 				height: 150px;
 			}
 			
-			#wrapper #main form#new_code textarea#code_code_body  {
+			#wrapper #main form textarea#code_code_body  {
 				width: 600px;
 			}
 			
-			#wrapper #main form#new_code p#program_language_id {
+			#wrapper #main form p#program_language_id {
 				left: 330px;
 				position:absolute;
 				top: 95px;
 			}
 			
-			#wrapper #main form#new_code p#category_id {
+			#wrapper #main form p#category_id {
 				left: 465px;
 				position: absolute;
 				top: 95px;
