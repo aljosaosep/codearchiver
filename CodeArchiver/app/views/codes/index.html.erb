@@ -6,7 +6,7 @@
 <table class="library_categories_table">
 	<tr>
 		<% for category in @categories -%>	
-			<td>
+			<td id="<%= category.name %>" onclick="show_table_onclick(this.id)">
 				<div class="entry">
 					<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id}, :post => true, :class => "categories_table_a" %> 
 				</div>
@@ -14,7 +14,6 @@
 		<% end %>		
 	</tr>
 </table>
-<br />
 
 <p style="text-align: center;">LANGUAGES</p>
 <table class="library_categories_table">
@@ -28,7 +27,7 @@
 		<% end %>
 	</tr>
 </table>
-<br /><br />
+<br />
 
 <table style="width: 100%">
 	<tr>

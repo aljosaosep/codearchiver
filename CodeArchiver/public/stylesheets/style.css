@@ -1,5 +1,5 @@
 #wrapper {
-	width:1050px;
+	width:1010px;
 	height:auto;
 	border:5px white solid;
 	margin: 0 auto;
@@ -109,8 +109,10 @@
 				text-align: center;
 				width: 10%;
 				border: #cccccc solid 1px;
+				padding: 0;
 				margin: 0 auto;
 			}
+			
 			
 			#wrapper #main .library_categories_table td :hover{
 				background-color: #B0C4DE;
@@ -343,4 +345,6 @@
 
 		
 /*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT************      */
-
+        #wrapper #main .comment_text_area{
+        	height: 100px;
+        }
