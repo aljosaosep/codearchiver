@@ -202,6 +202,11 @@
 				top: 95px;
 			}
 			
+			#wrpper #main form input[type="button"]{
+				height: auto;
+				width: auto;
+			}
+			
 
 /*      ************WRAPPER / MAIN / LIBRARY / .codes_table ************      */
 		#wrapper #main .codes_table {
@@ -335,3 +340,11 @@
 		#wrapper #main .show_code a.show_code_a{
 			color: black;
 		}
+
+		
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT************      */
+
+ 		#wrapper #main .code_comment_submit {
+ 			height: auto;
+			width: auto;
+ 		}
