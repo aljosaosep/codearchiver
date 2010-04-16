@@ -202,7 +202,7 @@
 				top: 95px;
 			}
 			
-			#wrpper #main form input[type="submit"]{
+			#wrapper #main form input[type="submit"]{
 				height: auto;
 				width: auto;
 			}
@@ -344,7 +344,3 @@
 		
 /*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT************      */
 
- 		#wrapper #main .submit {
- 			height: auto;
-			width: auto;
- 		}
