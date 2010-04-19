@@ -32,6 +32,10 @@
     <%= f.label :avatar %><br />
     <%= f.text_field :avatar %>
   </p>
+  
+  <p>
+    <%= f.select :listing, {'10' => 10, '20' => 20, '50' => 50, '100' => 100}  %>  	
+  </p>
  <!-- <p>
     <%= f.label :user %><br />
     <%= f.text_field :user %>
