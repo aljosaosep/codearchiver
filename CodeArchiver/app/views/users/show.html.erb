@@ -4,6 +4,10 @@
   <b>Username:</b>
   <%=h @user.username %>
 </p>
+<p>
+  <b>SLIKA:</b>
+  <%= image_tag (@profile.avatar, :size => "100x100") %>
+</p>
 <% if @profile.email=="yes" %>
 	<p>
 	  <b>Email:</b>
