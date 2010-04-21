@@ -1,13 +1,12 @@
-<h1><%=h @user.username %>'s code</h1>
+<p>
+  <%= image_tag (@profile.avatar, :size => "100x100") %>
+</p>
 
 <p>
   <b>Username:</b>
   <%=h @user.username %>
 </p>
-<p>
-  <b>SLIKA:</b>
-  <%= image_tag (@profile.avatar, :size => "100x100") %>
-</p>
+
 <% if @profile.email=="yes" %>
 	<p>
 	  <b>Email:</b>
@@ -39,7 +38,7 @@
   <%=h @profile.avatar %>
 </p>-->
 
-
+<h1><%=h @user.username %>'s code</h1>
 
 <table style="width: 100%">
 	<tr>

@@ -43,6 +43,38 @@ class CodesController < ApplicationController
 	  @comments = @code.getComments
     @newcomment = Comment.new
 
+    #profile potrebujemo za prikaz avatarjev ob komentarjih
+    @profile = Profile.find(:first, :conditions => {:user_id => @code.user_id})
+  
+    #grades potrebujemo ker moramo imeti zbrane vse ocene za posamezno kodo
+    @grades = Grade.find(:all , :conditions => {:code_id => @code.id})
+    
+    @gradesPlus = 0
+    @gradesMinus = 0
+    for grade in @grades
+      if grade.value == 1
+        @gradesPlus+=1
+      else
+        @gradesMinus+=1
+      end
+    end
+    
+    puts "SEEEEEEEESSSSSIIIIOOOONNNN " + session[:user_id].to_s
+    puts @gradesPlus.to_s
+    puts @gradesMinus.to_s
+    #gradeUser potrebujemo zato da bomo vedeli kaksno oceno je prijavljeni uporabnik ze podal
+    @gradeUser = 0
+    if session[:user_id]!=nil
+      @gradeUser = Grade.find(:first, :conditions => {:code_id => @code.id, :user_id => session[:user_id]})
+      if @gradeUser == nil
+        @gradeUser=0
+      else
+          @gradeUser = @gradeUser.value
+      end
+    end
+    puts "qlllllllllll"
+    puts @gradeUser.to_s
+    #@gradeUser = Grade.find(:first, conditions => {:code_id => @code.id, :user_id => session[:user_id]})
     	respond_to do |format|
       		format.html # show.html.erb
       		format.xml  { render :xml => @code }
@@ -137,7 +169,31 @@ class CodesController < ApplicationController
         		#	format.xml  { render :xml => @code.errors, :status => :unprocessable_entity }
       			end
 		end
-	end
+end
+
+def new_grade
+  
+end
+
+def gradeChange
+  @code = Code.find(params[:codeXid])
+  @grade = Grade.find(:first, :conditions => {:code_id => @code.id, :user_id => session[:user_id]})
+  @grade.value = params[:valueX]
+  @grade.save
+  redirect_to(:action => 'show', :id => @grade.code_id )
+end
+
+def createGrade
+  @grade = Grade.new
+  @grade.user_id = params[:userXid]
+  @grade.code_id = params[:codeXid]
+  @grade.value = params[:valueX]
+  @grade.save
+  redirect_to(:action => 'show', :id => @grade.code_id )
+end
+
+
+  def 
   
    def category
       @category = Category.find(:first, :conditions => {:name => params[:name]})

@@ -89,4 +89,18 @@ class Code < ActiveRecord::Base
 		return Comment.find(:all, :conditions => {:code_id => self.id})
 	end
 
+  ##########################################
+  # Returning the sum(grades) for code
+  # Aljosa 11.4.10
+  ##########################################
+  def getSumGrades
+    puts "self iD =============" + self.id.to_s
+    @gradeTemp = Grade.find(:all, :conditions => {:code_id => self.id})
+    @sum = 0
+    for gradeX in @gradeTemp
+      @sum+=gradeX.value
+    end
+    puts "VSOTTTTAAAA = "+ @sum.to_s
+    return @sum
+  end
 end

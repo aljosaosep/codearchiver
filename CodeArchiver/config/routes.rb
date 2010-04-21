@@ -28,6 +28,11 @@ ActionController::Routing::Routes.draw do |map|
   
   map.coddes 'create_comment', :controller => 'codes', :action => 'create_comment'
   
+  #20.04.2010
+  map.graddes 'new_grade', :controller => 'codes', :action => 'new_grade'
+  map.gradddes 'gradeChange', :controller => 'codes', :action => 'gradeChange'
+  map.gradeCreate 'createGrade', :controller => 'codes', :action => 'createGrade'
+  
   map.resources :sessions
 
   map.resources :users

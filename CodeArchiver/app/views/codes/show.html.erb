@@ -74,6 +74,26 @@
 
 <!-- comment input form -->
 
+<hr />
+	<p>
+		<%= @gradesPlus %> + <%= @gradesMinus %> -
+	</p>
+
+<hr />
+
+<hr />
+	<p>
+		<% if @gradeUser == 0 %>		
+			<%= link_to "I like", :controller => "codes", :action => "createGrade", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+			<%= link_to "I dont like", :controller => "codes", :action => "createGrade", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+		<% elsif @gradeUser == 1 %>
+			I already like this code <%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+		<% elsif @gradeUser == -1 %>
+			I dont like this code <%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+		<% end %>
+	</p>
+
+<hr />
 
 
 
@@ -114,7 +134,7 @@
 						by
 						<%= link_to comment.getAuthorName, user_path(comment.getAuthorName) %> 
 						<br />
-
+						<%= image_tag (@profile.avatar, :size => "50x50") %>
 						<p><%=h comment.content %></p>
 					</td>
   		
