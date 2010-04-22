@@ -41,15 +41,26 @@
 	<body>
 		<div id="wrapper">
 			<div id="sidebar">
-				<div id="slika" onclick="window.location='/'"></div>
-				<a class="buttons" href="/">Main</a>
-				<a class="buttons" href="/codes">Library</a>
-				<a class="buttons" href="/help">Help</a>
-				<% if session[:user_id] %>
-					<br />
-					<a class="buttons" href="/codes/new">Add Code</a>
-					<a class="buttons" href="/profile">Profile</a>
-				<% end %>
+				<img id="slika" onclick="window.location='/'"></img>
+				<ul>
+					<li>
+						<a class="buttons" href="/">Main</a>
+					</li>
+					<li>
+						<a class="buttons" href="/codes">Library</a>
+					</li>
+					<li>
+						<a class="buttons" href="/help">Help</a>
+					</li>
+						<% if session[:user_id] %>
+							<li>
+								<a class="buttons" href="/codes/new">Add Code</a>
+							</li>
+							<li>
+								<a class="buttons" href="/profile">Profile</a>
+							</li>
+						<% end %>
+				</ul>
 			</div>
 			<div id="main">
 				
