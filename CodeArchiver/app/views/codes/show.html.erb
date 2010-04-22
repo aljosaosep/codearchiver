@@ -74,77 +74,78 @@
 
 <!-- comment input form -->
 
-<hr />
-	<p>
-		<%= @gradesPlus %> + <%= @gradesMinus %> -
-	</p>
+<br/><br/><br/>
 
-<hr />
-
-<hr />
-	<p>
-		<% if @gradeUser == 0 %>		
-			<%= link_to "I like", :controller => "codes", :action => "createGrade", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
-			<%= link_to "I dont like", :controller => "codes", :action => "createGrade", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
-		<% elsif @gradeUser == 1 %>
-			I already like this code <%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
-		<% elsif @gradeUser == -1 %>
-			I dont like this code <%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
-		<% end %>
-	</p>
-
-<hr />
-
-
-
-<hr />
-	<!-- create layout for insertion of comment -->
-	<% form_tag :action => 'create_comment' do %>
+<table  class="show_code_rateandcomment">
+	<tr>	
+	
+		<td class"show_code_makecomment">
+			<!-- create layout for insertion of comment -->
+			<% form_tag :action => 'create_comment' do %>
+				
+				<!-- used for passing this code_id -->
+				<input type="hidden" name="code_id" value="<%= @code.id %>"/>	
 		
-		<!-- used for passing this code_id -->
-		<input type="hidden" name="code_id" value="<%= @code.id %>"/>	
-
-		<p>
-    			<%= text_area :comment, :content, :class => "comment_text_area" %>
-		</p>
-
-		<p>
-    			<%= submit_tag 'Comment', :class => "submit_button" %>
-  		</p>	
-	<% end %>
-
-<hr />
-
-
+				<p>
+		    			<%= text_area :comment, :content, :class => "comment_text_area" %>
+				</p>
+		
+				<p>
+		    			<%= submit_tag 'Comment', :class => "submit_button" %>
+		  		</p>	
+			<% end %>
+		</td>
+	
+		<td class="show_code_ilike">	
+			<p>
+				<%= @gradesPlus %> + <%= @gradesMinus %> -
+			</p>
+		
+		
+		
+		
+			<p>
+				<% if @gradeUser == 0 %>		
+					<%= link_to "I like", :controller => "codes", :action => "createGrade", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+					<%= link_to "I dont like", :controller => "codes", :action => "createGrade", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				<% elsif @gradeUser == 1 %>
+					I already like this code <%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				<% elsif @gradeUser == -1 %>
+					I dont like this code <%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				<% end %>
+			</p>
+		</td>
+	
+	</tr>
+</table>
 
 
 <!-- comments show section -->
-<hr />
-	<p>
-		<p> 
-			<b> Comments </b>
-		</p>
 
+
+		<p> 
+			<b class="show_code_b"> Comments: </b>
+		</p>
+		
+		
+		<table  class="comments_table">
 			<% @comments.each do |comment| %>
-			<table  class="comments_table">
   				<tr>
-					<td style="width: 80%">
-						
-						<br />
-						by
-						<%= link_to comment.getAuthorName, user_path(comment.getAuthorName) %> 
-						<br />
+  					<td class="comments_table_td1" style="width: 10%">
 						<%= image_tag (@profile.avatar, :size => "50x50") %>
+  					</td>
+					<td class="comments_table_td2" style="width:90%">
+						<%= link_to comment.getAuthorName, user_path(comment.getAuthorName), :class => "show_title_a2" %> 
+						said:
+						<br />
 						<p><%=h comment.content %></p>
 					</td>
-  		
   				</tr>
 			<% end %>
-			</table>
+		</table>
 
-	</p>
-<hr />
-
-
+<br/><br/><br/>
+<p>
 <%= link_to 'Edit', edit_code_path(@code) %> |
 <%= link_to 'Back', codes_path %>
+</p>
