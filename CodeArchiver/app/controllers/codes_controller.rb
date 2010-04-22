@@ -8,8 +8,6 @@ class CodesController < ApplicationController
       params[:page] = 1;
     end
     
-    @activeProfile = Profile.find session[:user_id]
-    
     if ( !params[:lang].nil? and !params[:cat].nil? ) 
       @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang]}
     elsif (!params[:lang].nil?)
@@ -20,8 +18,14 @@ class CodesController < ApplicationController
       @codes = Code.find :all
     end
     
-    @numPages = (@codes.length / @activeProfile.listing.to_f).ceil
-    @codes = @codes[(params[:page].to_i-1)*@activeProfile.listing, @activeProfile.listing]
+    @listing = 10
+    if !session[:user_id].nil? then
+      @activeProfile = Profile.find session[:user_id]
+      @listing = Profile.listing    
+    end
+    
+    @numPages = (@codes.length / @listing.to_f).ceil
+    @codes = @codes[(params[:page].to_i-1)*@listing, @listing]
     
     @categories = Category.all
     @languages = ProgramLanguage.all
