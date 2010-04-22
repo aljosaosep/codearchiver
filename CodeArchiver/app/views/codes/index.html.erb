@@ -6,9 +6,9 @@
 <table class="library_categories_table">
 	<tr>
 		<% for category in @categories -%>	
-			<td id="<%= category.name %>" onclick="show_table_onclick(this.id)">
+			<td id="<%= category.name %>">
 				<div class="entry">
-					<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id}, :post => true, :class => "categories_table_a" %> 
+					<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id, :page => 1}, :post => true, :class => "categories_table_a" %> 
 				</div>
 			</td>
 		<% end %>		
@@ -21,7 +21,7 @@
 		<% for language in @languages -%>
 			<td>
 				<div class="entry">
-					<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :tip => "jezik", :idX => language.id}, :post => true, :class => "categories_table_a" %> 
+					<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :tip => "jezik", :idX => language.id, :page => 1}, :post => true, :class => "categories_table_a" %> 
 				</div>
 			</td>
 		<% end %>
@@ -62,5 +62,23 @@
 		</td>
 	</tr>
 </table>
-
 <br />
+
+Page: 
+<% i = 1; while i <= @numPages %>
+   <%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :tip => @tip, :idX => @idX}, :post => true %>
+   <% i += 1 %>
+<% end %>
+
+<!-- #SMART LISTING ... za več kot 20 strani#
+IF listingNum <= 5
+  izpiši vse štiri
+ELSE IF listingNum > 5
+  IF listingNum == fist
+    izpiši prvega in dva za njim
+  ELSE IF listingNum == last
+    ispiši zadnjega in dva pred njim
+  ELSE
+    izpiši prvega, potem tri pike, potem enega pred trenutno aktivnim, trenutno aktivnega in enega za trenutno aktvino, tri pike, in zadnjega
+-->
+

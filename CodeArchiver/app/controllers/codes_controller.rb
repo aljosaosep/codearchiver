@@ -12,14 +12,23 @@ class CodesController < ApplicationController
     
     @tip = params[:tip]
     @idX = params[:idX]
+    #@page = params[:page]
+    
+    if(params[:page].nil?)
+      params[:page] = 1;
+    end
+    
+    @activeProfile = Profile.find session[:user_id]
+    
     if @tip == "kategorija"
-      #pomeni da bomo izpisali algoritme z določeno kategorijo
-      #@category = Category.find(:first, :conditions => {:name => params[:name]})
-      @codes = Code.find(:all, :conditions => {:category_id => @idX})
+      @codes = Code.find(:all, :conditions => {:category_id => @idX}, :limit => @activeProfile.listing, :offset => (@activeProfile.listing * (params[:page].to_i-1)))
+      @numPages = (Code.find(:all, :conditions => {:category_id => @idX}).length / @activeProfile.listing.to_f).ceil
     elsif @tip == "jezik"
-      @codes = Code.find(:all, :conditions => {:program_language_id => @idX})
+      @codes = Code.find(:all, :conditions => {:program_language_id => @idX}, :limit => @activeProfile.listing, :offset => (@activeProfile.listing * (params[:page].to_i-1)))
+      @numPages = (Code.find(:all, :conditions => {:program_language_id => @idX}).length / @activeProfile.listing.to_f).ceil
     else
-      @codes = Code.all
+      @codes = Code.all(:limit => @activeProfile.listing, :offset => (@activeProfile.listing * (params[:page].to_i-1)))
+      @numPages = (Code.all.length / @activeProfile.listing.to_f).ceil
     end
     
     @categories = Category.all
@@ -32,7 +41,6 @@ class CodesController < ApplicationController
   end
 
   def getAuthorName
-   # @author = User.find(@code.user_id).username
    return User.find(@code.user_id).username
   end
 
