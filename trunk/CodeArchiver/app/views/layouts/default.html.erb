@@ -54,7 +54,7 @@
 			<div id="main">
 				
 				<div id="loginbar">
-					<% if session[:user_id] %> 
+					<% if !session[:user_id].nil? %> 
 						<%= render :partial => "sessions/create" %>
 					<% else %>
 						<%= render :partial => "sessions/destroy" %>
