@@ -71,7 +71,9 @@
 		position: relative;	
 	}
 	
-	
+		#wrapper #main .selected {
+			background-color: #B0C4DE;
+		}
 	
 	
 /*      ************WRAPPER / MAIN / LOGINBAR ************      */	
@@ -127,6 +129,7 @@
 				#wrapper #main .library_categories_table td .categories_table_a{
 					text-decoration: none;
 					color: black;
+					display: block;
 				}
 			
 				#wrapper #main .library_categories_table td .categories_table_a :hover{

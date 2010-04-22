@@ -8,7 +8,12 @@
 		<% for category in @categories -%>	
 			<td id="<%= category.name %>">
 				<div class="entry">
-					<%= link_to category.name, {:controller => 'codes', :action => 'index', :tip => "kategorija", :idX => category.id, :page => 1}, :post => true, :class => "categories_table_a" %> 
+					<% if category.id == params[:cat].to_i then %>
+						<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a selected" %>
+					<% else %>
+						<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a" %>
+					<% end %>
+					 
 				</div>
 			</td>
 		<% end %>		
@@ -21,7 +26,11 @@
 		<% for language in @languages -%>
 			<td>
 				<div class="entry">
-					<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :tip => "jezik", :idX => language.id, :page => 1}, :post => true, :class => "categories_table_a" %> 
+					<% if language.id == params[:lang].to_i then %>
+						<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :lang => language.id, :cat => params[:cat], :page => 1}, :post => true, :class => "categories_table_a selected" %>
+					<% else %>
+						<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :lang => language.id, :cat => params[:cat], :page => 1}, :post => true, :class => "categories_table_a" %>
+					<% end %> 
 				</div>
 			</td>
 		<% end %>
@@ -66,9 +75,9 @@
 
 Page: 
 <% i = 1; while i <= @numPages %>
-   <%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :tip => @tip, :idX => @idX}, :post => true %>
-   <% i += 1 %>
-<% end %>
+   <%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :lang => params[:lang], :cat => params[:cat]}, :post => true %>
+   <%  i += 1 %>
+<%  end %>
 
 <!-- #SMART LISTING ... za več kot 20 strani#
 IF listingNum <= 5
