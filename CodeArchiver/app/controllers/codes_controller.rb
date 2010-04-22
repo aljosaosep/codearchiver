@@ -3,33 +3,25 @@ class CodesController < ApplicationController
   # GET /codes.xml
   layout :default.to_s
   def index
-    #@parameterX = params[:parameterX]
-    #if(@parameterX.nil?)
-     # puts "prazen"
-    #else
-    #  puts "=================" + @parameterX.to_s
-    #end
-    
-    @tip = params[:tip]
-    @idX = params[:idX]
-    #@page = params[:page]
-    
+ 
     if(params[:page].nil?)
       params[:page] = 1;
     end
     
     @activeProfile = Profile.find session[:user_id]
     
-    if @tip == "kategorija"
-      @codes = Code.find(:all, :conditions => {:category_id => @idX}, :limit => @activeProfile.listing, :offset => (@activeProfile.listing * (params[:page].to_i-1)))
-      @numPages = (Code.find(:all, :conditions => {:category_id => @idX}).length / @activeProfile.listing.to_f).ceil
-    elsif @tip == "jezik"
-      @codes = Code.find(:all, :conditions => {:program_language_id => @idX}, :limit => @activeProfile.listing, :offset => (@activeProfile.listing * (params[:page].to_i-1)))
-      @numPages = (Code.find(:all, :conditions => {:program_language_id => @idX}).length / @activeProfile.listing.to_f).ceil
+    if ( !params[:lang].nil? and !params[:cat].nil? ) 
+      @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang]}
+    elsif (!params[:lang].nil?)
+      @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang]}
+    elsif (!params[:cat].nil?)
+      @codes = Code.find :all, :conditions => {'category_id' => params[:cat]}
     else
-      @codes = Code.all(:limit => @activeProfile.listing, :offset => (@activeProfile.listing * (params[:page].to_i-1)))
-      @numPages = (Code.all.length / @activeProfile.listing.to_f).ceil
+      @codes = Code.find :all
     end
+    
+    @numPages = (@codes.length / @activeProfile.listing.to_f).ceil
+    @codes = @codes[(params[:page].to_i-1)*@activeProfile.listing, @activeProfile.listing]
     
     @categories = Category.all
     @languages = ProgramLanguage.all
