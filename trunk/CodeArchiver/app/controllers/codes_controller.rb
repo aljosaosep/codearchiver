@@ -21,7 +21,7 @@ class CodesController < ApplicationController
     @listing = 10
     if !session[:user_id].nil? then
       @activeProfile = Profile.find session[:user_id]
-      @listing = Profile.listing    
+      @listing = @activeProfile.listing    
     end
     
     @numPages = (@codes.length / @listing.to_f).ceil
