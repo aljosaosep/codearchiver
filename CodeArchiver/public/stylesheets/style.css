@@ -30,6 +30,7 @@
 		height: 50px;
 		background-color: #336699;
 		text-align:center;
+		position: relative;
 	}
 
 		#wrapper #sidebar p {
@@ -85,8 +86,8 @@
 			color: white;
 			font-size: x-small;
 			position: absolute;
-			right: 160px;
-			top: 20px;
+			right: 10px;
+			top: 11px;
 		}
 		
 			#wrapper #sidebar #loginbar a { 
