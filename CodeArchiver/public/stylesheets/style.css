@@ -131,7 +131,10 @@
 		}
 
 /*      ************WRAPPER / MAIN / LIBRARY************      */   /* code/index in profile/show */	
-
+		#wrapper #main h1.show_title{
+			color: #6495ED;
+			font-weight: bold;
+		}
 
 
 /*      ************WRAPPER / MAIN / LIBRARY / LIBRARY_CATEGORIES_TABLE************      */  
