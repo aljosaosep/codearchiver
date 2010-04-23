@@ -124,11 +124,17 @@
 				</p>
 				<% elsif @gradeUser == 1 %>
 				<p>
-					I already like this code <%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+					I already like this code
+				</p>
+				<p> 
+					<%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
 				</p>
 				<% elsif @gradeUser == -1 %>
 				<p>	
-					I dont like this code <%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+					I dont like this code 
+				</p>
+				<p>
+					<%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
 				</p>
 				<% end %>
 			</p>
