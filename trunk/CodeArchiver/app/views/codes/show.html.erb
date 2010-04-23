@@ -79,7 +79,7 @@
 <table  class="show_code_rateandcomment">
 	<tr>	
 	
-		<td class"show_code_makecomment">
+		<td class="show_code_makecomment">
 			<!-- create layout for insertion of comment -->
 			<% form_tag :action => 'create_comment' do %>
 				
@@ -90,28 +90,46 @@
 		    			<%= text_area :comment, :content, :class => "comment_text_area" %>
 				</p>
 		
-				<p>
+				<p style="padding-left: 110px;">
 		    			<%= submit_tag 'Comment', :class => "submit_button" %>
 		  		</p>	
 			<% end %>
 		</td>
 	
-		<td class="show_code_ilike">	
+		<td class="show_code_ilike">
+			<table class="ilike_table">	
+				<tr>
+					<td>
+						<p>
+							Positive: <%= @gradesPlus %> 
+						</p>
+					</td>
+					<td>
+						<p>
+							Negative: <%= @gradesMinus %>
+						</p>
+					</td>
+				</tr>
+			</table>
+		
+		
+		
 			<p>
-				<%= @gradesPlus %> + <%= @gradesMinus %> -
-			</p>
-		
-		
-		
-		
-			<p>
-				<% if @gradeUser == 0 %>		
+				<% if @gradeUser == 0 %>
+				<p>		
 					<%= link_to "I like", :controller => "codes", :action => "createGrade", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				</p>
+				<p>
 					<%= link_to "I dont like", :controller => "codes", :action => "createGrade", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				</p>
 				<% elsif @gradeUser == 1 %>
+				<p>
 					I already like this code <%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				</p>
 				<% elsif @gradeUser == -1 %>
+				<p>	
 					I dont like this code <%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
+				</p>
 				<% end %>
 			</p>
 		</td>

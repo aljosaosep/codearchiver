@@ -362,5 +362,57 @@
 		
 /*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT************      */
         #wrapper #main .comment_text_area{
-        	height: 100px;
-        }
+	        	height: 100px;
+	        }
+			#wrapper #main .show_code_rateandcomment{
+				width: 100%;
+				background-color: #f5f5f5 !important;
+			}
+	
+			#wrapper #main .show_code_makecomment{
+				width: 50%;
+				padding-left: 20px;
+			}
+	
+	        	#wrapper #main .comment_text_area{
+	        		height: 100px;
+	        	}
+	
+			#wrapper #main .show_code_ilike{
+				width: 50%;
+				text-align: right;
+				padding-right: 50px;
+			}
+			
+				#wrapper #main .show_code_ilike .ilike_table{
+					border: 2px solid white;
+					margin-left: 75%;
+				}
+				
+					#wrapper #main .show_code_ilike .ilike_table td{
+					border: 1px solid #eeeeee;
+					width: 20px;
+					text-align: center;
+				}
+	
+			#wrapper #main .comments_table{
+				width: 90%:
+			}
+	
+				#wrapper #main .comments_table_td1{
+					text-align:center;
+				}
+	
+				#wrapper #main .comments_table_td2{
+					border-top: 2px #eeeeee solid;
+				}
+	
+				#wrapper #main .comments_table a.show_title_a2{
+						color: #6495ED;
+						text-decoration: none;
+						font-size: small;
+					}
+	
+				#wrapper #main .comments_table a.show_title_a2 :hover{
+					text-decoration: underline;
+				}
