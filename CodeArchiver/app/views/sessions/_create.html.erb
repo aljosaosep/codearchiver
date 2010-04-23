@@ -1,4 +1,4 @@
 <% form_tag("/logout") do %>
-	<span>Logged in as: </span><a href="/profile"><%= session[:username] %></a>!
+	<span>Logged in as: </span><a href="/profile"><%= session[:username] %></a>!<br />
 	<%= submit_tag "Log out", :class => "login_button" %><br/>
 <% end %>
