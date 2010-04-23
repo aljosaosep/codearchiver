@@ -135,6 +135,10 @@
 			color: #6495ED;
 			font-weight: bold;
 		}
+		
+		#wrapper #main #show_codes_search{
+			text-align:center;
+		}
 
 
 /*      ************WRAPPER / MAIN / LIBRARY / LIBRARY_CATEGORIES_TABLE************      */  
