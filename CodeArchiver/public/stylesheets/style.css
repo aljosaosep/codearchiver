@@ -37,6 +37,8 @@
 			float: left;
 			margin: 0;
 			font-size: 38px;
+			position: relative;
+			left: 20px;
 		}
 
 		#wrapper #sidebar ul {
@@ -86,6 +88,17 @@
 			right: 160px;
 			top: 20px;
 		}
+		
+			#wrapper #sidebar #loginbar a { 
+				color: #cccccc;
+				text-decoration: none;
+			¸}
+		
+			#wrapper #sidebar #loginbar a:visited { 
+				color: #cccccc;
+				text-decoration: none;
+			}
+
 		
 			#wrapper #sidebar #loginbar input{
 				width: 50px;
