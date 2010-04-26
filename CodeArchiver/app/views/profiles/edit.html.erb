@@ -1,6 +1,6 @@
 <h1 class="show_title">Editing profile</h1>
 
-<% form_for(@profile) do |f| %>
+<% form_for @profile, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <!--<p>
@@ -29,7 +29,13 @@
     <%= f.text_field :webpage %>
   </p>
   <p>
-    <%= f.label :avatar %><br />
+
+
+    
+    <%= f.file_field :uploaded_data %>
+
+	<!-- <%= f.file_field :photo_file_name %> -->
+   <!-- <%= f.label :avatar %><br />
 	<%= f.file_field :uploaded_file %>
     <!-- <%= f.text_field :avatar %> -->
   </p>

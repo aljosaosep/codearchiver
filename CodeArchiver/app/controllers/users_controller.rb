@@ -9,7 +9,8 @@ class UsersController < ApplicationController
       
       if @user.save then
         #session[:user_id] = @user.id
-        Profile.create(:user_id => @user.id, :email => "yes")
+        Profile.create(:user_id => @user.id, :email => "yes", :listing => 10)
+	
         flash[:notice] = "Thank you for signing up! You are now logged in."
         redirect_to "/"
       end      
