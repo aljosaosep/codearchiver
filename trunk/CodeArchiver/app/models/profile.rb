@@ -1,4 +1,7 @@
+# Last edit by Aljosa Apr 26 10
+
 class Profile < ActiveRecord::Base
+  # attachment_fu stuff, for saving the image
   has_attachment :content_type => :image,
                  :storage => :file_system,
                  :max_size => 100.kilobytes,
@@ -6,9 +9,20 @@ class Profile < ActiveRecord::Base
                  :thumbnails => { :thumb => '50x50>' },
                  :processor => 'ImageScience'
 
-	#validates_as_attachment
+  #validates_as_attachment
 
+  # relationships
   belongs_to :user
+
+  # Method returns picture path, if user has uploaded the image or
+  # default_image path if he hasnt
+  def picture_path
+  	if self.filename == nil 
+		return "default.png" # user hasn't uploaded a picture. show default
+	else
+		return public_filename # return user's pic path
+	end
+  end
 
 
 end

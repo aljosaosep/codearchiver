@@ -1,5 +1,7 @@
 <h1 class="show_title">Editing profile</h1>
 
+<%= link_to image_tag(@profile.picture_path, :size => "100x100") %>
+
 <% form_for @profile, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
