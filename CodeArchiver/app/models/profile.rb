@@ -10,6 +10,9 @@ class Profile < ActiveRecord::Base
                  :processor => 'ImageScience'
 
   #validates_as_attachment
+  validates_presence_of :listing
+  validates_presence_of :email
+
 
   # relationships
   belongs_to :user
