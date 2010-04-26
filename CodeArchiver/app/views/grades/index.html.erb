@@ -10,8 +10,8 @@
 <% @grades.each do |grade| %>
   <tr>
     <td><%=h grade.value %></td>
-    <td><%=h grade.user %></td>
-    <td><%=h grade.code %></td>
+    <td><%=h grade.user.username %></td>
+    <td><%=h grade.code.title %></td>
     <td><%= link_to 'Show', grade %></td>
     <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
     <td><%= link_to 'Destroy', grade, :confirm => 'Are you sure?', :method => :delete %></td>

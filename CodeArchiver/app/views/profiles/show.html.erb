@@ -2,6 +2,13 @@
 
 <%= link_to image_tag(@profile.picture_path, :size => "100x100") %>
 
+
+<p>
+  <b>User:</b>
+  <%=h @profile.user.username %>
+</p>
+
+
 <p>
   <b>Email seen to everyone:</b>
   <%=h @profile.email %>
@@ -27,21 +34,17 @@
   <%=h @profile.webpage %>
 </p>
 
-<p>
+<!-- <p>
   <b>Avatar:</b>
   <%=h @profile.avatar %>
 </p>
+-->
 
 <p>
   <b>Codes listing:</b>
   <%=h @profile.listing %>	
 </p>
 
-<!--
-<p>
-  <b>User:</b>
-  <%=h @profile.user %>
-</p>
--->
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %>
