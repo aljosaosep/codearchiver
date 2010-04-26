@@ -155,12 +155,13 @@
 			<% @comments.each do |comment| %>
   				<tr>
   					<td class="comments_table_td1" style="width: 10%">
-						<%= image_tag (@profile.avatar, :size => "50x50") %>
+						<%= image_tag (@profile.public_filename, :size => "50x50") %>
   					</td>
 					<td class="comments_table_td2" style="width:90%">
 						<%= link_to comment.getAuthorName, user_path(comment.getAuthorName), :class => "show_title_a2" %> 
 						said:
 						<br />
+
 						<p><%=h comment.content %></p>
 					</td>
   				</tr>
