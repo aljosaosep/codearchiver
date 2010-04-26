@@ -1,4 +1,6 @@
 class Code < ActiveRecord::Base
+	attr_accessible :title
+
   	validates_presence_of :code_body
   	validates_presence_of :title
   	validates_length_of :title, :maximum=>40

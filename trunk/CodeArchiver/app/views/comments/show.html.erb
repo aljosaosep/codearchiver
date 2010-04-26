@@ -5,12 +5,12 @@
 
 <p>
   <b>User:</b>
-  <%=h User.find(@comment.user_id)%>
+  <%=h User.find(@comment.user_id).username%>
 </p>
 
 <p>
   <b>Code:</b>
-  <%=h @comment.code %>
+  <%=h @comment.code.title %>
 </p>
 
 
