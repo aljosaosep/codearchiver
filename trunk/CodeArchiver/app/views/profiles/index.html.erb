@@ -18,8 +18,8 @@
     <td><%=h profile.company %></td>
     <td><%=h profile.portfolio %></td>
     <td><%=h profile.webpage %></td>
-    <td><%=h profile.avatar %></td>
-    <td><%=h profile.user %></td>
+  <!--  <td><%=h profile.avatar %></td> -->
+    <td><%=h profile.user.username %></td>
     <td><%= link_to 'Show', profile %></td>
     <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
     <td><%= link_to 'Destroy', profile, :confirm => 'Are you sure?', :method => :delete %></td>
