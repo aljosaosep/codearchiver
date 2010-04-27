@@ -3,6 +3,8 @@ class Comment < ActiveRecord::Base
   	belongs_to :code
     validates_presence_of :user_id
     validates_presence_of :code_id
+    validates_presence_of :content
+    validates_length_of :content, :within => 2..100
 
 	##########################################
 	# Obj's name getter methods
