@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     
     if !params[:user].nil?
       @user = User.new(params[:user])
+      @user.group = 0 # set group to default
       
       if @user.save then
         #session[:user_id] = @user.id

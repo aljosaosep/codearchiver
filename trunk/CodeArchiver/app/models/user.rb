@@ -23,7 +23,9 @@ class User < ActiveRecord::Base
     self.password_hash == encrypt_password(pass)
   end
 
-
+  #def loggedIn
+  #   return self.id == session[:user_id]
+  #end	
   
   private
   

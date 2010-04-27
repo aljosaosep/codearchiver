@@ -44,7 +44,10 @@ class CodesController < ApplicationController
   # GET /codes/1.xml
   def show
     @code = Code.find(params[:id])
-	  @comments = @code.getComments
+    @canedit = isCurrentUserAuthorOrAdmin(@code.user_id, session[:user_id])
+
+    
+    @comments = @code.getComments
     @newcomment = Comment.new
 
     #profile potrebujemo za prikaz avatarjev ob komentarjih
@@ -98,15 +101,27 @@ class CodesController < ApplicationController
 
   # GET /codes/1/edit
   def edit
+    # get the code
     @code = Code.find(params[:id])
+
+    # authenticate user
+    unless isCurrentUserAuthorOrAdmin(@code.user_id, session[:user_id]) #@code.user_id != session[:user_id] # is user currently logged in code author?
+       flash[:notice] = "You are not authorised to do that." # he isn't!
+       redirect_to :controller => 'codes', :action => 'show'
+    end
   end
 
   # POST /codes
   # POST /codes.xml
   def create
+    # authenticate user
+    if session[:user_id].nil? then # is user not logged in?
+       flash[:notice] = "You are not logged in."
+       redirect_to :controller => 'sessions', :action => 'create'
+    end
+
     @code = Code.new(params[:code])
-	  # TODO: check if user is NOT logged in!!!! 
-	  @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
+    @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
     
 
     respond_to do |format|
@@ -210,5 +225,15 @@ end
       puts "PROGRAM LANGUAGE ID = "+  @language.id.to_s
       @codes = Code.find(:all, :conditions => {:program_language_id => @language.id})
   end
+
+  #protected
+  #	def isUserOrOwner
+  #	end
+  #   def authorize
+  #      unless User.find_by_id(session[:user_id])
+  #	   flash[:notice] = "Please log in."
+  # 	   redirect_to :controller => 'sessions', :action => 'create'
+  #      end
+  #   end
   
 end

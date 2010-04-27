@@ -170,6 +170,11 @@
 
 <br/><br/><br/>
 <p>
+<!-- link edit, do only if authorised to do so -->
+<% if @canedit == true %>
 <%= link_to 'Edit', edit_code_path(@code) %> |
+<% end %>
+
+<!-- link back -->
 <%= link_to 'Back', codes_path %>
 </p>

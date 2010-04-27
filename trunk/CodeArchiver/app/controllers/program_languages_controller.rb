@@ -1,6 +1,7 @@
 class ProgramLanguagesController < ApplicationController
   # GET /program_languages
   # GET /program_languages.xml
+  before_filter :authorize
   layout :default.to_s
   def index
     @program_languages = ProgramLanguage.all
@@ -83,4 +84,6 @@ class ProgramLanguagesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
 end

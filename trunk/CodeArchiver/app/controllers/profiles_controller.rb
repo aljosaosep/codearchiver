@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.xml
   
   layout :default.to_s
+  #before_filter :authorize
   
   def index
     
@@ -102,4 +103,14 @@ class ProfilesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  #protected
+  #   def authorize
+  #      @profile = Profile.find(:first, :conditions => {:user_id => session[:user_id]}) #Profile.find(params[:id])
+
+  #      unless isCurrentUserAuthor(@profile.user_id, session[:user_id])#User.find_by_id(session[:user_id])
+  #	  flash[:notice] = "You are not authorized to do that." 
+  #	   redirect_to :controller => 'main', :action => 'error404'
+  #      end
+  #   end
 end
