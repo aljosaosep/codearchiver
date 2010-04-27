@@ -1,6 +1,7 @@
 class TypesController < ApplicationController
   # GET /types
   # GET /types.xml
+  before_filter :authorize
   layout :default.to_s
   def index
     @types = Type.all

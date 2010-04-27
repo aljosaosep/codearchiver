@@ -93,7 +93,7 @@ class Code < ActiveRecord::Base
 
   ##########################################
   # Returning the sum(grades) for code
-  # Aljosa 11.4.10
+  # 
   ##########################################
   def getSumGrades
     puts "self iD =============" + self.id.to_s
