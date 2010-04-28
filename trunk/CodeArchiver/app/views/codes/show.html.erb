@@ -78,6 +78,8 @@
 <table  class="show_code_rateandcomment">
 	<tr>	
 	
+
+<% if @cancomment == true %>
 		<td class="show_code_makecomment">
 			<!-- create layout for insertion of comment -->
 			<% form_tag :action => 'create_comment' do %>
@@ -94,6 +96,7 @@
 		  		</p>	
 			<% end %>
 		</td>
+<% end %>
 	
 		<td class="show_code_ilike">
 			<table class="ilike_table">	
