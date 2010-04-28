@@ -16,4 +16,11 @@ class Comment < ActiveRecord::Base
 	def getAuthorName
 		return User.find(self.user_id).username
 	end
+
+ 	# Returns author's picture
+  	# Output: pic path
+	def getPicturePath
+		#return User.find(self.user_id)
+		return Profile.find(:first, :conditions => {:user_id => self.user_id}).picture_path
+	end
 end
