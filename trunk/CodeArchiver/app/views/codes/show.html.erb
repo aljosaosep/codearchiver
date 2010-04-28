@@ -85,7 +85,7 @@
 <% end%>
 <br/><br/><br/>
 
-<% if @CodeReplies != -1%>
+<% if @CodeReplies.length !=0%>
 	<p>This code has respones : 
 		<% for codeR in @CodeReplies %>
 			<%= link_to codeR.title, codeR %>
