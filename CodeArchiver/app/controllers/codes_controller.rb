@@ -45,6 +45,7 @@ class CodesController < ApplicationController
   def show
     @code = Code.find(params[:id])
     @canedit = isCurrentUserAuthorOrAdmin(@code.user_id, session[:user_id])
+    @cancomment = isUserLoggedIn(session[:user_id])
 
     
     @comments = @code.getComments
