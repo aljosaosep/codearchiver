@@ -42,6 +42,8 @@
   
   <input id="code_type_id" name="code[type_id]" type="hidden" value="1" />
   
+  <%= hidden_field_tag :response, params[:response] %>
+  <%= hidden_field_tag :parentID, params[:parentID] %>
   <!--<p id="type_id">
   	Type<br />
 	<%= select :code, :type_id, Type.find(:all).collect{|t| [t.name, t.id]} %>
