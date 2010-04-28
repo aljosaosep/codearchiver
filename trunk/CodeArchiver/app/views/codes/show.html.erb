@@ -79,7 +79,26 @@
 	<tr>	
 	
 
+<br/><br/><br/>
+<% if @CodeReply != -1%>
+<p>This code is reply to <%= link_to @CodeReply.title, @CodeReply %></p>
+<% end%>
+<br/><br/><br/>
+
+<% if @CodeReplies != -1%>
+	<p>This code has respones : 
+		<% for codeR in @CodeReplies %>
+			<%= link_to codeR.title, codeR %>
+		<% end%>
+	</p>
+<% end %>
+<br/><br/><br/>
+
+
 <% if @cancomment == true %>
+
+<%= link_to 'AddResponse', :controller => 'codes', :action => 'new', :response => '1', :parentID => @code.id %>
+
 		<td class="show_code_makecomment">
 			<!-- create layout for insertion of comment -->
 			<% form_tag :action => 'create_comment' do %>

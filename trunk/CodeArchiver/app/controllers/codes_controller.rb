@@ -46,7 +46,23 @@ class CodesController < ApplicationController
     @code = Code.find(params[:id])
     @canedit = isCurrentUserAuthorOrAdmin(@code.user_id, session[:user_id])
     @cancomment = isUserLoggedIn(session[:user_id])
-
+    
+    @isReplyToCode = CodeReply.find(:first, :conditions => {:child_id => @code.id})
+    @CodeReply = -1
+    if @isReplyToCode != nil
+      #is reply to other code
+      @CodeReply = Code.find(:first, :conditions => {:id => @isReplyToCode.code_id})
+    end
+    
+    @CodeHasReplies = CodeReply.find(:all, :conditions => {:code_id => @code.id})
+    @CodeReplies = -1
+    if @CodeHasReplies != nil
+      @codes = Array.new
+      for cr in @CodeHasReplies
+          @codes << Code.find(cr.child_id)
+      end     
+      @CodeReplies = @codes         
+    end
     
     @comments = @code.getComments
     @newcomment = Comment.new
@@ -67,7 +83,6 @@ class CodesController < ApplicationController
       end
     end
     
-    puts "SEEEEEEEESSSSSIIIIOOOONNNN " + session[:user_id].to_s
     puts @gradesPlus.to_s
     puts @gradesMinus.to_s
     #gradeUser potrebujemo zato da bomo vedeli kaksno oceno je prijavljeni uporabnik ze podal
@@ -93,7 +108,14 @@ class CodesController < ApplicationController
   # GET /codes/new.xml
   def new
     @code = Code.new
-
+    #@isResponse = params[:response]
+    #puts 'RESPONSE-new ============' + @isResponse.to_s 
+    #@parent=0
+    #if @isResponse == 1  #means that code is response to other code
+    #  @parent = params[:parentID]
+    #end
+    
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @code }
@@ -124,9 +146,18 @@ class CodesController < ApplicationController
     @code = Code.new(params[:code])
     @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
     
+    
 
     respond_to do |format|
-      if @code.save
+      if @code.save   #if code is saved and code is response to other code
+        @isResponse = params[:response] 
+        if @isResponse == '1'
+          @parent = params[:parentID]
+          @codeReply = CodeReply.new
+          @codeReply.child_id = @code.id   #adding relation in db
+          @codeReply.code_id = @parent.to_i
+          @codeReply.save
+        end
         flash[:notice] = 'Code was successfully created.'
         format.html { redirect_to("/codes") }
         format.xml  { render :xml => @code, :status => :created, :location => @code }

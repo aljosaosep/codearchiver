@@ -1,5 +1,5 @@
 class Code < ActiveRecord::Base
-	attr_accessible :title
+	#attr_accessible :title
 
   	validates_presence_of :code_body
   	validates_presence_of :title
@@ -7,9 +7,9 @@ class Code < ActiveRecord::Base
   	validates_presence_of :description
   	validates_presence_of :shortdescription
   	validates_length_of :shortdescription, :maximum=>200, :message=>": Maximum 200 character allowed"
-  	validates_presence_of :user_id
-  	validates_presence_of :category_id
-  	validates_presence_of :type_id
+  	#validates_presence_of :user_id
+  	#validates_presence_of :category_id
+  	#validates_presence_of :type_id
   
   	belongs_to :user
   	belongs_to :program_language
@@ -96,13 +96,11 @@ class Code < ActiveRecord::Base
   # 
   ##########################################
   def getSumGrades
-    puts "self iD =============" + self.id.to_s
     @gradeTemp = Grade.find(:all, :conditions => {:code_id => self.id})
     @sum = 0
     for gradeX in @gradeTemp
       @sum+=gradeX.value
     end
-    puts "VSOTTTTAAAA = "+ @sum.to_s
     return @sum
   end
 end
