@@ -2,6 +2,9 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.xml
   layout :default.to_s
+
+  before_filter :authorize # Only admin can manually edit categories!
+
   def index
     @categories = Category.all
 

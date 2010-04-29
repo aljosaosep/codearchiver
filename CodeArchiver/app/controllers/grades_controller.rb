@@ -1,7 +1,9 @@
 class GradesController < ApplicationController
   # GET /grades
   # GET /grades.xml
-  before_filter :authorize
+
+  before_filter :authorize # Only admin group can manually edit grades!
+
   layout :default.to_s
   def index
     @grades = Grade.all

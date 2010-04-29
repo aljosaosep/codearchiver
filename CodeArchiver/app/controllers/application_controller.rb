@@ -15,19 +15,28 @@ class ApplicationController < ActionController::Base
   # default authentication for filtering: authorize only admin group
   protected
      def authorize
-        @id = User.find(:first, :conditions => {:id => session[:user_id]}).id #Profile.find(params[:id])
+	unless session[:user_id] == nil # First check if user is logged in at all
+        	@id = User.find(:first, :conditions => {:id => session[:user_id]}).id 
 
-        unless isCurrentUserAdmin(@id) #User.find_by_id(session[:user_id])
-  	  flash[:notice] = "You are not authorized to do that." 
-  	   redirect_to :controller => 'main', :action => 'error404'
-        end
+		# User is logged in; check wheter he is admin or not
+        	unless isCurrentUserAdmin(@id) # User is not an admin!
+  	  		flash[:notice] = "You are not authorized to do that." 
+  	  		redirect_to :controller => 'main', :action => 'error404'
+        	end
+	else
+			# User is not logged in. Redirect him to login form.
+	  	  	flash[:notice] = "This action must be authorised." 
+  	  		redirect_to :controller => 'main', :action => 'error404'
+	end
      end
 
-  #protected
-     #def authorize
-        #unless User.find_by_id(session[:user_id])
-	#   flash[:notice] = "Please log in."
-	#   redirect_to :controller => 'sessions', :action => 'create'
-        #end
-     #end
+
+    # Requires only user to be logged in.
+    def loggedin
+	if session[:user_id] == nil # In case user is not logged in ...
+		# ... redirect him somewhere. We dont want him to mess with comments
+	  	flash[:notice] = "This action must be authorised." 
+  	  	redirect_to :controller => 'main', :action => 'error404'
+	end
+     end
 end

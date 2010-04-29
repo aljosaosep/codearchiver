@@ -1,6 +1,9 @@
 class SubcategoriesController < ApplicationController
   # GET /subcategories
   # GET /subcategories.xml
+
+  before_filter :authorize # Only admin can manually edit categories!
+
   layout :default.to_s
   def index
     @subcategories = Subcategory.all

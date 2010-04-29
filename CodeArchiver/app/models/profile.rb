@@ -26,6 +26,4 @@ class Profile < ActiveRecord::Base
 		return public_filename # return user's pic path
 	end
   end
-
-
 end
