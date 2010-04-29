@@ -6,7 +6,6 @@ class ProfilesController < ApplicationController
   #before_filter :authorize
   
   def index
-    
     @profiles = Profile.all
 
     respond_to do |format|
@@ -65,14 +64,14 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
     
     #@profile.email = 
-    puts "ATRIBUTIIIIIIIIIIIIIi"
+    #puts "ATRIBUTIIIIIIIIIIIIIi"
     #for @enProfil in @profile.attribute_names
      # puts @enProfil
     #end
-    puts "PARAMETRIIIIII"
+    #puts "PARAMETRIIIIII"
     
-  puts "PROFILE = " + @profile.to_s
-  puts "USER = " + @profile.user.to_s
+  #puts "PROFILE = " + @profile.to_s
+  #puts "USER = " + @profile.user.to_s
     #@profile.update_attribute(:email, @profile.email)
     #@profile.update_attribute(:im, "drekkkk")
     #@profile.save

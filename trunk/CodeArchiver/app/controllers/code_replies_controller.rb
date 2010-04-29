@@ -1,4 +1,9 @@
 class CodeRepliesController < ApplicationController
+
+  # Action filter
+  before_filter :authorize, :except => [:new, :create] #:only => [:edit, :update, :destroy, :show] # For editing you must be authorised
+  before_filter :loggedin, :only => [:new, :create] # In order to add codereply you must be logged in
+
   # GET /code_replies
   # GET /code_replies.xml
   layout :default.to_s

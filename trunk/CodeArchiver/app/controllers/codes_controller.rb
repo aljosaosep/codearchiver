@@ -1,4 +1,7 @@
 class CodesController < ApplicationController
+
+  before_filter :loggedin, :only => [:create_comment, :createGrade, :gradeChange] # In order to add codereply you must be logged in
+
   # GET /codes
   # GET /codes.xml
   layout :default.to_s
