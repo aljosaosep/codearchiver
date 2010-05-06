@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100506131325) do
+ActiveRecord::Schema.define(:version => 20100506153719) do
 
   create_table "admin_logs", :force => true do |t|
     t.string   "controller"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20100506131325) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "private"
+    t.integer  "views"
   end
 
   create_table "comments", :force => true do |t|
