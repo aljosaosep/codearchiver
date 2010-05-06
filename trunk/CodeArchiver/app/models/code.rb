@@ -5,6 +5,7 @@ class Code < ActiveRecord::Base
   validates_presence_of :description
   validates_presence_of :shortdescription
   validates_length_of :shortdescription, :maximum=>200, :message=>": Maximum 200 character allowed"
+
   
   belongs_to :user
   belongs_to :program_language
@@ -14,6 +15,10 @@ class Code < ActiveRecord::Base
   has_many :grades
   has_one :code_replies
   has_many :comments
+
+
+
+
 
 	##########################################
 	# Obj's name getter methods
