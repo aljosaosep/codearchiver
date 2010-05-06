@@ -27,7 +27,7 @@
 		<td>
 			<p>
   				<p><b class="show_description_b">Description:</b></p>
-  				<a class="show_description_a"><%=h @code.description %></a>
+  				<a class="show_description_a"><pre><%= @code.description %></pre></a>
 			</p>
 		</td>
 	</tr>
@@ -40,6 +40,8 @@
 </pre>
 
 
+					
+					
 <!--
 <p>
   <b>Tag:</b>
@@ -71,6 +73,12 @@
 <!-- Separated with horizontal line at teh moment, TODO: use something nicer :) -->
 
 <!-- comment input form -->
+<p style="text-align: right;">
+<% if @canedit == true %>
+	<%= link_to 'Edit', edit_code_path(@code), :class => "default_button_class" %> code
+<% end %>
+</p>
+
 
 <br/><br/><br/>
 <table  class="show_code_rateandcomment">
@@ -223,10 +231,7 @@
 <br/><br/><br/>
 <p>
 <!-- link edit, do only if authorised to do so -->
-<% if @canedit == true %>
-<%= link_to 'Edit', edit_code_path(@code) %> |
-<% end %>
+
 
 <!-- link back -->
-<%= link_to 'Back', codes_path %>
 </p>

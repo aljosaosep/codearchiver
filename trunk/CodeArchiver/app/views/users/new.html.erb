@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1 class="show_title">Sign up</h1>
 
 <% form_for :user do |f| %>
   <%= f.error_messages %>
@@ -18,5 +18,5 @@
     <%= f.label :password_confirmation, "Confirm Password" %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p><%= f.submit "Sign up" %></p>
+  <p><%= f.submit "Sign up", :class => "default_button_class" %></p>
 <% end %>
