@@ -134,6 +134,15 @@
 		border-color: #B0C4DE;
 	}
 	
+		#wrapper #main #search_forma {
+			margin: 0 auto;
+			width: 400px;
+		}
+		
+			#wrapper #main #search_forma input[type="submit"] {
+				width: auto;
+			}
+	
 		#wrapper #main .selected {
 			background-color: #B0C4DE;
 		}

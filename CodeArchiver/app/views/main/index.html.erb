@@ -1,7 +1,8 @@
 <h1 class="show_title">Welcome</h1>
 
-<p>The Code Archiver was founded on October 25, 2010, as a code repozitory to provide developers with a place to meet and exchange algorithms. We hope to provide developers with all the resources they need to help them in their day to day programming, as well as helping them keep up to date with the latest technologies.</p>
+<% form_tag :search, :id => "search_forma", :url => {:action => "index"} do %>
+  <%= text_field :search, :text, :size => 50  %>
+  <%= submit_tag 'Search', :class => "default_button_class" %>
+<% end %>
 
-<p>Our team would like to thank all those who have contributed their time, energy, and articles to make the site what it is.</p>
-
-<p>Head over to our Advertise page to find out about advertising on the CodeArchiver.com</p>
+<br /><br />

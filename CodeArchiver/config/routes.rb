@@ -35,6 +35,8 @@ ActionController::Routing::Routes.draw do |map|
   map.gradddes 'gradeChange', :controller => 'codes', :action => 'gradeChange'
   map.gradeCreate 'createGrade', :controller => 'codes', :action => 'createGrade'
   
+  map.search 'search', :controller => 'codes', :action => 'index'
+  
   map.resources :sessions
 
   map.resources :users

@@ -1,9 +1,9 @@
 <h1 class="show_title">Library</h1>
 
-<form id="show_codes_search" method="post" action="/search">
-<input type="text" name="search" />
-<input type="submit" value="search" class="default_button_class"/>
-</form>
+<% form_tag :search, :id => "search_forma", :url => {:action => "index"} do %>
+  <%= text_field :search, :text, :size => 50  %>
+  <%= submit_tag 'Search', :class => "default_button_class" %>
+<% end %>
 
 <p style="text-align: center;">CATEGORIES</p>
 <table class="library_categories_table">
@@ -16,7 +16,6 @@
 					<% else %>
 						<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a" %>
 					<% end %>
-					 
 				</div>
 			</td>
 		<% end %>		

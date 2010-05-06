@@ -101,13 +101,13 @@ class Code < ActiveRecord::Base
     return @sum
   end
   
-  #define_index do
-  #  indexes title
-  #  indexes shortdescription
-  #  indexes description
-  #  indexes tag
-  #  has user_id
-  #end
+  define_index do
+    indexes title
+    indexes shortdescription
+    indexes description
+    indexes tag
+    has user_id
+  end
 
 
 ##########################################
