@@ -40,9 +40,9 @@
   
   <input id="code_type_id" name="code[type_id]" type="hidden" value="1" />
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update', :class => "default_button_class" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @code %> |
-<%= link_to 'Back', codes_path %>
+<%= link_to 'Show', @code, :class => "default_button_class" %> |
+<%= link_to 'Back', codes_path, :class => "default_button_class" %>

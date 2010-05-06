@@ -23,6 +23,8 @@
 		line-height: normal;
 		margin-top: 0;
 	}
+	
+	
 
 
 /*      ************WRAPPER / SIDEBAR************      */
@@ -135,6 +137,26 @@
 		#wrapper #main .selected {
 			background-color: #B0C4DE;
 		}
+
+
+/*      ************WRAPPER / MAIN / DEFAULT BUTTON CLASS************      */
+		#wrapper #main .default_button_class{
+				color: black;
+				text-decoration: none;
+				font-size: small;
+				font-weight: 100;
+				border: solid #A9A9A9 1px;
+				background-color: white;
+				padding: 1px;
+				height: auto;
+				width: auto;
+		}
+			
+			#wrapper #main .default_button_class:hover{
+				background-color: #B0C4DE;
+				cursor: pointer;
+		}
+
 
 /*      ************WRAPPER / MAIN / LIBRARY************      */   /* code/index in profile/show */	
 		#wrapper #main h1.show_title{
@@ -365,6 +387,7 @@
 
 		#wrapper #main .show_description a.show_description_a{
 			color: black;
+			display: compact;
 		}
 		
 /*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE************      */		
