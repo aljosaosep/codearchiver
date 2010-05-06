@@ -2,7 +2,7 @@ class AdminLogsController < ApplicationController
   # GET /admin_logs
   # GET /admin_logs.xml
   before_filter :authorize
-
+  layout :default.to_s
   def index
     @admin_logs = AdminLog.all
 
