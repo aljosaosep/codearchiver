@@ -79,6 +79,14 @@ class CodesController < ApplicationController
     # prog_lang_brush potrebujemo za barvanje sintakse
     @prog_lang_brush = ProgramLanguage.find (@code.program_language_id).syntax_tag
 
+    #povecevanje stevca za ogled kode
+    if(@code.views != nil)
+      @code.views += 1
+      @code.save
+    else
+      @code.views=0
+      @code.save
+    end
     
     @gradesPlus = 0
     @gradesMinus = 0
