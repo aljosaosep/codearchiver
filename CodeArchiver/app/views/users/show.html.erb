@@ -38,7 +38,8 @@
   <%=h @profile.avatar %>
 </p>-->
 
-<h1><%=h @user.username %>'s code</h1>
+<br/>
+<h1 class="show_title"><%=h @user.username %>'s code</h1>
 
 <table style="width: 100%">
 	<tr>
@@ -65,8 +66,8 @@
 						</p>
 					</td>
 					<td class="codes_table_td" style="width: 10%;">999</td>
-  					<td class="codes_table_td" style="width: 10%;">999</td>
-   				 	<td class="codes_table_td" style="width: 10%;">9.9</td>	
+  					<td class="codes_table_td" style="width: 10%;"> <%= code.getNumComments %></td>
+   				 	<td class="codes_table_td" style="width: 10%;"> <%= code.getSumGrades %>    </td>	
   				</tr>
 			<% end %>
 			</table>

@@ -73,96 +73,102 @@
 <!-- comment input form -->
 
 <br/><br/><br/>
-
 <table  class="show_code_rateandcomment">
 	<tr>	
-	
-
-<br/><br/><br/>
-<% if @CodeReply != -1%>
-<p>This code is reply to <%= link_to @CodeReply.title, @CodeReply %></p>
-<% end%>
-<br/><br/><br/>
-
-<% if @CodeReplies.length !=0%>
-	<p>This code has respones : 
-		<% for codeR in @CodeReplies %>
-			<%= link_to codeR.title, codeR %>
-		<% end%>
-	</p>
-<% end %>
-<br/><br/><br/>
-
-
-<% if @cancomment == true %>
-
-<%= link_to 'AddResponse', :controller => 'codes', :action => 'new', :response => '1', :parentID => @code.id %>
-
-		<td class="show_code_makecomment">
-			<!-- create layout for insertion of comment -->
-			<% form_tag :action => 'create_comment' do %>
+		<td>
+			<table class="code_reply">	
+				<% if @CodeReply != -1%>
+					<tr>
+						<td>
+							<a  class="show_title_a2">This code is a reply to</a> <%= link_to @CodeReply.title, @CodeReply, :class => "show_title_a1" %>
+						</td>
+					</tr>
+				<% end%>
 				
-				<!-- used for passing this code_id -->
-				<input type="hidden" name="code_id" value="<%= @code.id %>"/>	
+				<% if @CodeReplies.length == 0%>
+					<tr>
+						<td>
+							<a  class="show_title_a2">This code has no responses.</a>
+						</td>
+					</tr>
+				<% end%>
+				
+				<% if @CodeReplies.length !=0%>
+					<tr>
+						<td>
+							<p><a  class="show_title_a2">This code has responses :</a></p> 
+						</td>
+					</tr>
+					
+					<% for codeR in @CodeReplies %>
+						<tr>
+							<td>
+								<a  class="show_title_a1"> - </a><%= link_to codeR.title, codeR, :class => "show_title_a1" %>
+							</td>
+						</tr>
+					<% end%>
+				<% end %>
 		
-				<p>
-		    			<%= text_area :comment, :content, :class => "comment_text_area" %>
-				</p>
-		
-				<p style="padding-left: 110px;">
-		    			<%= submit_tag 'Comment', :class => "submit_button" %>
-		  		</p>	
-			<% end %>
+				
+				<tr>
+					<td class="add_response_td">
+						<p><%= link_to 'Add Response', { :controller => 'codes', :action => 'new', :response => '1', :parentID => @code.id }, :class => "show_title_a3" %></p>
+					</td>
+				</tr>
+			</table>
 		</td>
-<% end %>
 	
 		<td class="show_code_ilike">
 			<table class="ilike_table">	
 				<tr>
 					<td>
 						<p>
-							Positive: <%= @gradesPlus %> 
+							Positive:<p> <%= @gradesPlus %> </p>
 						</p>
 					</td>
 					<td>
 						<p>
-							Negative: <%= @gradesMinus %>
+							Negative: <p> <%= @gradesMinus %> </p>
 						</p>
 					</td>
 				</tr>
 			</table>
-		
-		
-<% if @cancomment == true %>		
-			<p>
-				<% if @gradeUser == 0 %>
-				<p>		
-					<%= link_to "I like", :controller => "codes", :action => "createGrade", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
-				</p>
-				<p>
-					<%= link_to "I dont like", :controller => "codes", :action => "createGrade", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
-				</p>
-				<% elsif @gradeUser == 1 %>
-				<p>
-					I already like this code
-				</p>
-				<p> 
-					<%= link_to "I dont like", :controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id %>
-				</p>
-				<% elsif @gradeUser == -1 %>
-				<p>	
-					I dont like this code 
-				</p>
-				<p>
-					<%= link_to "I like", :controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id %>
-				</p>
-				<% end %>
-			</p>
-<% end %>
-		</td>
 	
+	
+					
+			<table style="margin-right: 0%; margin-left: auto;">		
+				<% if @cancomment == true %>	
+						<tr>
+							<% if @gradeUser == 0 %>
+								<td>
+									<%= button_to " ", {:controller => "codes", :action => "createGrade", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id }, :class => "like_button" %>
+								</td>
+								<td>
+									<%= button_to " ", {:controller => "codes", :action => "createGrade", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id }, :class => "dislike_button" %>
+								</td>
+							<% elsif @gradeUser == 1 %>
+								<td>You already like this code,<br/>change your mind?</td>
+								<td>
+									<%= button_to " ", {:controller => "codes", :action => "gradeChange", :valueX => "-1" , :userXid => session[:user_id], :codeXid => @code.id }, :class => "dislike_button" %>
+								</td>
+							<% elsif @gradeUser == -1 %>
+								<td>You already dont like this code,<br/>change your mind?</td>
+								<td>
+									<%= button_to " ", {:controller => "codes", :action => "gradeChange", :valueX => "1" , :userXid => session[:user_id], :codeXid => @code.id }, :class => "like_button" %>
+								</td>
+							<% end %>
+						</tr>
+				<% end %>			
+			</table>
+		</td>
 	</tr>
 </table>
+
+
+
+
+
+
 
 
 <!-- comments show section -->
@@ -187,8 +193,32 @@
 						<p><%=h comment.content %></p>
 					</td>
   				</tr>
-			<% end %>
+			<% end %>	
 		</table>
+
+<table>
+	<tr>
+				<% if @cancomment == true %>
+					<td class="show_code_makecomment">
+						<!-- create layout for insertion of comment -->
+						<% form_tag :action => 'create_comment' do %>
+							
+							<!-- used for passing this code_id -->
+							<input type="hidden" name="code_id" value="<%= @code.id %>"/>	
+					
+							<p>
+					    			<%= text_area :comment, :content, :class => "comment_text_area" %>
+							</p>
+					
+							<p style="padding-left: 110px;">
+					    			<%= submit_tag 'Comment', :class => "submit_button" %>
+					  		</p>	
+						<% end %>
+					</td>
+				<% end %>
+			</tr>
+	</table>
+
 
 <br/><br/><br/>
 <p>
