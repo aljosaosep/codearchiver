@@ -1,14 +1,6 @@
 <h1 class="show_title">Editing profile</h1>
-
-
-
 <% form_for @profile, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-
-  <!--<p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>-->
   <p>
   	Others can see my email: 
   	<%= f.radio_button :email, "yes", :class => "default_button_class" %> Yes
@@ -30,31 +22,20 @@
     <%= f.label :webpage %><br />
     <%= f.text_field :webpage %>
   </p>
+  
   <p>
-
-
     Avatar from  file <br />
     <%= f.file_field :uploaded_data %>
-
-	or <br />
-
-	<!-- <%= f.file_field :photo_file_name %> -->
-   <!-- <%= f.label :avatar %><br />
-<!--	<%= f.file_field :uploaded_file %> -->
-   Avatar from web (paste url) <br />
-   <%= f.text_field :avatar %> <br />
-    <!-- <%= f.text_field :avatar %> -->
   </p>
-  
+  <p>
+    Avatar from web (paste url) <br />
+    <%= f.text_field :avatar %> <br />
+  </p>
   <p>
   	Codes listing:
     <%= f.select :listing, {'10' => 10, '20' => 20, '50' => 50, '100' => 100}  %>  	
   </p>
- <!-- <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </p>
-  <p>   -->
+  <p>
     <%= f.submit 'Update', :class => "default_button_class" %>
   </p>
 <% end %>
