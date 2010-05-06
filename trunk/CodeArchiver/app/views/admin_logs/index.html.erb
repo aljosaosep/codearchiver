@@ -1,0 +1,39 @@
+<h1>Admin board</h1>
+<h2>Admin modules:</h2> 
+Try not to destroy anything. Thank you.<br /> <br />
+<%= link_to "Programming languages", :controller => "program_languages", :action => "index" %> <br />
+<%= link_to "Types", :controller => "types", :action => "index" %> <br />
+<%= link_to "Comments", :controller => "comments", :action => "index" %> <br />
+<%= link_to "Categories", :controller => "categories", :action => "index" %> <br />
+<%= link_to "Subcategories", :controller => "subcategories", :action => "index" %> <br />
+<%= link_to "Grades", :controller => "grades", :action => "index" %> <br />
+<%= link_to "Code replies", :controller => "code_replies", :action => "index" %> <br />
+<%= link_to "Profiles", :controller => "profiles", :action => "index" %> <br />
+<%= link_to "Codes", :controller => "codes", :action => "index" %> <br />
+
+<br /> <br />
+
+<h2>Logs:</h2> 
+If someone has been doing bad things, you can trace him here, hunt him down and kill him.<br /> <br />
+<table>
+  <tr>
+    <th>User</th>
+    <th>Controller</th>
+    <th>Action</th>
+  </tr>
+
+<% @admin_logs.each do |admin_log| %>
+  <tr>
+    <td><%=h admin_log.user_id %></td>
+    <td><%=h admin_log.controller %></td>
+    <td><%=h admin_log.action %></td>
+    <td><%= link_to 'Show', admin_log %></td>
+    <td><%= link_to 'Edit', edit_admin_log_path(admin_log) %></td>
+    <td><%= link_to 'Destroy', admin_log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New admin_log', new_admin_log_path %>
