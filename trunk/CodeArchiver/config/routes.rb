@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :admin_logs
+
   
   map.root :controller => "main"
   
