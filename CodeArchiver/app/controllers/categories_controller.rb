@@ -30,6 +30,9 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
 
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "categories", :action => "new")
+    @admin_log.save
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @category }
@@ -39,12 +42,18 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "categories", :action => "edit")
+    @admin_log.save
   end
 
   # POST /categories
   # POST /categories.xml
   def create
     @category = Category.new(params[:category])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "categories", :action => "create")
+    @admin_log.save
 
     respond_to do |format|
       if @category.save
@@ -80,6 +89,9 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "categories", :action => "destroy")
+    @admin_log.save
 
     respond_to do |format|
       format.html { redirect_to(categories_url) }

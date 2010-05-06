@@ -24,16 +24,12 @@ If someone has been doing bad things, you can trace him here, hunt him down and 
 
 <% @admin_logs.each do |admin_log| %>
   <tr>
-    <td><%=h admin_log.user_id %></td>
+    <td><%=h User.find (admin_log.aid).username %></td>
     <td><%=h admin_log.controller %></td>
     <td><%=h admin_log.action %></td>
-    <td><%= link_to 'Show', admin_log %></td>
-    <td><%= link_to 'Edit', edit_admin_log_path(admin_log) %></td>
-    <td><%= link_to 'Destroy', admin_log, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New admin_log', new_admin_log_path %>

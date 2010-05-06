@@ -34,6 +34,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @comment.user_id = session[:user_id]
     @comment.save
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "comments", :action => "new")
+    @admin_log.save
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @comment }
@@ -43,12 +47,18 @@ class CommentsController < ApplicationController
   # GET /comments/1/edit
   def edit
     @comment = Comment.find(params[:id])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "comments", :action => "edit")
+    @admin_log.save
   end
 
   # POST /comments
   # POST /comments.xml
   def create
     @comment = Comment.new(params[:comment])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "comments", :action => "create")
+    @admin_log.save
 
     respond_to do |format|
       if @comment.save
@@ -84,6 +94,9 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "comments", :action => "destroy")
+    @admin_log.save
 
     respond_to do |format|
       format.html { redirect_to(comments_url) }

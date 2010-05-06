@@ -28,6 +28,9 @@ class ProgramLanguagesController < ApplicationController
   def new
     @program_language = ProgramLanguage.new
 
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "program_language", :action => "new")
+    @admin_log.save
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @program_language }
@@ -37,12 +40,18 @@ class ProgramLanguagesController < ApplicationController
   # GET /program_languages/1/edit
   def edit
     @program_language = ProgramLanguage.find(params[:id])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "program_language", :action => "edit")
+    @admin_log.save
   end
 
   # POST /program_languages
   # POST /program_languages.xml
   def create
     @program_language = ProgramLanguage.new(params[:program_language])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "program_language", :action => "create")
+    @admin_log.save
 
     respond_to do |format|
       if @program_language.save
@@ -78,6 +87,9 @@ class ProgramLanguagesController < ApplicationController
   def destroy
     @program_language = ProgramLanguage.find(params[:id])
     @program_language.destroy
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "program_language", :action => "destroy")
+    @admin_log.save
 
     respond_to do |format|
       format.html { redirect_to(program_languages_url) }
