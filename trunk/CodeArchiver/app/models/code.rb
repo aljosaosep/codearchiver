@@ -1,27 +1,19 @@
 class Code < ActiveRecord::Base
-	#attr_accessible :title
-
-  	validates_presence_of :code_body
-  	validates_presence_of :title
-  	validates_length_of :title, :maximum=>40
-  	validates_presence_of :description
-  	validates_presence_of :shortdescription
-  	validates_length_of :shortdescription, :maximum=>200, :message=>": Maximum 200 character allowed"
-  	#validates_presence_of :user_id
-  	#validates_presence_of :category_id
-  	#validates_presence_of :type_id
+  validates_presence_of :code_body
+  validates_presence_of :title
+  validates_length_of :title, :maximum=>40
+  validates_presence_of :description
+  validates_presence_of :shortdescription
+  validates_length_of :shortdescription, :maximum=>200, :message=>": Maximum 200 character allowed"
   
-  	belongs_to :user
-  	belongs_to :program_language
-  	belongs_to :category
-  	belongs_to :type
+  belongs_to :user
+  belongs_to :program_language
+  belongs_to :category
+  belongs_to :type
   
-  	# Added by Edo, 23.3.2010
-  	has_many :grades
-  	has_one :code_replies
-  	has_many :comments
-
-
+  has_many :grades
+  has_one :code_replies
+  has_many :comments
 
 	##########################################
 	# Obj's name getter methods
@@ -103,6 +95,14 @@ class Code < ActiveRecord::Base
     end
     return @sum
   end
+  
+  #define_index do
+  #  indexes title
+  #  indexes shortdescription
+  #  indexes description
+  #  indexes tag
+  #  has user_id
+  #end
 
 
 ##########################################
@@ -112,6 +112,7 @@ class Code < ActiveRecord::Base
   def getNumComments
     return Comment.find(:all, :conditions => {:code_id => self.id}).length
   end
+
 end
 
 
