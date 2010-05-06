@@ -3,13 +3,13 @@
 <table>
   <tr>
     <th>Language name</th>
-    <th>Reservered words</th>
+    <th>Syntax Highilghter tag</th>
   </tr>
 
 <% @program_languages.each do |program_language| %>
   <tr>
     <td><%=h program_language.language_name %></td>
-    <td><%=h program_language.reservered_words %></td>
+    <td><%=h program_language.syntax_tag %></td>
     <td><%= link_to 'Show', program_language %></td>
     <td><%= link_to 'Edit', edit_program_language_path(program_language) %></td>
     <td><%= link_to 'Destroy', program_language, :confirm => 'Are you sure?', :method => :delete %></td>

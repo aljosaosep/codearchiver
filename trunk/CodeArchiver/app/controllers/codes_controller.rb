@@ -75,6 +75,10 @@ class CodesController < ApplicationController
   
     #grades potrebujemo ker moramo imeti zbrane vse ocene za posamezno kodo
     @grades = Grade.find(:all , :conditions => {:code_id => @code.id})
+
+    # prog_lang_brush potrebujemo za barvanje sintakse
+    @prog_lang_brush = ProgramLanguage.find (@code.program_language_id).syntax_tag
+
     
     @gradesPlus = 0
     @gradesMinus = 0
