@@ -30,6 +30,9 @@ class GradesController < ApplicationController
   def new
     @grade = Grade.new
 
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "grades", :action => "new")
+    @admin_log.save
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @grade }
@@ -39,12 +42,18 @@ class GradesController < ApplicationController
   # GET /grades/1/edit
   def edit
     @grade = Grade.find(params[:id])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "grades", :action => "edit")
+    @admin_log.save
   end
 
   # POST /grades
   # POST /grades.xml
   def create
     @grade = Grade.new(params[:grade])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "grades", :action => "create")
+    @admin_log.save
 
     respond_to do |format|
       if @grade.save
@@ -80,6 +89,9 @@ class GradesController < ApplicationController
   def destroy
     @grade = Grade.find(params[:id])
     @grade.destroy
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "grades", :action => "destroy")
+    @admin_log.save
 
     respond_to do |format|
       format.html { redirect_to(grades_url) }

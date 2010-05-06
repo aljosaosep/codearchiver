@@ -14,14 +14,14 @@ class AdminLogsController < ApplicationController
 
   # GET /admin_logs/1
   # GET /admin_logs/1.xml
-  def show
-    @admin_log = AdminLog.find(params[:id])
+#  def show
+#    @admin_log = AdminLog.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @admin_log }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html # show.html.erb
+  #    format.xml  { render :xml => @admin_log }
+  #  end
+ # end
 
   # GET /admin_logs/new
   # GET /admin_logs/new.xml
@@ -35,9 +35,9 @@ class AdminLogsController < ApplicationController
   end
 
   # GET /admin_logs/1/edit
-  def edit
-    @admin_log = AdminLog.find(params[:id])
-  end
+#  def edit
+#    @admin_log = AdminLog.find(params[:id])
+#  end
 
   # POST /admin_logs
   # POST /admin_logs.xml
@@ -58,30 +58,25 @@ class AdminLogsController < ApplicationController
 
   # PUT /admin_logs/1
   # PUT /admin_logs/1.xml
-  def update
-    @admin_log = AdminLog.find(params[:id])
+#  def update
+#    @admin_log = AdminLog.find(params[:id])
 
-    respond_to do |format|
-      if @admin_log.update_attributes(params[:admin_log])
-        flash[:notice] = 'AdminLog was successfully updated.'
-        format.html { redirect_to(@admin_log) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_log.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
+#    respond_to do |format|
+#      if @admin_log.update_attributes(params[:admin_log])
+#        flash[:notice] = 'AdminLog was successfully updated.'
+#        format.html { redirect_to(@admin_log) }
+#        format.xml  { head :ok }
+#      else
+#        format.html { render :action => "edit" }
+#        format.xml  { render :xml => @admin_log.errors, :status => :unprocessable_entity }
+#      end
+#    end
+#  end
 
   # DELETE /admin_logs/1
   # DELETE /admin_logs/1.xml
   def destroy
     @admin_log = AdminLog.find(params[:id])
     @admin_log.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(admin_logs_url) }
-      format.xml  { head :ok }
-    end
   end
 end

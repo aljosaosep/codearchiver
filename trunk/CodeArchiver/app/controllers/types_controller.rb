@@ -28,6 +28,9 @@ class TypesController < ApplicationController
   def new
     @type = Type.new
 
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "types_controller", :action => "new")
+    @admin_log.save
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @type }
@@ -37,6 +40,9 @@ class TypesController < ApplicationController
   # GET /types/1/edit
   def edit
     @type = Type.find(params[:id])
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "types_controller", :action => "edit")
+    @admin_log.save
   end
 
   # POST /types
@@ -44,8 +50,10 @@ class TypesController < ApplicationController
   def create
     @type = Type.new(params[:type])
 
-    @admin_log = AdminLog.new(:user_id=> session[:user_id], :controller => "types_controller", :action => "create")
+	#  
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "types_controller", :action => "create")
     @admin_log.save
+
 
     respond_to do |format|
       if @type.save
@@ -81,6 +89,9 @@ class TypesController < ApplicationController
   def destroy
     @type = Type.find(params[:id])
     @type.destroy
+
+    @admin_log = AdminLog.new(:aid=> session[:user_id], :controller => "types_controller", :action => "destroy")
+    @admin_log.save
 
     respond_to do |format|
       format.html { redirect_to(types_url) }
