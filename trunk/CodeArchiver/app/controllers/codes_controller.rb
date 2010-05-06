@@ -12,14 +12,18 @@ class CodesController < ApplicationController
       params[:page] = 1;
     end
     
-    if ( !params[:lang].nil? and !params[:cat].nil? ) 
-      @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang]}
-    elsif (!params[:lang].nil?)
-      @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang]}
-    elsif (!params[:cat].nil?)
-      @codes = Code.find :all, :conditions => {'category_id' => params[:cat]}
+    if (!params[:search].nil?)
+      @codes = Code.search params[:search][:text]
     else
-      @codes = Code.find :all
+      if ( !params[:lang].nil? and !params[:cat].nil? ) 
+        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang]}
+      elsif (!params[:lang].nil?)
+        @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang]}
+      elsif (!params[:cat].nil?)
+        @codes = Code.find :all, :conditions => {'category_id' => params[:cat]}
+      else
+        @codes = Code.find :all
+      end
     end
     
     @listing = 10
