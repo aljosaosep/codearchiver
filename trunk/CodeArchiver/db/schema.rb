@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100506090629) do
+ActiveRecord::Schema.define(:version => 20100506131325) do
 
   create_table "admin_logs", :force => true do |t|
     t.string   "controller"
     t.string   "action"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "aid"
   end
 
   create_table "categories", :force => true do |t|
@@ -83,6 +84,7 @@ ActiveRecord::Schema.define(:version => 20100506090629) do
     t.text     "reservered_words"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "syntax_tag"
   end
 
   create_table "subcategories", :force => true do |t|

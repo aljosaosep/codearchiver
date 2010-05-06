@@ -93,7 +93,7 @@
 			#wrapper #sidebar #loginbar a { 
 				color: #cccccc;
 				text-decoration: none;
-			¸}
+			}
 		
 			#wrapper #sidebar #loginbar a:visited { 
 				color: #cccccc;
@@ -112,6 +112,12 @@
 				height:13px;
 				position:relative;
 				top:1px;
+				bottom: 1px;
+			}
+			
+			#wrapper #sidebar #loginbar .login_button:hover{
+				cursor: pointer;
+				background-color: #B0C4DE;
 			}
 
 
@@ -242,6 +248,11 @@
 			}
 			
 			#wrapper #main form input[type="submit"]{
+				/*height: auto;
+				width: auto;*/
+			}
+			
+			#wrapper #main .search_submit{
 				height: auto;
 				width: auto;
 			}
@@ -291,7 +302,7 @@
 				font-size: xx-small;
 			}
 			
-			#wrapper #main .codes_table p.codes_table_p :hover{
+			#wrapper #main .codes_table p.codes_table_p:hover{
 				color: #A9A9A9;
 				text-decoration: underline;
 			}
@@ -326,7 +337,7 @@
 					font-weight: normal;
 				}
 				
-				#wrapper #main .show_table h1.show_title a.show_title_a :hover{
+				#wrapper #main .show_table h1.show_title a.show_title_a:hover{
 					text-decoration: none;
 				}
 		
@@ -336,7 +347,7 @@
 					font-size: small;
 				}
 				
-				#wrapper #main .show_table h1.show_title a.show_title_a2 :hover{
+				#wrapper #main .show_table h1.show_title a.show_title_a2:hover{
 					text-decoration: underline;
 				}
 				
@@ -380,34 +391,59 @@
 			color: black;
 		}
 
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / CODE_REPLIES************      */
+
+		#wrapper #main .code_reply_table{
+			background-color: #f5f5f5;
+			width: 100%;
+		}
+	
+		#wrapper #main a.show_title_a2{
+						color: #6495ED;
+						text-decoration: none;
+						font-size: small;
+						font-weight: bold;
+					}
+	
+		#wrapper #main a.show_title_a1{
+						color: #555555;
+						text-decoration: none;
+						font-size: small;
+					}
+	
+				#wrapper #main a.show_title_a1:hover{
+					text-decoration: underline;
+				}
+				
+		#wrapper #main td.add_response_td {
+						text-align: center;
+						border-top: solid #f5f5f5 5px;
+					}
 		
-/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT************      */
-        #wrapper #main .comment_text_area{
-	        	height: 100px;
-	        }
-			#wrapper #main .show_code_rateandcomment{
-				width: 100%;
-				background-color: #f5f5f5 !important;
-			}
-	
-			#wrapper #main .show_code_makecomment{
-				width: 50%;
-				padding-left: 20px;
-			}
-	
-	        	#wrapper #main .comment_text_area{
-	        		height: 100px;
-	        	}
-	
+			#wrapper #main a.show_title_a3{
+							color: black;
+							text-decoration: none;
+							font-size: small;
+							border: solid #A9A9A9 1px;
+							background-color: white;
+							padding: 5px;
+						}
+						
+					#wrapper #main a.show_title_a3:hover{
+								background-color: #B0C4DE;
+							}
+		
+
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT / ILIKE_IDISLIKE************      */	
 			#wrapper #main .show_code_ilike{
 				width: 50%;
-				text-align: right;
+				text-align: center;
 				padding-right: 50px;
 			}
 			
 				#wrapper #main .show_code_ilike .ilike_table{
 					border: 2px solid white;
-					margin-left: 75%;
+					margin-left: 72.7%;
 				}
 				
 					#wrapper #main .show_code_ilike .ilike_table td{
@@ -415,9 +451,44 @@
 					width: 20px;
 					text-align: center;
 				}
-	
+				
+					#wrapper #main .like_button{
+						width: 43px;
+						height: 30px;
+						background-image: url('/images/like-unselected.png');
+						display:block;
+						border: solid #A9A9A9 1px;
+					}
+					
+						#wrapper #main .like_button:hover{
+							background-image: url('/images/like-hover.png');
+							cursor: pointer;
+						}
+						
+						#wrapper #main .like_button:active{
+							background-image: url('/images/like-selected.png');
+						}
+					
+					#wrapper #main .dislike_button{
+						width: 43px;
+						height: 30px;
+						background-image: url('/images/dislike-unselected.png');
+						display:block;
+						border: solid #A9A9A9 1px;
+					}
+					
+						#wrapper #main .dislike_button:hover{
+							background-image: url('/images/dislike-hover.png');
+							cursor: pointer;
+						}
+						
+						#wrapper #main .dislike_button:active{
+							background-image: url('/images/dislike-selected.png');
+						}
+					
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT / SHOW_COMMENTS************      */	
 			#wrapper #main .comments_table{
-				width: 90%:
+				width: 90%;
 			}
 	
 				#wrapper #main .comments_table_td1{
@@ -434,6 +505,41 @@
 						font-size: small;
 					}
 	
-				#wrapper #main .comments_table a.show_title_a2 :hover{
+				#wrapper #main .comments_table a.show_title_a2:hover{
 					text-decoration: underline;
+				}
+				
+/*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE / COMMENT************      */
+        #wrapper #main .comment_text_area{
+	        	height: 100px;
+	        }
+			#wrapper #main .show_code_rateandcomment{
+				width: 100%;
+				background-color: #f5f5f5 !important;
+			}
+	
+			#wrapper #main .show_code_makecomment{
+				width: 50%;
+				padding-left: 50%;
+			}
+	
+	        	#wrapper #main .comment_text_area{
+	        		height: 100px;
+	        	}
+				
+			#wrapper #main .show_code_makecomment .submit_button{
+					color: black;
+					text-decoration: none;
+					font-size: small;
+					font-weight: 100;
+					border: solid #A9A9A9 1px;
+					background-color: white;
+					padding: 5px;
+					height: auto;
+					width: auto;
+			}
+			
+				#wrapper #main .show_code_makecomment .submit_button:hover{
+					background-color: #B0C4DE;
+					cursor: pointer;
 				}
