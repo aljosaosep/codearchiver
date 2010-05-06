@@ -2,7 +2,7 @@ class CodesController < ApplicationController
 
   before_filter :loggedin, :only => [:create_comment, :createGrade, :gradeChange] # In order to add codereply you must be logged in
 
-  before_filter :onlyAuthor, :except => [:index]
+  before_filter :onlyAuthor, :only => [:show, :edit, :destroy]
   # GET /codes
   # GET /codes.xml
   layout :default.to_s
@@ -278,12 +278,17 @@ end
     # Stuff like private code even admin can't manage
     def onlyAuthor
 	@code = Code.find(params[:id])
+
+	puts "================="
+	puts " onlyauthor"
+	puts params[:id].to_s
+	puts "=============="	
 	
-	unless @code.private == nil
-		if @code.private == true
-			isCurrentUserAuthor(@code, session[:user_id])
-		end
-	end
+	#unless @code.private == nil
+	#	if @code.private == true
+	#		isCurrentUserAuthor(@code, session[:user_id])
+	#	end
+	#end
     end
   #	def isUserOrOwner
   #	end
