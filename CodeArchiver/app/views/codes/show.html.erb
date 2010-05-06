@@ -35,8 +35,7 @@
 
 
 <p><b class="show_code_b">Code:</b></p>
-
-<pre class="brush: c-sharp;">
+<% if @prog_lang_brush == nil %> <pre class="brush: cpp;"> <% else %> <pre class="brush: <%= @prog_lang_brush %>;"> 	<% end %>
 <%=h @code.code_body %></a>
 </pre>
 
