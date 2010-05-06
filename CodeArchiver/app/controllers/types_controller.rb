@@ -44,6 +44,9 @@ class TypesController < ApplicationController
   def create
     @type = Type.new(params[:type])
 
+    @admin_log = AdminLog.new(:user_id=> session[:user_id], :controller => "types_controller", :action => "create")
+    @admin_log.save
+
     respond_to do |format|
       if @type.save
         flash[:notice] = 'Type was successfully created.'

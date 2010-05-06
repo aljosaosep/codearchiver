@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @admin_log.user_id %>
+</p>
+
+<p>
+  <b>Controller:</b>
+  <%=h @admin_log.controller %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%=h @admin_log.action %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_log_path(@admin_log) %> |
+<%= link_to 'Back', admin_logs_path %>
