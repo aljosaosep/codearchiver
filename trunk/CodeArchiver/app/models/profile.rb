@@ -2,12 +2,12 @@
 
 class Profile < ActiveRecord::Base
   # attachment_fu stuff, for saving the image
-  #has_attachment :content_type => :image,
-   #              :storage => :file_system,
-    #             :max_size => 100.kilobytes,
-     #            :resize_to => '100x100>',
-      #           :thumbnails => { :thumb => '50x50>' },
-       #          :processor => 'ImageScience'
+  has_attachment :content_type => :image,
+                :storage => :file_system,
+               :max_size => 100.kilobytes,
+                :resize_to => '100x100>',
+                 :thumbnails => { :thumb => '50x50>' },
+                 :processor => 'ImageScience'
 
   #validates_as_attachment
   validates_presence_of :listing
