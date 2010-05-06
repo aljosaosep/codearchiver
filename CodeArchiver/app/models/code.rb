@@ -103,4 +103,15 @@ class Code < ActiveRecord::Base
     end
     return @sum
   end
+
+
+##########################################
+  # Returning the number of comments Edo 06.05.2010
+  # 
+  ##########################################
+  def getNumComments
+    return Comment.find(:all, :conditions => {:code_id => self.id}).length
+  end
 end
+
+
