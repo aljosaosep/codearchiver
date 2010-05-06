@@ -21,6 +21,12 @@ class Comment < ActiveRecord::Base
   	# Output: pic path
 	def getPicturePath
 		#return User.find(self.user_id)
-		return Profile.find(:first, :conditions => {:user_id => self.user_id}).picture_path
+    @profile = Profile.find(:first, :conditions => {:user_id => self.user_id})
+    if @profile.avatar != '' and @profile.avatar!=nil
+      return @profile.avatar
+    else
+      return @profile.picture_path
+    end
+		#return Profile.find(:first, :conditions => {:user_id => self.user_id}).picture_path
 	end
 end

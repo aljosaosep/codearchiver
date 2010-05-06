@@ -21,9 +21,20 @@ class Profile < ActiveRecord::Base
   # default_image path if he hasnt
   def picture_path
   	if self.filename == nil 
-		return "default.png" # user hasn't uploaded a picture. show default
-	else
-		return public_filename # return user's pic path
-	end
+		  return "default.png" # user hasn't uploaded a picture. show default
+	   else
+		  return public_filename # return user's pic path
+	   end
+  end
+  
+  def getPicturePath
+    #return User.find(self.user_id)
+    @profile = Profile.find(:first, :conditions => {:user_id => self.user_id})
+    if @profile.avatar != '' and @profile.avatar!=nil
+      return @profile.avatar
+    else
+      return @profile.picture_path
+    end
+    #return Profile.find(:first, :conditions => {:user_id => self.user_id}).picture_path
   end
 end
