@@ -27,6 +27,10 @@ ActionController::Routing::Routes.draw do |map|
   map.help 'help',
     :controller => 'help',
     :action => 'index'
+
+  map.mycode 'mycodes',
+	:controller => 'codes',
+	:action => 'mycode'
   
   map.coddes 'create_comment', :controller => 'codes', :action => 'create_comment'
   
