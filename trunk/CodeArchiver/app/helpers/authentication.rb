@@ -3,6 +3,8 @@ module Authentication
    # vhod: id... id reference objave, session... teh session :)
    def isCurrentUserAuthor(id, session)
 	unless session == nil
+		puts "session not null"
+		puts id==session.to_s
 		return id == session # TODO: if admin naj bo tudi true
 	end
 

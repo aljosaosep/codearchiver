@@ -72,6 +72,8 @@
 <!-- COMMENT AREA -->
 <!-- Separated with horizontal line at teh moment, TODO: use something nicer :) -->
 
+<% if @isPrivate == false %> <!-- if code is private, comments, grades and stuff show is uneccessary -->
+
 <!-- comment input form -->
 <p style="text-align: right;">
 <% if @canedit == true %>
@@ -230,6 +232,9 @@
 
 <br/><br/><br/>
 <p>
+
+<% end %> <!-- END OF if @isPrivate -->
+
 <!-- link edit, do only if authorised to do so -->
 
 
