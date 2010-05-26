@@ -12,17 +12,18 @@ class CodesController < ApplicationController
       params[:page] = 1;
     end
     
+
     if (!params[:search].nil?)
       @codes = Code.search params[:search][:text]
     else
       if ( !params[:lang].nil? and !params[:cat].nil? ) 
-        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang]}
+        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang], 'private' => false}
       elsif (!params[:lang].nil?)
-        @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang]}
+        @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang], 'private' => false}
       elsif (!params[:cat].nil?)
-        @codes = Code.find :all, :conditions => {'category_id' => params[:cat]}
+        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'private' => false}
       else
-        @codes = Code.find :all
+        @codes = Code.find :all, :conditions => {'private' => false}
       end
     end
     
@@ -44,9 +45,34 @@ class CodesController < ApplicationController
     end
   end
 
+  ### OBSOLETE?!?
   def getAuthorName
    return User.find(@code.user_id).username
   end
+
+  # Lists all users's codes and is avalible only to user.
+  # User can access (his!) private codes only here.
+  def mycode
+    @codes = Code.find(:all, :conditions => {:user_id => session[:user_id]}) # Get ALL codes, even private, since this is user's private code view
+
+    @listing = 10
+    if !session[:user_id].nil? then
+      @activeProfile = Profile.find session[:user_id]
+      @listing = @activeProfile.listing    
+    end
+    
+    @numPages = (@codes.length / @listing.to_f).ceil
+  #  @codes = @codes[(params[:page].to_i-1)*@listing, @listing]
+    
+    @categories = Category.all
+    @languages = ProgramLanguage.all
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @codes }
+    end
+  end
+
 
   # GET /codes/1
   # GET /codes/1.xml
@@ -54,6 +80,8 @@ class CodesController < ApplicationController
     @code = Code.find(params[:id])
     @canedit = isCurrentUserAuthorOrAdmin(@code.user_id, session[:user_id])
     @cancomment = isUserLoggedIn(session[:user_id])
+    @isPrivate = @code.private
+
     
     @isReplyToCode = CodeReply.find(:first, :conditions => {:child_id => @code.id})
     @CodeReply = -1
@@ -115,8 +143,8 @@ class CodesController < ApplicationController
           @gradeUser = @gradeUser.value
       end
     end
-    puts "qlllllllllll"
-    puts @gradeUser.to_s
+#    puts "qlllllllllll"
+#    puts @gradeUser.to_s
     #@gradeUser = Grade.find(:first, conditions => {:code_id => @code.id, :user_id => session[:user_id]})
     	respond_to do |format|
       		format.html # show.html.erb
@@ -164,6 +192,11 @@ class CodesController < ApplicationController
     end
 
     @code = Code.new(params[:code])
+    
+    if @code.private == nil
+	@code.private = false
+    end
+
     @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
     
     
@@ -283,16 +316,16 @@ end
     def onlyAuthor
 	@code = Code.find(params[:id])
 
-	puts "================="
-	puts " onlyauthor"
-	puts params[:id].to_s
-	puts "=============="	
-	
-	#unless @code.private == nil
-	#	if @code.private == true
-	#		isCurrentUserAuthor(@code, session[:user_id])
-	#	end
-	#end
+	unless @code.private == nil
+		if @code.private == true
+			unless isCurrentUserAuthor(@code.user_id, session[:user_id])
+				# Code is private
+				puts "--- onlyAuthor fAiL ---"
+	  			flash[:notice] = "Private code, you should be an author." 
+  	  			redirect_to :controller => 'main', :action => 'error404'
+			end
+		end
+	end
     end
   #	def isUserOrOwner
   #	end
