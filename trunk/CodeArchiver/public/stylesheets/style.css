@@ -35,13 +35,18 @@
 		position: relative;
 	}
 
-		#wrapper #sidebar p {
+		#wrapper #sidebar a.page_title {
 			color: white;
 			float: left;
 			margin: 0;
 			font-size: 38px;
 			position: relative;
 			left: 20px;
+			text-decoration: none;
+		}
+		
+		#wrapper #sidebar .page_title:hover{
+			cursor:pointer;
 		}
 
 		#wrapper #sidebar ul {
@@ -128,6 +133,7 @@
 		/*width:820px;
 		float:right;*/
 		border-style: ridge;
+		border-width: 1px;
 		position: relative;	
 		padding: 20px;
 		margin-top: 10px;
@@ -164,6 +170,17 @@
 			#wrapper #main .default_button_class:hover{
 				background-color: #B0C4DE;
 				cursor: pointer;
+		}
+		
+		#wrapper #main .default_button_class_selected{
+			background-color: #B0C4DE;
+			cursor: default;
+			border: none;
+		}
+		
+		#wrapper #main .default_button_class_selected:hover{
+			background-color: #B0C4DE;
+			cursor: default;
 		}
 
 
@@ -335,7 +352,7 @@
 			
 			#wrapper #main .codes_table p.codes_table_p:hover{
 				color: #A9A9A9;
-				text-decoration: underline;
+				/*text-decoration: underline;*/
 			}
 
 			
@@ -397,6 +414,9 @@
 		#wrapper #main .show_description a.show_description_a{
 			color: black;
 			display: compact;
+			width: 100%;
+			overflow: visible;
+			text-overflow: ellipsis;
 		}
 		
 /*      ************WRAPPER / MAIN / CODES_SHOW / SHOW_CODE************      */		

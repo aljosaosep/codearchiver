@@ -192,9 +192,17 @@ class CodesController < ApplicationController
     end
 
     @code = Code.new(params[:code])
+    desc = @code.description
+    puts "--------------------------------------------------------------------------------------------------------"
+    puts desc
+    
+    @code.description = desc.gsub("\n","<br/>")
+    
+    puts "------------------------------------------------------------------------------------------------------"
+   # puts desc
     
     if @code.private == nil
-	@code.private = false
+	     @code.private = false
     end
 
     @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code

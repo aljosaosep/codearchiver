@@ -7,12 +7,15 @@ class SessionsController < ApplicationController
       flash[:notice] = "Logged in successfully."
       #redirect_to_target_or_default(:back)
       session[:username] = user.username
+      redirect_to :back
     else
       flash.now[:error] = "Invalid login or password."
-      render :action => 'new'
+      #redirect_to :back
+       redirect_to "/main"
+      #render :action => 'new'
     end
     
-    redirect_to :back
+    #redirect_to :back
   end
   
   def destroy
