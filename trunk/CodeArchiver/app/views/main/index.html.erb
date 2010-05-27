@@ -4,22 +4,44 @@
   <%= text_field :search, :text, :size => 50  %>
   <%= submit_tag 'Search', :class => "default_button_class" %>
 <% end %>
-<div style="text-align: center;">
-	<h3>Most popular</h3>
-	
-	<% for code in @top_5 %>
-		<%= link_to code.title, code %>
-		<br />
-	<% end %>
-	
-	<h3>Last comments</h3>
-	
-	<% for comment in @top_5_comments %>
-		<% code = Code.find comment.code_id %>
-		<% author = User.find comment.user_id %>
-		<%= link_to code.title, code %> by <%= link_to author.username, 'users/'+author.username %>
-		
-		<br />
-	<% end %>
+<br />
+<div>
+	<table class="firstpage_table">
+		<caption>MOST POPULAR</caption>
+		<tr>
+			<th>Code</th>
+			<th>Popularity</th>
+		</tr>
+		<% for code in @top_5 %>
+		<tr>
+			<td>
+				<%= link_to code.title, code %>
+			</td>
+			<td class="drugi_stolpec">
+				<%= code.popularity %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+	<br />
+	<table class="firstpage_table">
+		<caption>LAST COMMENTS</caption>
+		<tr>
+			<th>Code</th>
+			<th>Time ago</th>
+		</tr>
+		<% for comment in @top_5_comments %>
+			<tr>
+				<td>
+				<% code = Code.find comment.code_id %>
+				<% author = User.find comment.user_id %>
+				<%= link_to code.title, code %> by <%= link_to author.username, 'users/'+author.username %>
+				</td>
+				<td class="drugi_stolpec">
+				<%= distance_of_time_in_words(Time.now,comment.updated_at) %>	
+				</td>
+			</tr>
+		<% end %>
+	</table>
 </div>
 <br /><br />

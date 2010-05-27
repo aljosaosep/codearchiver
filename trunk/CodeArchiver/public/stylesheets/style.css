@@ -152,7 +152,22 @@
 		#wrapper #main .selected {
 			background-color: #B0C4DE;
 		}
+		
+			#wrapper #main div table.firstpage_table {
+				margin: 0 auto;
+			}
+			
+				#wrapper #main div table.firstpage_table caption {
+					margin-bottom: 5px;
+				}
 
+				#wrapper #main div table.firstpage_table th {
+					background-color: #EEEEEE;
+				}
+				
+				#wrapper #main div table.firstpage_table td.drugi_stolpec {
+					text-align: center;
+				}
 
 /*      ************WRAPPER / MAIN / DEFAULT BUTTON CLASS************      */
 		#wrapper #main .default_button_class{
