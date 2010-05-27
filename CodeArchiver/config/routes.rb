@@ -23,6 +23,10 @@ ActionController::Routing::Routes.draw do |map|
   map.login 'login', 
     :controller => 'sessions', 
     :action => 'create'
+    
+  map.login_error 'login_error',
+    :controller => 'main',
+    :action => 'login_error'
   
   map.help 'help',
     :controller => 'help',

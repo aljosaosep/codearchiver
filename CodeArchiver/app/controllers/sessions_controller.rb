@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     else
       flash.now[:error] = "Invalid login or password."
       #redirect_to :back
-       redirect_to "/main"
+       redirect_to "/login_error"
       #render :action => 'new'
     end
     
