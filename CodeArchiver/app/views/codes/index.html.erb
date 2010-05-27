@@ -77,9 +77,15 @@
 
 Page: 
 <% i = 1; while i <= @numPages %>
-   <%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :lang => params[:lang], :cat => params[:cat]}, :post => true %>
-   <%  i += 1 %>
+	<% if i == params[:page].to_i %>
+		<span class ="default_button_class default_button_class_selected" ><%= i %></span>
+	<% else %>
+   		<%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :lang => params[:lang], :cat => params[:cat]}, :post => true, :class => "default_button_class" %>
+	<% end %>
+	<%  i += 1 %>
 <%  end %>
+
+
 
 <!-- #SMART LISTING ... za več kot 20 strani#
 IF listingNum <= 5

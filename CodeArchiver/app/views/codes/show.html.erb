@@ -27,7 +27,7 @@
 		<td>
 			<p>
   				<p><b class="show_description_b">Description:</b></p>
-  				<a class="show_description_a"><pre><%= @code.description %></pre></a>
+  				<a class="show_description_a"><%= @code.description %></a>
 			</p>
 		</td>
 	</tr>
@@ -119,12 +119,13 @@
 					<% end%>
 				<% end %>
 		
-				
+				<% if @cancomment == true %>
 				<tr>
 					<td class="add_response_td">
 						<p><%= link_to 'Add Response', { :controller => 'codes', :action => 'new', :response => '1', :parentID => @code.id }, :class => "show_title_a3" %></p>
 					</td>
 				</tr>
+				<% end %>
 			</table>
 		</td>
 	
