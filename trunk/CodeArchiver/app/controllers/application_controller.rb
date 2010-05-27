@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   include Authentication
   helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  #protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   #before_filter :authorize, :except => :login
   #debugger

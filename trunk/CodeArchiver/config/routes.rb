@@ -39,6 +39,9 @@ ActionController::Routing::Routes.draw do |map|
   map.gradddes 'gradeChange', :controller => 'codes', :action => 'gradeChange'
   map.gradeCreate 'createGrade', :controller => 'codes', :action => 'createGrade'
   
+ # map.connect ':controller/:action/:id.:format'
+  
+  map.search_xml 'search.xml', :controller => 'codes', :action => 'index' , :format =>'xml'
   map.search 'search', :controller => 'codes', :action => 'index'
   
   map.resources :sessions
@@ -72,6 +75,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :types
 
   map.resources :categories
+  
+  #map.connect ':controller/:action/:id.:format'
   
   map.connect "*anything",
     :controller => "main",
