@@ -12,7 +12,6 @@ class CodesController < ApplicationController
       params[:page] = 1;
     end
     
-
     if (!params[:search].nil?)
       @codes = Code.search params[:search][:text]
     else
