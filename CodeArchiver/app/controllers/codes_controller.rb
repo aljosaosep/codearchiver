@@ -16,13 +16,13 @@ class CodesController < ApplicationController
       @codes = Code.search params[:search][:text]
     else
       if ( !params[:lang].nil? and !params[:cat].nil? ) 
-        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang], 'private' => false}
+        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang], 'private' => false}, :order => 'updated_at DESC'
       elsif (!params[:lang].nil?)
-        @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang], 'private' => false}
+        @codes = Code.find :all, :conditions => {'program_language_id' => params[:lang], 'private' => false}, :order => 'updated_at DESC'
       elsif (!params[:cat].nil?)
-        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'private' => false}
+        @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'private' => false}, :order => 'updated_at DESC'
       else
-        @codes = Code.find :all, :conditions => {'private' => false}
+        @codes = Code.find :all, :conditions => {'private' => false}, :order => 'updated_at DESC'
       end
     end
     
