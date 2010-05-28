@@ -52,7 +52,7 @@
 				</tr>
 			</table>
 			
-			
+			<% if @codes.count() > 0 then %>
 				<% @codes.each do |code| %>
 				<table class="codes_table">
 	  				<tr>
@@ -74,12 +74,15 @@
 	  				</tr>
 				</table>
 				<% end %>
+			<% else %>
+				<h3 style="text-align: center">Unfortunately your search didn't return any results.</h3>
+			<% end %>
 		</td>
 	</tr>
 </table>
 <br />
 
-
+<% if @codes.count() > 0 then %>
 	Page: 
 	<% i = 1; while i <= @numPages %>
 		<% if i == params[:page].to_i %>
@@ -89,6 +92,7 @@
 		<% end %>
 		<%  i += 1 %>
 	<% end %>
+<% end %>
 
 <!-- #SMART LISTING ... za več kot 20 strani#
 IF listingNum <= 5
