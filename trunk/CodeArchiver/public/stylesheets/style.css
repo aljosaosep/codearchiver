@@ -163,6 +163,24 @@
 
 				#wrapper #main div table.firstpage_table th {
 					background-color: #EEEEEE;
+					font-weight: normal;
+					color: #A9A9A9;
+				}
+				
+				#wrapper #main div table.firstpage_table a {
+					text-decoration: none;
+					color: blue;
+				}
+				
+				#wrapper #main div table.firstpage_table a:hover {
+					text-decoration: underline;
+					background-color: #B0C4DE;
+				}
+				
+				#wrapper #main div table.firstpage_table td {
+					border-bottom: solid;
+					border-color: #EEEEEE;
+					border-width: 1px;
 				}
 				
 				#wrapper #main div table.firstpage_table td.drugi_stolpec {
@@ -354,6 +372,7 @@
 			#wrapper #main .codes_table a:hover{
 				text-decoration: underline;
 				color: blue;
+				background-color: #B0C4DE;
 			}
 
 			#wrapper #main .codes_table p{
