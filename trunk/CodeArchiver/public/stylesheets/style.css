@@ -34,20 +34,34 @@
 		text-align:center;
 		position: relative;
 	}
-
-		#wrapper #sidebar a.page_title {
-			color: white;
+		
+		#wrapper #sidebar p#title {
 			float: left;
 			margin: 0;
-			font-size: 38px;
+			font-size: 36px;
 			position: relative;
 			left: 20px;
+			top: 1px;
 			text-decoration: none;
+			color: white;
 		}
 		
-		#wrapper #sidebar .page_title:hover{
+			#wrapper #sidebar a {
+				text-decoration: none;
+			}
+		
+			#wrapper #sidebar p#title a.page_title_1 {
+				color: white;
+			}
+			
+			#wrapper #sidebar p#title a.page_title_2 {
+				color: white;
+				margin-left:-8px;
+			}
+		
+		#wrapper #sidebar p#title:hover {
 			cursor:pointer;
-		}
+		}		
 
 		#wrapper #sidebar ul {
 			float: left;
@@ -56,13 +70,13 @@
 
 		#wrapper #sidebar ul li {
 			display: block;
-			border-right: 2px #cccccc solid;
+			/*border-right: 2px #cccccc solid;*/
 			height: 50px;
 			float: left;
 		}
 		
 			#wrapper #sidebar ul li:first-child {
-				border-left: 2px #cccccc solid;
+				/*border-left: 2px #cccccc solid;*/
 			}
 		
 			#wrapper #sidebar ul li:hover {
@@ -628,4 +642,31 @@
 				#wrapper #main .show_code_makecomment .submit_button:hover{
 					background-color: #B0C4DE;
 					cursor: pointer;
+				}
+				
+		#wrapper #main #profile {
+			
+		}
+		
+			#wrapper #main #profile #picture {
+				border: 1px ridge #B0C4DE;
+			}
+			
+			#wrapper #main #profile p {
+				margin: 0;
+				padding: 0;
+			}
+			
+				#wrapper #main #profile p#username {
+					left: 160px;
+					top: 70px;
+					font-size: 30px;
+					position: absolute;
+				}
+				
+				#wrapper #main #profile p#member_since {
+					position: absolute;
+					top: 120px;
+					left: 160px;
+					font-size: 16px;
 				}

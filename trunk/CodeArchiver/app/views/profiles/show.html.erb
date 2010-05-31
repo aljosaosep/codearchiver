@@ -1,50 +1,49 @@
-<h1 class="show_title">Profile</h1>
-
-<%= link_to image_tag(@profile.getPicturePath, :size => "100x100") %>
-
-
-<p>
-  <b>User:</b>
-  <%=h @profile.user.username %>
-</p>
-
-
-<p>
-  <b>Email seen to everyone:</b>
-  <%=h @profile.email %>
-</p>
-
-<p>
-  <b>Im:</b>
-  <%=h @profile.IM %>
-</p>
-
-<p>
-  <b>Company:</b>
-  <%=h @profile.company %>
-</p>
-
-<p>
-  <b>Portfolio:</b>
-  <%=h @profile.portfolio %>
-</p>
-
-<p>
-  <b>Webpage:</b>
-  <%=h @profile.webpage %>
-</p>
-
-<!-- <p>
-  <b>Avatar:</b>
-  <%=h @profile.avatar %>
-</p>
--->
-
-<p>
-  <b>Codes listing:</b>
-  <%=h @profile.listing %>	
-</p>
-
-
-
-<%= link_to 'Edit', edit_profile_path(@profile), :class => "default_button_class" %>
+<div id="profile">
+	
+	<h1 class="show_title">Profile</h1>
+	
+	<%= image_tag(@profile.getPicturePath, :size => "120x120", :id => "picture") %>
+	
+	<p id="username"><%=h @profile.user.username %></p>
+	<p id="member_since">Member since: <%=h @profile.created_at %></p>
+	
+	<p>
+	  <b>Email seen to everyone:</b>
+	  <%=h @profile.email %>
+	</p>
+	
+	<p>
+	  <b>Im:</b>
+	  <%=h @profile.IM %>
+	</p>
+	
+	<p>
+	  <b>Company:</b>
+	  <%=h @profile.company %>
+	</p>
+	
+	<p>
+	  <b>Portfolio:</b>
+	  <%=h @profile.portfolio %>
+	</p>
+	
+	<p>
+	  <b>Webpage:</b>
+	  <%=h @profile.webpage %>
+	</p>
+	
+	<!-- <p>
+	  <b>Avatar:</b>
+	  <%=h @profile.avatar %>
+	</p>
+	-->
+	
+	<p>
+	  <b>Codes listing:</b>
+	  <%=h @profile.listing %>	
+	</p>
+	
+	
+	
+	<%= link_to 'Edit', edit_profile_path(@profile), :class => "default_button_class" %>
+</div>
