@@ -2,48 +2,58 @@
 	
 	<h1 class="show_title">Profile</h1>
 	
-	<%= image_tag(@profile.getPicturePath, :size => "120x120", :id => "picture") %>
+	<div id="slika">
+		<%= image_tag(@profile.getPicturePath, :size => "120x120", :id => "picture") %>
+	</div>
 	
-	<p id="username"><%=h @profile.user.username %></p>
-	<p id="member_since">Member since: <%=h @profile.created_at %></p>
+	<div id="vmesni_del">
+		<p id="username"><%=h @profile.user.username %></p>
+		<p id="member_since">Member since: <%= @profile.created_at.strftime("%d %B %Y") %></p>
+	</div>
 	
+	<div id="ikone">
+		<% email = User.find(:first, :conditions => {:username => @profile.user.username}).email %>
+		<p id="email"><img src="images/email.png" alt="email_pic" /><a href="mailto:<%= email %>"><%= email %></a></p>
+		<% if (!@profile.webpage.nil? && @profile.webpage.length > 0) %>
+			<p id="webpage"><img src="images/webpage.png" alt="webpage_pic" /><a href="<%=h @profile.webpage %>"><%=h @profile.webpage %></a></p>
+		<% end %>
+		<% if (!@profile.company.nil? && @profile.company.length > 0) %>
+			<p id="company"><img src="images/company.png" alt="company_pic" /><%=h @profile.company %></p>
+		<% end %>
+		<% if (!@profile.IM.nil? && @profile.IM.length > 0) %>
+			<p id="im"><img src="images/im.png" alt="im_pic" /><%=h @profile.IM %></p>
+		<% end %>
+	</div>
+	
+	<div id="uredi">
+		<%= link_to 'Edit', edit_profile_path(@profile), :class => "default_button_class" %>
+	</div>
+	
+	<div style="clear: both"></div>
+	
+	<% if (!@profile.portfolio.nil? && @profile.portfolio.length > 0) %>
+		<div id="portfolio">
+			<b>Portfolio:</b>
+			<p>
+				<%=h @profile.portfolio %>
+			</p>
+		</div>
+	<% end %>
+	
+	<!--<p id="listing"><img src="" alt="listing_pic" /></p>
+	<p id="mail_privacy"><img src="" alt="mail_privacy_pic"></p>
+	<p id="portfolio"><img src="" alt="portfolio_pic" /></p>-->
+	
+	<!--
 	<p>
 	  <b>Email seen to everyone:</b>
 	  <%=h @profile.email %>
 	</p>
 	
 	<p>
-	  <b>Im:</b>
-	  <%=h @profile.IM %>
-	</p>
-	
-	<p>
-	  <b>Company:</b>
-	  <%=h @profile.company %>
-	</p>
-	
-	<p>
-	  <b>Portfolio:</b>
-	  <%=h @profile.portfolio %>
-	</p>
-	
-	<p>
-	  <b>Webpage:</b>
-	  <%=h @profile.webpage %>
-	</p>
-	
-	<!-- <p>
-	  <b>Avatar:</b>
-	  <%=h @profile.avatar %>
-	</p>
-	-->
-	
-	<p>
 	  <b>Codes listing:</b>
 	  <%=h @profile.listing %>	
 	</p>
+	-->
 	
-	
-	
-	<%= link_to 'Edit', edit_profile_path(@profile), :class => "default_button_class" %>
 </div>
