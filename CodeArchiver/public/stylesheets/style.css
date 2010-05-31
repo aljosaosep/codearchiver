@@ -24,7 +24,15 @@
 		margin-top: 0;
 	}
 	
+	#wrapper a {
+		color: blue;
+		text-decoration: none;
+	}
 	
+		#wrapper a:hover {
+			text-decoration: underline;
+			background-color: #B0C4DE;
+		}
 
 
 /*      ************WRAPPER / SIDEBAR************      */
@@ -119,6 +127,10 @@
 			#wrapper #sidebar #loginbar a:visited { 
 				color: #cccccc;
 				text-decoration: none;
+			}
+			
+			#wrapper #sidebar #loginbar a:hover {
+				background-color: transparent; 	
 			}
 
 		
@@ -648,25 +660,52 @@
 			
 		}
 		
-			#wrapper #main #profile #picture {
-				border: 1px ridge #B0C4DE;
-			}
-			
 			#wrapper #main #profile p {
 				margin: 0;
 				padding: 0;
 			}
+		
+			#wrapper #main #profile #slika {
+				width: 122px;
+				float: left;
+				margin-right: 25px;	
+			}
 			
-				#wrapper #main #profile p#username {
-					left: 160px;
-					top: 70px;
+				#wrapper #main #profile #slika #picture {
+					border: 1px ridge #B0C4DE;
+				}
+			
+			#wrapper #main #profile #vmesni_del {
+				width: 300px;
+				float: left;	
+			}
+			
+				#wrapper #main #profile #vmesni_del p#username {
 					font-size: 30px;
-					position: absolute;
 				}
 				
-				#wrapper #main #profile p#member_since {
-					position: absolute;
-					top: 120px;
-					left: 160px;
+				#wrapper #main #profile #vmesni_del p#member_since {
 					font-size: 16px;
 				}
+				
+			#wrapper #main #profile #ikone {
+				width: 400px;
+				float: left;
+			}
+				
+				#wrapper #main #profile #ikone p {
+				}
+				
+				#wrapper #main #profile #ikone img {
+					vertical-align: middle;
+					width: 30px;
+					margin-right: 5px;
+				}
+				
+			#wrapper #main #profile #uredi {
+				float: right;
+			}
+			
+			#wrapper #main #profile #portfolio {
+				margin-top: 10px;
+			}
