@@ -39,47 +39,52 @@
 			</p>
 		</div>
 	<% end %>
-	<br /><br />
-	<h3>My codes</h3>
-	<table style="width: 100%">
-		<tr>
-			<td>
-				<tr class="legend_tr">
-					<td style="width: 70%"><a class="legend_a">Title</a>/<a class="legend_a">Author</a></td>
-					<td class="legend_td" style="width: 10%"><a class="legend_a">Views</a></td>
-					<td class="legend_td" style="width: 10%"><a class="legend_a">Comments</a></td>
-					<td class="legend_td" style="width: 10%"><a class="legend_a">Ratio</a></td>		
-				</tr>
-				<% @codes.each do |code| %>
-				<table class="codes_table">
-	  				<tr>
-						<td style="width: 70%">
-							<%= link_to code.title, code %> 
-							by 
-							<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
-							<br />
-							<p><%=h code.shortdescription %></p>
-							<p class="codes_table_p">
-								<%= link_to code.getProgLangName, code.getProgLang, :class => "codes_table_a" %>
-								/
-								<%= link_to code.getCategoryName, code.getCategory, :class => "codes_table_a" %>
-							</p>
-						</td>
-						<td class="codes_table_td" style="width: 10%;"> <%= code.views %> </td>
-	  					<td class="codes_table_td" style="width: 10%;"> <%= code.getNumComments %></td>
-	   				 	<td class="codes_table_td" style="width: 10%;"> <%= code.getSumGrades %>    </td>	
-	  				</tr>
-				<% end %>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<br />
 	
-	Page: 
-	<% i = 1; while i <= @numPages %>
-	   <%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :lang => params[:lang], :cat => params[:cat]}, :post => true, :class => "default_button_class default_button_class_selected" %>
-	   <%  i += 1 %>
-	<%  end %>
+	<% if @codes.count > 0 then %>
+	
+		<br /><br />
+		<h3>My codes</h3>
+		<table style="width: 100%">
+			<tr>
+				<td>
+					<tr class="legend_tr">
+						<td style="width: 70%"><a class="legend_a">Title</a>/<a class="legend_a">Author</a></td>
+						<td class="legend_td" style="width: 10%"><a class="legend_a">Views</a></td>
+						<td class="legend_td" style="width: 10%"><a class="legend_a">Comments</a></td>
+						<td class="legend_td" style="width: 10%"><a class="legend_a">Ratio</a></td>		
+					</tr>
+					<% @codes.each do |code| %>
+					<table class="codes_table">
+		  				<tr>
+							<td style="width: 70%">
+								<%= link_to code.title, code %> 
+								by 
+								<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
+								<br />
+								<p><%=h code.shortdescription %></p>
+								<p class="codes_table_p">
+									<%= link_to code.getProgLangName, code.getProgLang, :class => "codes_table_a" %>
+									/
+									<%= link_to code.getCategoryName, code.getCategory, :class => "codes_table_a" %>
+								</p>
+							</td>
+							<td class="codes_table_td" style="width: 10%;"> <%= code.views %> </td>
+		  					<td class="codes_table_td" style="width: 10%;"> <%= code.getNumComments %></td>
+		   				 	<td class="codes_table_td" style="width: 10%;"> <%= code.getSumGrades %>    </td>	
+		  				</tr>
+					<% end %>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<br />
+		
+		Page: 
+		<% i = 1; while i <= @numPages %>
+		   <%= link_to i, {:controller => 'codes', :action => 'index', :page => i, :lang => params[:lang], :cat => params[:cat]}, :post => true, :class => "default_button_class default_button_class_selected" %>
+		   <%  i += 1 %>
+		<%  end %>
+	
+	<% end %>
 	
 </div>
