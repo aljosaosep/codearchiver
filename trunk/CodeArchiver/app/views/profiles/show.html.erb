@@ -13,9 +13,9 @@
 	
 	<div id="ikone">
 		<% email = User.find(:first, :conditions => {:username => @profile.user.username}).email %>
-		<p id="email"><img src="/images/email.png" alt="email" /><a href="mailto:<%= email %>"><%= email %></a> (<%= @profile.email == true ? "public"  : "private" %>)</p>
+		<p id="email"><img src="/images/email.png" alt="email" /><a class="link" href="mailto:<%= email %>"><%= email %></a> (<%= @profile.email == true ? "public"  : "private" %>)</p>
 		<% if (!@profile.webpage.nil? && @profile.webpage.length > 0) %>
-			<p id="webpage"><img src="/images/webpage.png" alt="webpage" /><a href="http://<%=h @profile.webpage %>"><%=h @profile.webpage %></a></p>
+			<p id="webpage"><img src="/images/webpage.png" alt="webpage" /><a class="link" href="http://<%=h @profile.webpage %>"><%=h @profile.webpage %></a></p>
 		<% end %>
 		<% if (!@profile.company.nil? && @profile.company.length > 0) %>
 			<p id="company"><img src="/images/company.png" alt="company" /><%=h @profile.company %></p>
