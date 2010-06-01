@@ -40,7 +40,14 @@ class CodesController < ApplicationController
     
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @codes }
+      format.xml  {
+      @codesXML = @codes
+      for @codeXML in @codesXML
+        @codeXML.program_language_id = ProgramLanguage.find(@codeXML.program_language_id).language_name
+        @codeXML.category_id = Category.find(@codeXML.category_id).name
+      end
+      
+      render :xml => @codesXML }
     end
   end
 
