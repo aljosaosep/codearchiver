@@ -18,6 +18,26 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.xml
   def show
     #@profile = Profile.find(params[:id])
+    
+    @codes = Code.find(:all, :conditions => {:user_id => session[:user_id]}) # Get ALL codes, even private, since this is user's private code view
+
+    @listing = 10
+    if !session[:user_id].nil? then
+      @activeProfile = Profile.find session[:user_id]
+      @listing = @activeProfile.listing    
+    end
+    
+    @numPages = (@codes.length / @listing.to_f).ceil
+  #  @codes = @codes[(params[:page].to_i-1)*@listing, @listing]
+    
+    @categories = Category.all
+    @languages = ProgramLanguage.all
+
+    #respond_to do |format|
+    #  format.html # new.html.erb
+    #  format.xml  { render :xml => @codes }
+    #nd
+    
     @profile = Profile.find(:first, :conditions => {:user_id => session[:user_id]} )
     respond_to do |format|
       format.html # show.html.erb
