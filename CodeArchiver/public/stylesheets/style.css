@@ -166,13 +166,33 @@
 		border-color: #B0C4DE;
 	}
 	
+		#wrapper #main #pomembni {
+			
+		}
+		
+			#wrapper #main #pomembni #levo {
+				float: left;
+				margin-left: 220px;
+			}
+			
+			#wrapper #main #pomembni #desno {
+				float: right;
+				margin-right: 220px;
+			}
+	
 		#wrapper #main #search_forma {
 			margin: 0 auto;
 			width: 400px;
 		}
 		
+			#wrapper #main #search_forma input[type="text"] {
+				width: 400px;
+				margin-bottom: 5px;
+			}
+		
 			#wrapper #main #search_forma input[type="submit"] {
 				width: auto;
+				margin-left: 175px;
 			}
 	
 		#wrapper #main .selected {
