@@ -23,17 +23,6 @@
 		line-height: normal;
 		margin-top: 0;
 	}
-	
-	#wrapper a {
-		color: blue;
-		text-decoration: none;
-	}
-	
-		#wrapper a:hover {
-			text-decoration: underline;
-			background-color: #B0C4DE;
-		}
-
 
 /*      ************WRAPPER / SIDEBAR************      */
 	#wrapper #sidebar{
@@ -171,13 +160,13 @@
 		}
 		
 			#wrapper #main #pomembni #levo {
-				float: left;
-				margin-left: 220px;
+				/*float: left;
+				margin-left: 220px;*/
 			}
 			
 			#wrapper #main #pomembni #desno {
-				float: right;
-				margin-right: 220px;
+				/*float: right;
+				margin-right: 220px;*/
 			}
 	
 		#wrapper #main #search_forma {
@@ -683,6 +672,16 @@
 			#wrapper #main #profile p {
 				margin: 0;
 				padding: 0;
+			}
+		
+			#wrapper #main #profile .link {
+				color: blue;
+				text-decoration: none;
+			}
+			
+			#wrapper #main #profile .link:hover {
+				text-decoration: underline;
+				background-color: #B0C4DE;	
 			}
 		
 			#wrapper #main #profile #slika {
