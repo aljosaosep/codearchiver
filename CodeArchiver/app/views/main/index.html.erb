@@ -1,9 +1,38 @@
+<!--<h1 class="show_title" style="text-align: center">OUR PHILOSOPHY</h1>
+<table id="philo" style="margin: 0 auto;">
+	<tr>
+		<td>don't repeat yourself</td>
+		<td>don't reinvent the wheel</td>
+		<td>be more productive</td>
+	</tr>
+	<tr>
+		<td><img src="/images/repetition.jpg" alt="repeat" /></td>
+		<td><img src="/images/wheel.jpg" alt="wheel" /></td>
+		<td><img src="/images/productive.png" alt="productive" /></td>
+	</tr>
+</table>-->
+
+<h1 class="show_title" style="text-align: center; margin-bottom: -5px;">your centralized code repository</h1>
+<table id="philo" style="margin: 0 auto;">
+	<tr>
+		<td style="border-right: 20px solid white">don't repeat yourself</td>
+		<td style="border-right: 20px solid white">don't reinvent the wheel</td>
+		<td>be more productive</td>
+	</tr>
+	<!--<tr>
+		<td><img src="/images/repetition.jpg" alt="repeat" /></td>
+		<td><img src="/images/wheel.jpg" alt="wheel" /></td>
+		<td><img src="/images/productive.png" alt="productive" /></td>
+	</tr>-->
+</table>
+
+<br /><br />
 
 <% form_tag :search, :id => "search_forma", :url => {:action => "index"} do %>
   <%= text_field :search, :text, :size => 50  %>
   <%= submit_tag 'Search', :class => "default_button_class" %>
 <% end %>
-<br /><br />
+<br /><br /><br />
 <div id="pomembni">
 	<div id="levo">
 		<table class="firstpage_table">
@@ -24,7 +53,7 @@
 			<% end %>
 		</table>
 	</div>
-	<br />
+	
 	<div id="desno">
 		<table class="firstpage_table">
 			<caption>LAST COMMENTS</caption>
