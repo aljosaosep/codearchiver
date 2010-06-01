@@ -1,79 +1,77 @@
+<div id="profile">
 
+	<div id="slika">
+		<%= image_tag(@profile.getPicturePath, :size => "120x120", :id => "picture") %>
+	</div>
+	
+	<div id="vmesni_del">
+		<p id="username"><%=h @profile.user.username %></p>
+		<p id="member_since">Member since: <%= @profile.created_at.strftime("%d %B %Y") %></p>
+	</div>
+	
+	<div id="ikone">
+		<% if @profile.email == true %>
+			<% email = User.find(:first, :conditions => {:username => @profile.user.username}).email %>
+		<p id="email"><img src="/images/email.png" alt="email" /><a href="mailto:<%= email %>"><%= email %></a></p>
+		<% end %>
+		<% if (!@profile.webpage.nil? && @profile.webpage.length > 0) %>
+			<p id="webpage"><img src="/images/webpage.png" alt="webpage" /><a href="http://<%=h @profile.webpage %>"><%=h @profile.webpage %></a></p>
+		<% end %>
+		<% if (!@profile.company.nil? && @profile.company.length > 0) %>
+			<p id="company"><img src="/images/company.png" alt="company" /><%=h @profile.company %></p>
+		<% end %>
+		<% if (!@profile.IM.nil? && @profile.IM.length > 0) %>
+			<p id="im"><img src="/images/im.png" alt="im" /><%=h @profile.IM %></p>
+		<% end %>
+	</div>
+	
+	<div style="clear: both"></div>
+	
+	<% if (!@profile.portfolio.nil? && @profile.portfolio.length > 0) %>
+		<div id="portfolio">
+			<b>Portfolio:</b>
+			<p>
+				<%=h @profile.portfolio %>
+			</p>
+		</div>
+	<% end %>
+	
+</div>
 
-<%= link_to image_tag(@profile.picture_path, :size => "100x100") %>
-
-<p>
-  <b>Username:</b>
-  <%=h @user.username %>
-</p>
-
-<% if @profile.email=="yes" %>
-	<p>
-	  <b>Email:</b>
-	  <%=h @user.email %>
-	</p>
+<% if @codes.length > 0 then %>
+	<br />	
+	<table style="width: 100%">
+		<tr>
+			<td>
+				<tr class="legend_tr">
+					<td style="width: 70%"><a class="legend_a">Title</a>/<a class="legend_a">Author</a></td>
+					<td class="legend_td" style="width: 10%"><a class="legend_a">Views</a></td>
+					<td class="legend_td" style="width: 10%"><a class="legend_a">Comments</a></td>
+					<td class="legend_td" style="width: 10%"><a class="legend_a">Ratio</a></td>		
+				</tr>
+				<% @codes.each do |code| %>
+				<table class="codes_table">
+	  				<tr>
+						<td style="width: 70%">
+							<%= link_to code.title, code %> 
+							by 
+							<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
+							<br />
+							<p><%=h code.shortdescription %></p>
+							<p class="codes_table_p">
+								<%= link_to code.getProgLangName, code.getProgLang, :class => "codes_table_a" %>
+								/
+								<%= link_to code.getCategoryName, code.getCategory, :class => "codes_table_a" %>
+							</p>
+						</td>
+						<td class="codes_table_td" style="width: 10%;"> <%= code.views %> </td>
+	  					<td class="codes_table_td" style="width: 10%;"> <%= code.getNumComments %></td>
+	   				 	<td class="codes_table_td" style="width: 10%;"> <%= code.getSumGrades %>    </td>	
+	  				</tr>
+				<% end %>
+				</table>
+			</td>
+		</tr>
+	</table>
 <% end %>
-<p>
-  <b>Im:</b>
-  <%=h @profile.IM %>
-</p>
-
-<p>
-  <b>Company:</b>
-  <%=h @profile.company %>
-</p>
-
-<p>
-  <b>Portfolio:</b>
-  <%=h @profile.portfolio %>
-</p>
-
-<p>
-  <b>Webpage:</b>
-  <%=h @profile.webpage %>
-</p>
-
-<!--<p>
-  <b>Avatar:</b>
-  <%=h @profile.avatar %>
-</p>-->
-
-<br/>
-<h1 class="show_title"><%=h @user.username %>'s code</h1>
-
-<table style="width: 100%">
-	<tr>
-		<td>
-			<tr class="legend_tr">
-				<td style="width: 70%"><a class="legend_a">Title</a>/<a class="legend_a">Author</a></td>
-				<td class="legend_td" style="width: 10%"><a class="legend_a">Views</a></td>
-				<td class="legend_td" style="width: 10%"><a class="legend_a">Comments</a></td>
-				<td class="legend_td" style="width: 10%"><a class="legend_a">Ratio</a></td>		
-			</tr>
-			<% @codes.each do |code| %>
-			<table class="codes_table">
-  				<tr>
-					<td style="width: 70%">
-						<%= link_to code.title, code %> 
-						by 
-						<%= link_to code.getAuthorName, user_path(code.getAuthorName) %>
-						<br />
-						<p><%=h code.shortdescription %></p>
-						<p class="codes_table_p">
-							<%= link_to code.getProgLangName, code.getProgLang, :class => "codes_table_a" %>
-							/
-							<%= link_to code.getCategoryName, code.getCategory, :class => "codes_table_a" %>
-						</p>
-					</td>
-					<td class="codes_table_td" style="width: 10%;"> <%= code.views %> </td>
-  					<td class="codes_table_td" style="width: 10%;"> <%= code.getNumComments %></td>
-   				 	<td class="codes_table_td" style="width: 10%;"> <%= code.getSumGrades %>    </td>	
-  				</tr>
-			<% end %>
-			</table>
-		</td>
-	</tr>
-</table>
-
-<br />
 
