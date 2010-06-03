@@ -14,8 +14,6 @@ class CodesController < ApplicationController
     @searchON = false
     if (!params[:search].nil?)
       @codes = Code.search params[:search][:text]
-      puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
-       puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
       @searchON = true
     else
       if ( !params[:lang].nil? and !params[:cat].nil? ) 
