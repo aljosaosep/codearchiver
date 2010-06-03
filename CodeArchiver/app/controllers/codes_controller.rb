@@ -11,9 +11,12 @@ class CodesController < ApplicationController
     if(params[:page].nil?)
       params[:page] = 1;
     end
-    
+    @searchON = false
     if (!params[:search].nil?)
       @codes = Code.search params[:search][:text]
+      puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
+       puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
+      @searchON = true
     else
       if ( !params[:lang].nil? and !params[:cat].nil? ) 
         @codes = Code.find :all, :conditions => {'category_id' => params[:cat], 'program_language_id' => params[:lang], 'private' => false}, :order => 'updated_at DESC'
