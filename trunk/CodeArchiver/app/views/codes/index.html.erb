@@ -4,40 +4,41 @@
   <%= text_field :search, :text, :size => 50  %>
   <%= submit_tag 'Search', :class => "default_button_class" %>
 <% end %>
+<% if @searchON == false then %>
+	<p style="text-align: center;">CATEGORIES</p>
+	<table class="library_categories_table">
+		<tr>
+			<% for category in @categories -%>	
+				<td id="<%= category.name %>">
+					<div class="entry">
+						<% if category.id == params[:cat].to_i then %>
+							<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a selected" %>
+						<% else %>
+							<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a" %>
+						<% end %>
+					</div>
+				</td>
+			<% end %>
+		</tr>
+	</table>
 
-<p style="text-align: center;">CATEGORIES</p>
-<table class="library_categories_table">
-	<tr>
-		<% for category in @categories -%>	
-			<td id="<%= category.name %>">
-				<div class="entry">
-					<% if category.id == params[:cat].to_i then %>
-						<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a selected" %>
-					<% else %>
-						<%= link_to category.name, {:controller => 'codes', :action => 'index', :cat => category.id, :lang => params[:lang], :page => 1}, :post => true, :class => "categories_table_a" %>
-					<% end %>
-				</div>
-			</td>
-		<% end %>
-	</tr>
-</table>
-
-<p style="text-align: center;">LANGUAGES</p>
-<table class="library_categories_table">
-	<tr>
-		<% for language in @languages -%>
-			<td>
-				<div class="entry">
-					<% if language.id == params[:lang].to_i then %>
-						<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :lang => language.id, :cat => params[:cat], :page => 1}, :post => true, :class => "categories_table_a selected" %>
-					<% else %>
-						<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :lang => language.id, :cat => params[:cat], :page => 1}, :post => true, :class => "categories_table_a" %>
-					<% end %> 
-				</div>
-			</td>
-		<% end %>
-	</tr>
-</table>
+	<p style="text-align: center;">LANGUAGES</p>
+	<table class="library_categories_table">
+		<tr>
+			<% for language in @languages -%>
+				<td>
+					<div class="entry">
+						<% if language.id == params[:lang].to_i then %>
+							<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :lang => language.id, :cat => params[:cat], :page => 1}, :post => true, :class => "categories_table_a selected" %>
+						<% else %>
+							<%= link_to language.language_name, {:controller => 'codes', :action => 'index', :lang => language.id, :cat => params[:cat], :page => 1}, :post => true, :class => "categories_table_a" %>
+						<% end %> 
+					</div>
+				</td>
+			<% end %>
+		</tr>
+	</table>
+	<% end%>
 <br />
 
 <table style="width: 100%">
