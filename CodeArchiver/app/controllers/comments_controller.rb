@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   # GET /comments.xml
   layout :default.to_s
 
-
   # Action filter
   before_filter :authorize, :except => [:new, :create] #:only => [:edit, :update, :destroy, :show] # For editing you must be authorised
   before_filter :loggedin, :only => [:new, :create] # In order to add comment you must be logged in
