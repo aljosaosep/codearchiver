@@ -42,9 +42,13 @@ class CodesController < ApplicationController
       format.html # index.html.erb
       format.xml  {
       @codesXML = @codes
+
       for @codeXML in @codesXML
         @codeXML.program_language_id = ProgramLanguage.find(@codeXML.program_language_id).language_name
         @codeXML.category_id = Category.find(@codeXML.category_id).name
+        
+     #   @XMLizhod.create("bla", "ena")
+       # puts @XMLizhod.bla
       end
       
       render :xml => @codesXML }
@@ -214,7 +218,7 @@ class CodesController < ApplicationController
     @code.user_id = session[:user_id] # gets user id from session (user current logged in) and sets is to code
     
     
-
+    @code.views=0
     respond_to do |format|
       if @code.save   #if code is saved and code is response to other code
         @isResponse = params[:response] 
